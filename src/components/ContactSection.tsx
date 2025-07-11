@@ -34,8 +34,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             className="!rounded-button whitespace-nowrap cursor-pointer bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 vintage-shadow"
             style={{ fontFamily: "Crimson Text, serif" }}
           >
-            <i className="fab fa-whatsapp mr-3 text-xl"></i>
-            {t('contact.whatsappButton')}
+                            <i className="fab fa-line mr-3 text-xl"></i>
+                          {t('contact.lineButton')}
           </button>
           <div
             className="text-amber-200"

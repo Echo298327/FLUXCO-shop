@@ -15,10 +15,10 @@ const Home: React.FC = () => {
     const message = productName
       ? `Hello! I'm interested in the ${productName}. Could you provide more details?`
       : "Hello! I'd like to know more about your vintage cycling products.";
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(
+    const lineUrl = `https://line.me/R/msg/text/?${encodeURIComponent(
       message
     )}`;
-    window.open(whatsappUrl, "_blank");
+    window.open(lineUrl, "_blank");
   };
   return (
     <div>

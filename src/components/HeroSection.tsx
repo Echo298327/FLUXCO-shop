@@ -47,7 +47,7 @@ interface HeroSectionProps {
               className="!rounded-button whitespace-nowrap cursor-pointer bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 vintage-shadow"
               style={{ fontFamily: "Crimson Text, serif" }}
             >
-              <i className="fab fa-whatsapp mr-3"></i>
+                              <i className="fab fa-line mr-3"></i>
               {t('hero.cta')}
             </button>
           </div>

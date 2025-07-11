@@ -54,7 +54,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                     className="!rounded-button whitespace-nowrap cursor-pointer w-full bg-amber-600 hover:bg-amber-700 text-white py-3 font-semibold transition-colors duration-300 mt-auto"
                     style={{ fontFamily: "Crimson Text, serif" }}
                 >
-                    <i className="fab fa-whatsapp mr-2"></i>
+                    <i className="fab fa-line mr-2"></i>
                     {t('products.inquireNow')}
                 </button>
             </div>
