@@ -1,5 +1,6 @@
 // React import
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import bg from "../assets/bg.jpg";
 
 interface HeroSectionProps {
@@ -9,6 +10,7 @@ interface HeroSectionProps {
   export const HeroSection: React.FC<HeroSectionProps> = ({
     handleWhatsAppContact,
   }) => {
+    const { t } = useTranslation();
     return (
       <section
         id="home"
@@ -30,17 +32,15 @@ interface HeroSectionProps {
               className="text-6xl font-bold text-amber-50 mb-6 leading-tight"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Timeless Cycling
+              {t('hero.title')}
               <br />
-              <span className="text-amber-200">Heritage</span>
+              <span className="text-amber-200">{t('hero.titleAccent')}</span>
             </h2>
             <p
               className="text-xl text-amber-100 mb-8 leading-relaxed"
               style={{ fontFamily: "Crimson Text, serif" }}
             >
-              Discover authentic vintage bicycles and accessories, carefully
-              restored to preserve the golden age of cycling. Each piece tells a
-              story of craftsmanship and adventure.
+              {t('hero.subtitle')}
             </p>
             <button
               onClick={() => handleWhatsAppContact()}
@@ -48,7 +48,7 @@ interface HeroSectionProps {
               style={{ fontFamily: "Crimson Text, serif" }}
             >
               <i className="fab fa-whatsapp mr-3"></i>
-              Connect With Us
+              {t('hero.cta')}
             </button>
           </div>
         </div>

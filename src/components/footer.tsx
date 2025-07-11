@@ -1,10 +1,12 @@
 // React import
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({}) => {
+  const { t } = useTranslation();
   return (
     <footer className="vintage-texture bg-amber-900/95 py-12">
       <div className="max-w-7xl mx-auto px-6">
@@ -16,15 +18,14 @@ export const Footer: React.FC<FooterProps> = ({}) => {
                 className="text-2xl font-bold text-amber-100"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
-                FLUX & CO
+                {t('footer.companyName')}
               </h4>
             </div>
             <p
               className="text-amber-300"
               style={{ fontFamily: "Crimson Text, serif" }}
             >
-              Preserving cycling heritage through authentic restoration and
-              curated vintage collections.
+              {t('footer.description')}
             </p>
           </div>
           <div>
@@ -32,15 +33,15 @@ export const Footer: React.FC<FooterProps> = ({}) => {
               className="text-xl font-bold text-amber-100 mb-4"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Business Hours
+              {t('footer.businessHours')}
             </h5>
             <div
               className="text-amber-300 space-y-2"
               style={{ fontFamily: "Crimson Text, serif" }}
             >
-              <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-              <p>Saturday: 10:00 AM - 4:00 PM</p>
-              <p>Sunday: By Appointment</p>
+              <p>{t('footer.hours.weekdays')}</p>
+              <p>{t('footer.hours.saturday')}</p>
+              <p>{t('footer.hours.sunday')}</p>
             </div>
           </div>
           <div>
@@ -48,7 +49,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
               className="text-xl font-bold text-amber-100 mb-4"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Follow Us
+              {t('footer.followUs')}
             </h5>
             <div className="flex justify-center md:justify-start space-x-4">
               <a
@@ -77,8 +78,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
             className="text-amber-400"
             style={{ fontFamily: "Crimson Text, serif" }}
           >
-            © 2024 FLUX & CO. All rights reserved. | Crafted with passion for
-            vintage cycling heritage.
+            {t('footer.copyright')}
           </p>
         </div>
       </div>

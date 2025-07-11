@@ -1,0 +1,90 @@
+{
+  "header": {
+    "companyName": "FLUX & CO",
+    "tagline": "Vintage Cycling Heritage",
+    "nav": {
+      "home": "Home",
+      "products": "Products",
+      "services": "Services",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Timeless Cycling",
+    "titleAccent": "Heritage",
+    "subtitle": "Discover high-quality bicycles and accessories, carefully selected to meet your cycling needs. Each product combines excellent craftsmanship with modern functionality.",
+    "cta": "Connect With Us"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Each product in our collection has been carefully selected to offer you the best quality bicycles and accessories for your cycling adventures.",
+    "inquireNow": "Inquire Now",
+    "items": {
+      "1": {
+        "name": "Classic E-City",
+        "description": "Vintage-inspired electric city bike with elegant copper accents"
+      },
+      "2": {
+        "name": "Retro E-Step",
+        "description": "Traditional step-through frame with modern electric assist"
+      },
+      "3": {
+        "name": "E-Commuter",
+        "description": "Classic commuter design with hidden electric technology"
+      },
+      "4": {
+        "name": "E-Cargo",
+        "description": "Electric cargo bike with traditional bamboo carrier"
+      },
+      "5": {
+        "name": "E-Explorer",
+        "description": "Retro adventure e-bike with vintage leather accessories"
+      },
+      "6": {
+        "name": "E-Folding",
+        "description": "Compact electric folder with classic design elements"
+      }
+    }
+  },
+  "features": {
+    "title": "Why Choose Us",
+    "subtitle": "Our passion for cycling is reflected in every service we provide. We offer professional expertise and quality products for all your cycling needs.",
+    "items": {
+      "1": {
+        "title": "Expert Service",
+        "description": "Professional maintenance and repair services for all types of bicycles with certified technicians"
+      },
+      "2": {
+        "title": "Quality Products",
+        "description": "High-quality bicycles and accessories from trusted brands worldwide"
+      },
+      "3": {
+        "title": "Personal Consultation",
+        "description": "One-on-one consultation to find the perfect cycling solution for your needs"
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "Ready to discover your perfect cycling companion? Get in touch and let us help you find exactly what you're looking for.",
+    "whatsappButton": "WhatsApp Chat",
+    "phone": "+1 (555) 123-4567"
+  },
+  "footer": {
+    "companyName": "FLUX & CO",
+    "description": "Your trusted partner for high-quality bicycles and professional cycling services.",
+    "businessHours": "Business Hours",
+    "hours": {
+      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+      "saturday": "Saturday: 10:00 AM - 4:00 PM",
+      "sunday": "Sunday: By Appointment"
+    },
+    "followUs": "Follow Us",
+    "copyright": "© 2024 FLUX & CO. All rights reserved. | Crafted with passion for cycling excellence."
+  },
+  "common": {
+    "language": "Language",
+    "chinese": "中文",
+    "english": "English"
+  }
+} 

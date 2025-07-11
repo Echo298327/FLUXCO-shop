@@ -1,0 +1,90 @@
+{
+  "header": {
+    "companyName": "FLUX & CO",
+    "tagline": "复古自行车传承",
+    "nav": {
+      "home": "首页",
+      "products": "产品",
+      "services": "服务",
+      "contact": "联系我们"
+    }
+  },
+  "hero": {
+    "title": "永恒骑行",
+    "titleAccent": "传承",
+    "subtitle": "发现高品质的自行车和配件，精心挑选以满足您的骑行需求。每款产品都结合了精湛工艺和现代功能。",
+    "cta": "联系我们"
+  },
+  "products": {
+    "title": "我们的产品",
+    "subtitle": "我们收藏中的每一款产品都经过精心挑选，为您的骑行冒险提供最优质的自行车和配件。",
+    "inquireNow": "立即咨询",
+    "items": {
+      "1": {
+        "name": "经典电动城市车",
+        "description": "复古风格电动城市自行车，配有优雅的铜色装饰"
+      },
+      "2": {
+        "name": "复古电动跨步车",
+        "description": "传统跨步式车架，配备现代电动助力系统"
+      },
+      "3": {
+        "name": "电动通勤车",
+        "description": "经典通勤设计，配备隐藏式电动技术"
+      },
+      "4": {
+        "name": "电动货运车",
+        "description": "配备传统竹编载货架的电动货运自行车"
+      },
+      "5": {
+        "name": "电动探险车",
+        "description": "复古冒险电动自行车，配有vintage皮革配件"
+      },
+      "6": {
+        "name": "电动折叠车",
+        "description": "紧凑型电动折叠车，融合经典设计元素"
+      }
+    }
+  },
+  "features": {
+    "title": "为什么选择我们",
+    "subtitle": "我们对自行车的热情体现在我们提供的每一项服务中。我们为您的所有骑行需求提供专业的专业知识和优质产品。",
+    "items": {
+      "1": {
+        "title": "专业服务",
+        "description": "由认证技师为各种类型自行车提供专业维护和维修服务"
+      },
+      "2": {
+        "title": "优质产品",
+        "description": "来自世界各地可信品牌的高品质自行车和配件"
+      },
+      "3": {
+        "title": "个人咨询",
+        "description": "一对一咨询，为您的需求找到完美的骑行解决方案"
+      }
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "准备发现您完美的骑行伙伴了吗？请联系我们，让我们帮您找到您要寻找的产品。",
+    "whatsappButton": "WhatsApp 聊天",
+    "phone": "+1 (555) 123-4567"
+  },
+  "footer": {
+    "companyName": "FLUX & CO",
+    "description": "您值得信赖的高品质自行车和专业骑行服务合作伙伴。",
+    "businessHours": "营业时间",
+    "hours": {
+      "weekdays": "周一至周五：上午9:00 - 下午6:00",
+      "saturday": "周六：上午10:00 - 下午4:00",
+      "sunday": "周日：预约服务"
+    },
+    "followUs": "关注我们",
+    "copyright": "© 2024 FLUX & CO. 版权所有 | 用心打造卓越骑行体验。"
+  },
+  "common": {
+    "language": "语言",
+    "chinese": "中文",
+    "english": "English"
+  }
+} 

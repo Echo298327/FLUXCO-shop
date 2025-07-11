@@ -45,17 +45,17 @@ export const products: Product[] = [
 export const features: Feature[] = [
   {
     icon: "fas fa-tools",
-    title: "Expert Restoration",
-    description: "Professional restoration services for vintage bicycles with authentic period components",
+    title: "Expert Service",
+    description: "Professional maintenance and repair services for all types of bicycles with certified technicians",
   },
   {
-    icon: "fas fa-certificate",
-    title: "Authentic Parts",
-    description: "Genuine vintage bicycle parts sourced from trusted collectors worldwide",
+    icon: "fas fa-star",
+    title: "Quality Products",
+    description: "High-quality bicycles and accessories from trusted brands worldwide",
   },
   {
     icon: "fas fa-handshake",
-    title: "Personal Service",
-    description: "One-on-one consultation to find the perfect vintage cycling solution",
+    title: "Personal Consultation",
+    description: "One-on-one consultation to find the perfect cycling solution for your needs",
   },
 ];

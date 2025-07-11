@@ -1,5 +1,6 @@
 // React import
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import type { Feature } from "../types";
 
 
@@ -9,6 +10,7 @@ interface FeaturesSectionProps {
 
 
 export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ features }) => {
+  const { t } = useTranslation();
   return (
     <section
       id="services"
@@ -20,15 +22,13 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ features }) =>
             className="text-5xl font-bold text-amber-900 mb-4"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            Our Expertise
+            {t('features.title')}
           </h3>
           <p
             className="text-xl text-amber-700 max-w-3xl mx-auto"
             style={{ fontFamily: "Crimson Text, serif" }}
           >
-            Decades of experience in vintage bicycle restoration and authentic
-            parts sourcing ensure every piece meets the highest standards of
-            quality and authenticity.
+            {t('features.subtitle')}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -44,13 +44,13 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ features }) =>
                 className="text-2xl font-bold text-amber-900 mb-4"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
-                {feature.title}
+                {t(`features.items.${index + 1}.title`)}
               </h4>
               <p
                 className="text-amber-700 leading-relaxed"
                 style={{ fontFamily: "Crimson Text, serif" }}
               >
-                {feature.description}
+                {t(`features.items.${index + 1}.description`)}
               </p>
             </div>
           ))}

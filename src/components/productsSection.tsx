@@ -1,5 +1,6 @@
 // React import
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import type { Product } from "../types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -10,6 +11,7 @@ interface ProductsSectionProps {
 }
 
 export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, handleWhatsAppContact }) => {
+    const { t } = useTranslation();
     // State for selected product
     const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
 
@@ -24,15 +26,13 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
               className="text-5xl font-bold text-amber-900 mb-4"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Curated Collection
+              {t('products.title')}
             </h3>
             <p
               className="text-xl text-amber-700 max-w-3xl mx-auto"
               style={{ fontFamily: "Crimson Text, serif" }}
             >
-              Each piece in our collection has been carefully selected and
-              restored to showcase the finest examples of vintage cycling
-              craftsmanship.
+              {t('products.subtitle')}
             </p>
           </div>
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -49,7 +49,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
                 <div className="h-64 overflow-hidden">
                   <img
                     src={product.image}
-                    alt={product.name}
+                    alt={t(`products.items.${product.id}.name`)}
                     className="w-full h-full object-cover sepia-filter hover:scale-110 transition-transform duration-500"
                   />
                 </div>
@@ -58,24 +58,24 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
                     className="text-2xl font-bold text-amber-900 mb-3"
                     style={{ fontFamily: "Playfair Display, serif" }}
                   >
-                    {product.name}
+                    {t(`products.items.${product.id}.name`)}
                   </h4>
                   <p
                     className="text-amber-700 mb-4 leading-relaxed"
                     style={{ fontFamily: "Crimson Text, serif" }}
                   >
-                    {product.description}
+                    {t(`products.items.${product.id}.description`)}
                   </p>
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleWhatsAppContact(product.name);
+                      handleWhatsAppContact(t(`products.items.${product.id}.name`));
                     }}
                     className="!rounded-button whitespace-nowrap cursor-pointer w-full bg-amber-600 hover:bg-amber-700 text-white py-3 font-semibold transition-colors duration-300"
                     style={{ fontFamily: "Crimson Text, serif" }}
                   >
                     <i className="fab fa-whatsapp mr-2"></i>
-                    Inquire Now
+                    {t('products.inquireNow')}
                   </button>
                 </div>
               </div>
@@ -112,7 +112,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
                     <div className="h-64 overflow-hidden">
                       <img
                         src={product.image}
-                        alt={product.name}
+                        alt={t(`products.items.${product.id}.name`)}
                         className="w-full h-full object-cover sepia-filter hover:scale-110 transition-transform duration-500"
                       />
                     </div>
@@ -121,24 +121,24 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
                         className="text-2xl font-bold text-amber-900 mb-3"
                         style={{ fontFamily: "Playfair Display, serif" }}
                       >
-                        {product.name}
+                        {t(`products.items.${product.id}.name`)}
                       </h4>
                       <p
                         className="text-amber-700 mb-4 leading-relaxed"
                         style={{ fontFamily: "Crimson Text, serif" }}
                       >
-                        {product.description}
+                        {t(`products.items.${product.id}.description`)}
                       </p>
-                      <button
+                                              <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          handleWhatsAppContact(product.name);
+                          handleWhatsAppContact(t(`products.items.${product.id}.name`));
                         }}
                         className="!rounded-button whitespace-nowrap cursor-pointer w-full bg-amber-600 hover:bg-amber-700 text-white py-3 font-semibold transition-colors duration-300"
                         style={{ fontFamily: "Crimson Text, serif" }}
                       >
                         <i className="fab fa-whatsapp mr-2"></i>
-                        Inquire Now
+                        {t('products.inquireNow')}
                       </button>
                     </div>
                   </div>

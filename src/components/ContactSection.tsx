@@ -1,5 +1,6 @@
 // React import
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 interface ContactSectionProps {
   handleWhatsAppContact: () => void;
@@ -8,6 +9,7 @@ interface ContactSectionProps {
 export const ContactSection: React.FC<ContactSectionProps> = ({
   handleWhatsAppContact,
 }) => {
+  const { t } = useTranslation();
   return (
     <section
       id="contact"
@@ -18,14 +20,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           className="text-5xl font-bold text-amber-50 mb-6"
           style={{ fontFamily: "Playfair Display, serif" }}
         >
-          Let's Connect
+          {t('contact.title')}
         </h3>
         <p
           className="text-xl text-amber-200 mb-8 leading-relaxed"
           style={{ fontFamily: "Crimson Text, serif" }}
         >
-          Ready to discover your perfect vintage cycling companion? Get in touch
-          and let us help you find exactly what you're looking for.
+          {t('contact.subtitle')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
@@ -34,7 +35,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             style={{ fontFamily: "Crimson Text, serif" }}
           >
             <i className="fab fa-whatsapp mr-3 text-xl"></i>
-            WhatsApp Chat
+            {t('contact.whatsappButton')}
           </button>
           <div
             className="text-amber-200"
@@ -42,7 +43,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           >
             <p className="text-lg">
               <i className="fas fa-phone mr-2"></i>
-              +1 (555) 123-4567
+              {t('contact.phone')}
             </p>
           </div>
         </div>
