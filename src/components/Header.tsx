@@ -1,6 +1,7 @@
 // React import
 import React from "react";
 import { useTranslation } from 'react-i18next';
+import logo from "../assets/logo.png";
 
 interface HeaderProps {}
 
@@ -15,7 +16,11 @@ export const Header: React.FC<HeaderProps> = ({}) => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <i className="fas fa-bicycle text-4xl text-amber-800"></i>
+            <img 
+              src={logo} 
+              alt="FLUX & CO Logo" 
+              className="h-12 w-auto"
+            />
             <div>
               <h1 
                 className="text-3xl font-bold text-amber-900"
