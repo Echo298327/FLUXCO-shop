@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import type { Product } from "../types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
+import { ProductCard } from "./ProductCard";
 
 interface ProductsSectionProps {
     products: Product[];
@@ -37,48 +38,13 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
           </div>
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
-              <div
+              <ProductCard
                 key={product.id}
-                className="vintage-texture bg-white/90 rounded-lg overflow-hidden vintage-shadow hover:scale-105 transition-all duration-300 cursor-pointer distressed-border"
-                onClick={() =>
-                  setSelectedProduct(
-                    selectedProduct === product.id ? null : product.id,
-                  )
-                }
-              >
-                <div className="h-64 overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={t(`products.items.${product.id}.name`)}
-                    className="w-full h-full object-cover sepia-filter hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h4
-                    className="text-2xl font-bold text-amber-900 mb-3"
-                    style={{ fontFamily: "Playfair Display, serif" }}
-                  >
-                    {t(`products.items.${product.id}.name`)}
-                  </h4>
-                  <p
-                    className="text-amber-700 mb-4 leading-relaxed"
-                    style={{ fontFamily: "Crimson Text, serif" }}
-                  >
-                    {t(`products.items.${product.id}.description`)}
-                  </p>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleWhatsAppContact(t(`products.items.${product.id}.name`));
-                    }}
-                    className="!rounded-button whitespace-nowrap cursor-pointer w-full bg-amber-600 hover:bg-amber-700 text-white py-3 font-semibold transition-colors duration-300"
-                    style={{ fontFamily: "Crimson Text, serif" }}
-                  >
-                    <i className="fab fa-whatsapp mr-2"></i>
-                    {t('products.inquireNow')}
-                  </button>
-                </div>
-              </div>
+                product={product}
+                handleWhatsAppContact={handleWhatsAppContact}
+                selectedProduct={selectedProduct}
+                setSelectedProduct={setSelectedProduct}
+              />
             ))}
           </div>
 
@@ -101,47 +67,12 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
             >
               {products.map((product) => (
                 <SwiperSlide key={product.id}>
-                  <div
-                    className="vintage-texture bg-white/90 rounded-lg overflow-hidden vintage-shadow distressed-border"
-                    onClick={() =>
-                      setSelectedProduct(
-                        selectedProduct === product.id ? null : product.id,
-                      )
-                    }
-                  >
-                    <div className="h-64 overflow-hidden">
-                      <img
-                        src={product.image}
-                        alt={t(`products.items.${product.id}.name`)}
-                        className="w-full h-full object-cover sepia-filter hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h4
-                        className="text-2xl font-bold text-amber-900 mb-3"
-                        style={{ fontFamily: "Playfair Display, serif" }}
-                      >
-                        {t(`products.items.${product.id}.name`)}
-                      </h4>
-                      <p
-                        className="text-amber-700 mb-4 leading-relaxed"
-                        style={{ fontFamily: "Crimson Text, serif" }}
-                      >
-                        {t(`products.items.${product.id}.description`)}
-                      </p>
-                                              <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleWhatsAppContact(t(`products.items.${product.id}.name`));
-                        }}
-                        className="!rounded-button whitespace-nowrap cursor-pointer w-full bg-amber-600 hover:bg-amber-700 text-white py-3 font-semibold transition-colors duration-300"
-                        style={{ fontFamily: "Crimson Text, serif" }}
-                      >
-                        <i className="fab fa-whatsapp mr-2"></i>
-                        {t('products.inquireNow')}
-                      </button>
-                    </div>
-                  </div>
+                  <ProductCard
+                    product={product}
+                    handleWhatsAppContact={handleWhatsAppContact}
+                    selectedProduct={selectedProduct}
+                    setSelectedProduct={setSelectedProduct}
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
