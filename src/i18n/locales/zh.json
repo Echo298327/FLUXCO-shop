@@ -73,11 +73,10 @@
   "footer": {
     "companyName": "FLUX & CO",
     "description": "您值得信赖的高品质自行车和专业骑行服务合作伙伴。",
+    "address": "中正區金門街7之4號",
     "businessHours": "营业时间",
     "hours": {
-      "weekdays": "周一至周五：上午9:00 - 下午6:00",
-      "saturday": "周六：上午10:00 - 下午4:00",
-      "sunday": "周日：预约服务"
+      "schedule": "周一至周六：12:00-20:00"
     },
     "followUs": "关注我们",
     "copyright": "© 2024 FLUX & CO. 版权所有 | 用心打造卓越骑行体验。"

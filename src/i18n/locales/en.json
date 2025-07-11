@@ -73,11 +73,10 @@
   "footer": {
     "companyName": "FLUX & CO",
     "description": "Your trusted partner for high-quality bicycles and professional cycling services.",
+    "address": "No. 7-4, Jinmen Street, Zhongzheng District",
     "businessHours": "Business Hours",
     "hours": {
-      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
-      "saturday": "Saturday: 10:00 AM - 4:00 PM",
-      "sunday": "Sunday: By Appointment"
+      "schedule": "Monday - Saturday: 12:00 PM - 8:00 PM"
     },
     "followUs": "Follow Us",
     "copyright": "© 2024 FLUX & CO. All rights reserved. | Crafted with passion for cycling excellence."

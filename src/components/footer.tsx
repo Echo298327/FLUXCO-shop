@@ -22,11 +22,24 @@ export const Footer: React.FC<FooterProps> = ({}) => {
               </h4>
             </div>
             <p
-              className="text-amber-300"
+              className="text-amber-300 mb-4"
               style={{ fontFamily: "Crimson Text, serif" }}
             >
               {t('footer.description')}
             </p>
+            <div className="text-amber-300">
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=中正區金門街7之4號"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-amber-100 transition-colors cursor-pointer"
+              >
+                <i className="fas fa-map-marker-alt mr-2"></i>
+                <span style={{ fontFamily: "Crimson Text, serif" }}>
+                  {t('footer.address')}
+                </span>
+              </a>
+            </div>
           </div>
           <div>
             <h5
@@ -36,12 +49,10 @@ export const Footer: React.FC<FooterProps> = ({}) => {
               {t('footer.businessHours')}
             </h5>
             <div
-              className="text-amber-300 space-y-2"
+              className="text-amber-300"
               style={{ fontFamily: "Crimson Text, serif" }}
             >
-              <p>{t('footer.hours.weekdays')}</p>
-              <p>{t('footer.hours.saturday')}</p>
-              <p>{t('footer.hours.sunday')}</p>
+              <p>{t('footer.hours.schedule')}</p>
             </div>
           </div>
           <div>
@@ -53,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
             </h5>
             <div className="flex justify-center md:justify-start space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/fluxtaipei?igsh=MXkyNnA4cncwbmtrcQ%3D%3D&utm_source=qr"
                 className="text-amber-300 hover:text-amber-100 text-2xl cursor-pointer transition-colors"
               >
                 <i className="fab fa-instagram"></i>
