@@ -6,7 +6,7 @@ import { HeroSection } from "../components/HeroSection";
 import { ProductsSection } from "../components/productsSection";
 import { FeaturesSection } from "../components/FeaturesSection";
 import { ContactSection } from "../components/ContactSection";
-import { Footer } from "../components/footer";
+import { Footer } from "../components/Footer";
 // Utils import
 import { products, features } from "../utils/homeData";
 
