@@ -1,51 +1,59 @@
 // React import
 import React from "react";
+import type { Feature } from "../types";
 
-export const FeaturesSection: React.FC = () => {
+
+interface FeaturesSectionProps {
+    features: Feature[];
+}
+
+
+export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ features }) => {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
+    <section
+      id="services"
+      className="py-20 vintage-texture bg-gradient-to-b from-amber-100/90 to-amber-50/90"
+    >
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Why Choose Velocity</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We're committed to providing the best cycling experience with
-            premium quality bikes and exceptional service.
+          <h3
+            className="text-5xl font-bold text-amber-900 mb-4"
+            style={{ fontFamily: "Playfair Display, serif" }}
+          >
+            Our Expertise
+          </h3>
+          <p
+            className="text-xl text-amber-700 max-w-3xl mx-auto"
+            style={{ fontFamily: "Crimson Text, serif" }}
+          >
+            Decades of experience in vintage bicycle restoration and authentic
+            parts sourcing ensure every piece meets the highest standards of
+            quality and authenticity.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Feature 1 */}
-          <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-            <div className="text-[#00A3FF] text-4xl mb-4">
-              <i className="fas fa-medal"></i>
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="text-center vintage-texture bg-white/80 p-8 rounded-lg vintage-shadow hover:bg-white/90 transition-all duration-300 distressed-border"
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-600 text-white rounded-full mb-6 vintage-shadow">
+                <i className={`${feature.icon} text-3xl`}></i>
+              </div>
+              <h4
+                className="text-2xl font-bold text-amber-900 mb-4"
+                style={{ fontFamily: "Playfair Display, serif" }}
+              >
+                {feature.title}
+              </h4>
+              <p
+                className="text-amber-700 leading-relaxed"
+                style={{ fontFamily: "Crimson Text, serif" }}
+              >
+                {feature.description}
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-3">Premium Quality</h3>
-            <p className="text-gray-600">
-              Our bicycles are crafted using the highest quality materials and
-              components, ensuring durability and performance.
-            </p>
-          </div>
-          {/* Feature 2 */}
-          <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-            <div className="text-[#00A3FF] text-4xl mb-4">
-              <i className="fas fa-tools"></i>
-            </div>
-            <h3 className="text-xl font-bold mb-3">Expert Service</h3>
-            <p className="text-gray-600">
-              Our team of certified technicians provides professional
-              maintenance and repair services for all bicycle brands.
-            </p>
-          </div>
-          {/* Feature 3 */}
-          <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-            <div className="text-[#00A3FF] text-4xl mb-4">
-              <i className="fas fa-sync-alt"></i>
-            </div>
-            <h3 className="text-xl font-bold mb-3">30-Day Returns</h3>
-            <p className="text-gray-600">
-              Not completely satisfied? Return your bicycle within 30 days for a
-              full refund or exchange, no questions asked.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

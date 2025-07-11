@@ -1,62 +1,50 @@
 // React import
 import React from "react";
 
-export const ContactSection: React.FC = () => {
+interface ContactSectionProps {
+  handleWhatsAppContact: () => void;
+}
+
+export const ContactSection: React.FC<ContactSectionProps> = ({
+  handleWhatsAppContact,
+}) => {
   return (
-    <section id="contact" className="py-20 bg-gray-900 text-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-lg text-gray-300 mb-8">
-            Interested in our premium bicycles? Contact us for detailed
-            information and personalized assistance.
-          </p>
-          <div className="flex justify-center space-x-8 mb-12">
-            <a
-              href="tel:+1234567890"
-              className="flex items-center text-gray-300 hover:text-white transition-colors"
-            >
+    <section
+      id="contact"
+      className="py-20 vintage-texture bg-gradient-to-b from-amber-800/90 to-amber-900/90"
+    >
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <h3
+          className="text-5xl font-bold text-amber-50 mb-6"
+          style={{ fontFamily: "Playfair Display, serif" }}
+        >
+          Let's Connect
+        </h3>
+        <p
+          className="text-xl text-amber-200 mb-8 leading-relaxed"
+          style={{ fontFamily: "Crimson Text, serif" }}
+        >
+          Ready to discover your perfect vintage cycling companion? Get in touch
+          and let us help you find exactly what you're looking for.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <button
+            onClick={() => handleWhatsAppContact()}
+            className="!rounded-button whitespace-nowrap cursor-pointer bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 vintage-shadow"
+            style={{ fontFamily: "Crimson Text, serif" }}
+          >
+            <i className="fab fa-whatsapp mr-3 text-xl"></i>
+            WhatsApp Chat
+          </button>
+          <div
+            className="text-amber-200"
+            style={{ fontFamily: "Crimson Text, serif" }}
+          >
+            <p className="text-lg">
               <i className="fas fa-phone mr-2"></i>
-              <span>+1 (234) 567-890</span>
-            </a>
-            <a
-              href="https://wa.me/1234567890"
-              className="flex items-center text-gray-300 hover:text-white transition-colors"
-            >
-              <i className="fab fa-whatsapp mr-2"></i>
-              <span>WhatsApp</span>
-            </a>
+              +1 (555) 123-4567
+            </p>
           </div>
-          <form className="flex flex-col gap-4 max-w-xl mx-auto">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              className="px-4 py-3 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#00A3FF] text-gray-900 border-none placeholder-gray-500"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="px-4 py-3 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#00A3FF] text-gray-900 border-none placeholder-gray-500"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows={4}
-              className="px-4 py-3 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#00A3FF] text-gray-900 border-none resize-none placeholder-gray-500"
-              required
-              maxLength={500}
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#00A3FF] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0081cc] transition-colors !rounded-button whitespace-nowrap cursor-pointer"
-            >
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
     </section>
