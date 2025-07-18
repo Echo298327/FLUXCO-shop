@@ -1,5 +1,7 @@
 // React imports
 import React from "react";
+// Hooks imports
+import { useTranslation } from 'react-i18next';
 // Types imports
 import type { Product } from "../types/products";
 
@@ -10,6 +12,8 @@ interface ProductSpecificationsProps {
 export const ProductSpecifications: React.FC<ProductSpecificationsProps> = ({
   product,
 }) => {
+  const { t } = useTranslation();
+  
   return (
     <div className="lg:w-1/2">
       <div className="bg-white/80 rounded-lg p-8 vintage-shadow h-full">
@@ -17,7 +21,7 @@ export const ProductSpecifications: React.FC<ProductSpecificationsProps> = ({
           className="text-3xl font-bold text-amber-900 mb-8 text-center"
           style={{ fontFamily: "Playfair Display, serif" }}
         >
-          Specifications
+          {t('productPage.specifications')}
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -35,13 +39,13 @@ export const ProductSpecifications: React.FC<ProductSpecificationsProps> = ({
                     className="text-sm text-amber-700 mb-1 leading-tight"
                     style={{ fontFamily: "Crimson Text, serif" }}
                   >
-                    {spec.label}
+                    {t(`productPage.details.labels.${key}`) || spec.label}
                   </div>
                   <div
                     className="font-semibold text-amber-900"
                     style={{ fontFamily: "Crimson Text, serif" }}
                   >
-                    {spec.value}
+                    {t(`productPage.details.values.${spec.value}`) || spec.value}
                   </div>
                 </div>
               </div>

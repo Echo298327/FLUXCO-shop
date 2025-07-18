@@ -4,8 +4,10 @@ import React from "react";
 import { Button } from "../components/Button";
 // Hooks import
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export const NotFound: React.FC = () => {
+    const { t } = useTranslation();
     const navigate = useNavigate();
   return (
     <div className="min-h-screen vintage-texture bg-gradient-to-b from-amber-50/95 to-yellow-50/95 flex items-center justify-center">
@@ -17,24 +19,23 @@ export const NotFound: React.FC = () => {
           className="text-6xl font-bold text-amber-900 mb-4"
           style={{ fontFamily: "Playfair Display, serif" }}
         >
-          404
+          {t('productPage.pageNotFound.errorCode')}
         </h1>
         <h2
           className="text-3xl font-bold text-amber-800 mb-6"
           style={{ fontFamily: "Playfair Display, serif" }}
         >
-          Page Not Found
+          {t('productPage.pageNotFound.title')}
         </h2>
         <p
           className="text-xl text-amber-700 mb-8"
           style={{ fontFamily: "Crimson Text, serif" }}
         >
-          Looks like you've taken a wrong turn on your cycling journey. Let's
-          get you back on track.
+          {t('productPage.pageNotFound.message')}
         </p>
         <Button
           className="!rounded-button whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 vintage-shadow"
-          text="Return Home"
+          text={t('productPage.pageNotFound.returnHome')}
           color="amber"
           onClick={() => navigate("/")}
         />

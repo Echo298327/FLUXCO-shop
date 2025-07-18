@@ -81,6 +81,87 @@
     "followUs": "關注我們",
     "copyright": "© 2024 FLUX & CO. 版權所有 | 用心打造卓越騎行體驗。"
   },
+  "productPage": {
+    "notFound": {
+      "title": "找不到產品",
+      "backButton": "返回首頁"
+    },
+    "pageNotFound": {
+      "errorCode": "404",
+      "title": "找不到頁面",
+      "message": "看起來您在騎行旅程中迷路了。讓我們帶您回到正確的路線上。",
+      "returnHome": "返回首頁"
+    },
+    "dimensions": {
+      "vehicleHeight": "車高",
+      "seatHeight": "座高",
+      "vehicleLength": "車長"
+    },
+    "contactButton": "聯繫購買",
+    "contactButtonTitle": "透過Line聯繫我們",
+    "specifications": "產品規格",
+    "details": {
+      "labels": {
+        "topSpeed": "最高時速",
+        "battery": "電池",
+        "motor": "馬達",
+        "easyCharge": "便捷充電",
+        "range": "續航里程",
+        "ridingMode": "騎行模式",
+        "letterWrap": "車把握把",
+        "UpgradeBluetoothDisplay": "藍牙顯示器",
+        "warranty": "保固",
+        "NonSlipWrap": "防滑握把",
+        "UpgradehDisplay": "顯示器",
+        "SevenSpeedGears": "變速系統",
+        "frontRearSuspension": "避震系統",
+        "cupHolder": "杯架",
+        "signals": "信號燈"
+      },
+      "values": {
+        "25km/h": "25公里/小時",
+        "35km/h": "35公里/小時",
+        "25-40km/h": "25-40公里/小時",
+        "25-45km/h": "25-45公里/小時",
+        "36V 5Ah": "36V 5Ah",
+        "48V 10Ah": "48V 10Ah",
+        "48V 8.2Ah": "48V 8.2Ah",
+        "250W": "250W",
+        "500W": "500W",
+        "750W": "750W",
+        "Easy Charge": "便捷充電",
+        "20-25km": "20-25公里",
+        "45-50km": "45-50公里",
+        "60-95km": "60-95公里",
+        "Three Riding Modes": "三種騎行模式",
+        "Letter Wrap": "車把握把",
+        "Upgrade Bluetooth Display": "升級藍牙顯示器",
+        "One Year Warranty": "一年保固",
+        "Non-Slip Wrap": "防滑握把",
+        "Upgrade Display": "升級顯示器",
+        "Seven Speed Gears": "七速變速系統",
+        "Front&Rear": "前後避震",
+        "Cup Holder": "杯架",
+        "Signal Light": "信號燈"
+      }
+    },
+    "form": {
+      "title": "留下您的聯繫方式",
+      "subtitle": "對此產品感興趣嗎？留下您的聯繫方式，我們會盡快聯繫您！",
+      "name": "姓名",
+      "email": "電子郵件",
+      "phone": "電話（選填）",
+      "message": "留言",
+      "messagePlaceholder": "告訴我們您對此產品的興趣...",
+      "submitButton": "發送訊息",
+      "submitButtonTitle": "發送您的詢問"
+    },
+    "success": {
+      "title": "謝謝您！🎉",
+      "message": "您的訊息已成功發送！我們會盡快聯繫您。",
+      "redirecting": "正在返回首頁..."
+    }
+  },
   "common": {
     "language": "語言",
     "chinese": "中文",

@@ -2,6 +2,7 @@
 import React from "react";
 // Hooks imports
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 // Components imports
 import { Button } from "./Button";
 
@@ -10,8 +11,8 @@ interface EmailFormSectionProps {
 }
 
 export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSuccess}) => {
+    const { t } = useTranslation();
     const navigate = useNavigate();
-
 
     const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -29,13 +30,13 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
               className="text-3xl font-bold text-amber-900 mb-6 text-center"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Leave Your Details
+              {t('productPage.form.title')}
             </h3>
             <p
               className="text-center text-amber-700 mb-8"
               style={{ fontFamily: "Crimson Text, serif" }}
             >
-              Interested in this product? Leave your details and we'll contact you soon!
+              {t('productPage.form.subtitle')}
             </p>
             
             <form
@@ -47,7 +48,7 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
                   className="block text-amber-800 mb-2 font-semibold"
                   style={{ fontFamily: "Crimson Text, serif" }}
                 >
-                  Name
+                  {t('productPage.form.name')}
                 </label>
                 <input
                   type="text"
@@ -63,7 +64,7 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
                   className="block text-amber-800 mb-2 font-semibold"
                   style={{ fontFamily: "Crimson Text, serif" }}
                 >
-                  Email
+                  {t('productPage.form.email')}
                 </label>
                 <input
                   type="email"
@@ -79,7 +80,7 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
                   className="block text-amber-800 mb-2 font-semibold"
                   style={{ fontFamily: "Crimson Text, serif" }}
                 >
-                  Phone (Optional)
+                  {t('productPage.form.phone')}
                 </label>
                 <input
                   type="tel"
@@ -94,13 +95,13 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
                   className="block text-amber-800 mb-2 font-semibold"
                   style={{ fontFamily: "Crimson Text, serif" }}
                 >
-                  Message
+                  {t('productPage.form.message')}
                 </label>
                 <textarea
                   name="message"
                   rows={4}
                   required
-                  placeholder="Tell us about your interest in this product..."
+                  placeholder={t('productPage.form.messagePlaceholder')}
                   className="w-full px-4 py-3 rounded-lg bg-white/80 border border-amber-200 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-200 transition-all resize-vertical"
                   style={{ fontFamily: "Crimson Text, serif" }}
                 ></textarea>
@@ -108,11 +109,11 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
               
               <div className="text-center">
                 <Button
-                  text="Send Message"
+                  text={t('productPage.form.submitButton')}
                   icon="fas fa-paper-plane"
                   onClick={() => {}}
                   color="amber"
-                  title="Send your inquiry"
+                  title={t('productPage.form.submitButtonTitle')}
                   className="w-full sm:w-auto"
                 />
               </div>

@@ -1,6 +1,10 @@
 // React imports
+import React from "react";
+// Hooks imports
+import { useTranslation } from 'react-i18next';
 
 export const SuccessModal: React.FC = () => {
+    const { t } = useTranslation();
     return (
       <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
         <div className="bg-white rounded-2xl p-8 max-w-md mx-4 text-center transform">
@@ -12,19 +16,19 @@ export const SuccessModal: React.FC = () => {
               className="text-2xl font-bold text-amber-900 mb-2"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Thank You! 🎉
+              {t('productPage.success.title')}
             </h3>
             <p
               className="text-amber-700"
               style={{ fontFamily: "Crimson Text, serif" }}
             >
-              Your message has been sent successfully! We'll contact you soon.
+              {t('productPage.success.message')}
             </p>
           </div>
           <div className="flex items-center justify-center space-x-2 text-amber-600">
             <i className="fas fa-home"></i>
             <span style={{ fontFamily: "Crimson Text, serif" }}>
-              Redirecting to home...
+              {t('productPage.success.redirecting')}
             </span>
           </div>
           <div className="mt-4">

@@ -81,6 +81,87 @@
     "followUs": "Follow Us",
     "copyright": "© 2024 FLUX & CO. All rights reserved. | Crafted with passion for cycling excellence."
   },
+  "productPage": {
+    "notFound": {
+      "title": "Product Not Found",
+      "backButton": "Back to Home"
+    },
+    "pageNotFound": {
+      "errorCode": "404",
+      "title": "Page Not Found",
+      "message": "Looks like you've taken a wrong turn on your cycling journey. Let's get you back on track.",
+      "returnHome": "Return Home"
+    },
+    "dimensions": {
+      "vehicleHeight": "Vehicle Height",
+      "seatHeight": "Seat Height", 
+      "vehicleLength": "Vehicle Length"
+    },
+    "contactButton": "Contact for Purchase",
+    "contactButtonTitle": "Contact us via Line",
+    "specifications": "Specifications",
+    "details": {
+      "labels": {
+        "topSpeed": "Top Speed",
+        "battery": "Battery",
+        "motor": "Motor",
+        "easyCharge": "Easy Charge",
+        "range": "Range",
+        "ridingMode": "Riding Mode",
+        "letterWrap": "Letter Wrap",
+        "UpgradeBluetoothDisplay": "Bluetooth Display",
+        "warranty": "Warranty",
+        "NonSlipWrap": "Non-Slip Wrap",
+        "UpgradehDisplay": "Display",
+        "SevenSpeedGears": "Speed Gears",
+        "frontRearSuspension": "Suspension",
+        "cupHolder": "Cup Holder",
+        "signals": "Signal Light"
+      },
+      "values": {
+        "25km/h": "25km/h",
+        "35km/h": "35km/h",
+        "25-40km/h": "25-40km/h",
+        "25-45km/h": "25-45km/h",
+        "36V 5Ah": "36V 5Ah",
+        "48V 10Ah": "48V 10Ah",
+        "48V 8.2Ah": "48V 8.2Ah",
+        "250W": "250W",
+        "500W": "500W",
+        "750W": "750W",
+        "Easy Charge": "Easy Charge",
+        "20-25km": "20-25km",
+        "45-50km": "45-50km",
+        "60-95km": "60-95km",
+        "Three Riding Modes": "Three Riding Modes",
+        "Letter Wrap": "Letter Wrap",
+        "Upgrade Bluetooth Display": "Upgrade Bluetooth Display",
+        "One Year Warranty": "One Year Warranty",
+        "Non-Slip Wrap": "Non-Slip Wrap",
+        "Upgrade Display": "Upgrade Display",
+        "Seven Speed Gears": "Seven Speed Gears",
+        "Front&Rear": "Front & Rear",
+        "Cup Holder": "Cup Holder",
+        "Signal Light": "Signal Light"
+      }
+    },
+    "form": {
+      "title": "Leave Your Details",
+      "subtitle": "Interested in this product? Leave your details and we'll contact you soon!",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (Optional)",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your interest in this product...",
+      "submitButton": "Send Message",
+      "submitButtonTitle": "Send your inquiry"
+    },
+    "success": {
+      "title": "Thank You! 🎉",
+      "message": "Your message has been sent successfully! We'll contact you soon.",
+      "redirecting": "Redirecting to home..."
+    }
+  },
   "common": {
     "language": "Language",
     "chinese": "中文",

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 // Hooks imports
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 // Components imports
 import { ProductHeader } from "../components/ProductHeader";
 import { ProductImage } from "../components/ProductImage";
@@ -17,6 +18,7 @@ interface ProductPageProps {
 }
 
 const ProductPage: React.FC<ProductPageProps> = ({ handleLineContact }) => {
+  const { t } = useTranslation();
   const { id } = useParams();
   const [showSuccess, setShowSuccess] = useState(false);
 
