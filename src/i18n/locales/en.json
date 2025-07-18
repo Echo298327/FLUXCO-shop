@@ -1,7 +1,7 @@
 {
   "header": {
     "companyName": "FLUX & CO",
-    "tagline": "Vintage Cycling Heritage",
+    "tagline": "Classic Cycling Heritage",
     "nav": {
       "home": "Home",
       "products": "Products",
@@ -22,7 +22,7 @@
     "items": {
       "1": {
         "name": "Classic E-City",
-        "description": "Vintage-inspired electric city bike with elegant copper accents"
+        "description": "Classic-inspired electric city bike with elegant copper accents"
       },
       "2": {
         "name": "Retro E-Step",
@@ -38,7 +38,7 @@
       },
       "5": {
         "name": "E-Explorer",
-        "description": "Retro adventure e-bike with vintage leather accessories"
+        "description": "Retro adventure e-bike with premium leather accessories"
       },
       "6": {
         "name": "E-Folding",

@@ -1,88 +1,88 @@
 {
   "header": {
     "companyName": "FLUX & CO",
-    "tagline": "复古自行车传承",
+    "tagline": "經典自行車傳承",
     "nav": {
-      "home": "首页",
-      "products": "产品",
-      "services": "服务",
-      "contact": "联系我们"
+      "home": "首頁",
+      "products": "產品",
+      "services": "服務",
+      "contact": "聯繫我們"
     }
   },
   "hero": {
-    "title": "永恒骑行",
-    "titleAccent": "传承",
-    "subtitle": "发现高品质的自行车和配件，精心挑选以满足您的骑行需求。每款产品都结合了精湛工艺和现代功能。",
-    "cta": "联系我们"
+    "title": "永恆騎行",
+    "titleAccent": "傳承",
+    "subtitle": "發現高品質的自行車和配件，精心挑選以滿足您的騎行需求。每款產品都結合了精湛工藝和現代功能。",
+    "cta": "聯繫我們"
   },
   "products": {
-    "title": "我们的产品",
-    "subtitle": "我们收藏中的每一款产品都经过精心挑选，为您的骑行冒险提供最优质的自行车和配件。",
-    "inquireNow": "立即咨询",
+    "title": "我們的產品",
+    "subtitle": "我們收藏中的每一款產品都經過精心挑選，為您的騎行冒險提供最優質的自行車和配件。",
+    "inquireNow": "立即諮詢",
     "items": {
       "1": {
-        "name": "经典电动城市车",
-        "description": "复古风格电动城市自行车，配有优雅的铜色装饰"
+        "name": "經典電動城市車",
+        "description": "經典風格電動城市自行車，配有優雅的銅色裝飾"
       },
       "2": {
-        "name": "复古电动跨步车",
-        "description": "传统跨步式车架，配备现代电动助力系统"
+        "name": "經典電動跨步車",
+        "description": "傳統跨步式車架，配備現代電動助力系統"
       },
       "3": {
-        "name": "电动通勤车",
-        "description": "经典通勤设计，配备隐藏式电动技术"
+        "name": "電動通勤車",
+        "description": "經典通勤設計，配備隱藏式電動技術"
       },
       "4": {
-        "name": "电动货运车",
-        "description": "配备传统竹编载货架的电动货运自行车"
+        "name": "電動貨運車",
+        "description": "配備傳統竹編載貨架的電動貨運自行車"
       },
       "5": {
-        "name": "电动探险车",
-        "description": "复古冒险电动自行车，配有vintage皮革配件"
+        "name": "電動探險車",
+        "description": "經典冒險電動自行車，配有高級皮革配件"
       },
       "6": {
-        "name": "电动折叠车",
-        "description": "紧凑型电动折叠车，融合经典设计元素"
+        "name": "電動摺疊車",
+        "description": "緊湊型電動摺疊車，融合經典設計元素"
       }
     }
   },
   "features": {
-    "title": "为什么选择我们",
-    "subtitle": "我们对自行车的热情体现在我们提供的每一项服务中。我们为您的所有骑行需求提供专业的专业知识和优质产品。",
+    "title": "為什麼選擇我們",
+    "subtitle": "我們對自行車的熱情體現在我們提供的每一項服務中。我們為您的所有騎行需求提供專業的專業知識和優質產品。",
     "items": {
       "1": {
-        "title": "专业服务",
-        "description": "由认证技师为各种类型自行车提供专业维护和维修服务"
+        "title": "專業服務",
+        "description": "由認證技師為各種類型自行車提供專業維護和維修服務"
       },
       "2": {
-        "title": "优质产品",
-        "description": "来自世界各地可信品牌的高品质自行车和配件"
+        "title": "優質產品",
+        "description": "來自世界各地可信品牌的高品質自行車和配件"
       },
       "3": {
-        "title": "个人咨询",
-        "description": "一对一咨询，为您的需求找到完美的骑行解决方案"
+        "title": "個人諮詢",
+        "description": "一對一諮詢，為您的需求找到完美的騎行解決方案"
       }
     }
   },
   "contact": {
-    "title": "联系我们",
-    "subtitle": "准备发现您完美的骑行伙伴了吗？请联系我们，让我们帮您找到您要寻找的产品。",
+    "title": "聯繫我們",
+    "subtitle": "準備發現您完美的騎行夥伴了嗎？請聯繫我們，讓我們幫您找到您要尋找的產品。",
     "lineButton": "Line 聊天",
     "phone": "+1 (555) 123-4567"
   },
   "footer": {
     "companyName": "FLUX & CO",
-    "description": "您值得信赖的高品质自行车和专业骑行服务合作伙伴。",
+    "description": "您值得信賴的高品質自行車和專業騎行服務合作夥伴。",
     "address": "中正區金門街7之4號",
-    "businessHours": "营业时间",
+    "businessHours": "營業時間",
     "hours": {
-      "schedule": "周一至周六：12:00-20:00"
+      "schedule": "週一至週六：12:00-20:00"
     },
-    "followUs": "关注我们",
-    "copyright": "© 2024 FLUX & CO. 版权所有 | 用心打造卓越骑行体验。"
+    "followUs": "關注我們",
+    "copyright": "© 2024 FLUX & CO. 版權所有 | 用心打造卓越騎行體驗。"
   },
   "common": {
-    "language": "语言",
+    "language": "語言",
     "chinese": "中文",
     "english": "English"
   }
