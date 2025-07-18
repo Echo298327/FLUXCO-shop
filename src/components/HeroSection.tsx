@@ -5,11 +5,11 @@ import bg from "../assets/bg.jpg";
 import { Button } from "./Button";
 
 interface HeroSectionProps {
-    handleWhatsAppContact: () => void;
+    handleLineContact: () => void;
   }
   
   export const HeroSection: React.FC<HeroSectionProps> = ({
-    handleWhatsAppContact,
+    handleLineContact,
   }) => {
     const { t } = useTranslation();
     return (
@@ -46,7 +46,7 @@ interface HeroSectionProps {
             <Button
               text={t('hero.cta')}
               icon="fab fa-line"
-              onClick={() => handleWhatsAppContact()}
+              onClick={() => handleLineContact()}
               color="amber"
               title={t('hero.cta')}
             />

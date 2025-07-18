@@ -4,11 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { Button } from "./Button";
 
 interface ContactSectionProps {
-  handleWhatsAppContact: () => void;
+  handleLineContact: () => void;
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({
-  handleWhatsAppContact,
+  handleLineContact,
 }) => {
   const { t } = useTranslation();
   return (
@@ -33,7 +33,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           <Button
             text={t('contact.lineButton')}
             icon="fab fa-line"
-            onClick={() => handleWhatsAppContact()}
+            onClick={() => handleLineContact()}
             color="green"
             title={t('contact.lineButton')}
           />

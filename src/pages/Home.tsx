@@ -6,15 +6,14 @@ import { HeroSection } from "../components/HeroSection";
 import { ProductsSection } from "../components/productsSection";
 import { FeaturesSection } from "../components/FeaturesSection";
 import { ContactSection } from "../components/ContactSection";
-import { Footer } from "../components/Footer";
 // Utils import
 import { products, features } from "../utils/homeData";
 
 const Home: React.FC = () => {
-  const handleWhatsAppContact = (productName?: string) => {
+  const handleLineContact = (productName?: string) => {
     const message = productName
       ? `Hello! I'm interested in the ${productName}. Could you provide more details?`
-      : "Hello! I'd like to know more about your vintage cycling products.";
+      : "Hello! I'd like to know more about the products.";
     const lineUrl = `https://line.me/R/msg/text/?${encodeURIComponent(
       message
     )}`;
@@ -65,18 +64,15 @@ const Home: React.FC = () => {
       {/* Header */}
       <Header />
       {/* Hero Section */}
-      <HeroSection handleWhatsAppContact={handleWhatsAppContact} />
+      <HeroSection handleLineContact={handleLineContact} />
       {/* Product Showcase */}
       <ProductsSection
         products={products}
-        handleWhatsAppContact={handleWhatsAppContact}
       />
       {/* Features Section */}
       <FeaturesSection features={features} />
       {/* Contact Section */}
-      <ContactSection handleWhatsAppContact={handleWhatsAppContact} />
-      {/* Footer */}
-      <Footer />
+      <ContactSection handleLineContact={handleLineContact} />
     </div>
   );
 };

@@ -1,5 +1,10 @@
+// React import
 import React from 'react'
+// Router import
 import { Outlet } from 'react-router-dom'
+// Components import
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 export const Layout: React.FC = () => {
     return (
@@ -11,7 +16,9 @@ export const Layout: React.FC = () => {
             animation: "gradientShift 15s ease infinite",
         }}
       >
+            <Header />
             <Outlet />
+            <Footer />
         </div>
     );
 }

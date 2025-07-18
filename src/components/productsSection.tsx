@@ -1,21 +1,28 @@
 // React import
 import React, { useState } from "react";
+// Components import
+import { ProductCard } from "./ProductCard";
+// Hooks import
 import { useTranslation } from 'react-i18next';
-import type { Product } from "../types";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import { ProductCard } from "./ProductCard";
+// Types import
+import type { Product } from "../types";
 
 interface ProductsSectionProps {
     products: Product[];
-    handleWhatsAppContact: (productName: string) => void;
 }
 
-export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, handleWhatsAppContact }) => {
+export const ProductsSection: React.FC<ProductsSectionProps> = ({ products }) => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     // State for selected product
     const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
 
+    const handleProductClick = (productName: string) => {
+      navigate(`/product/${productName}`);
+    }
     return (
         <section
         id="products"
@@ -41,7 +48,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
               <ProductCard
                 key={product.id}
                 product={product}
-                handleWhatsAppContact={handleWhatsAppContact}
+                handleProductClick={handleProductClick}
                 selectedProduct={selectedProduct}
                 setSelectedProduct={setSelectedProduct}
               />
@@ -69,7 +76,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
                 <SwiperSlide key={product.id}>
                   <ProductCard
                     product={product}
-                    handleWhatsAppContact={handleWhatsAppContact}
+                    handleProductClick={handleProductClick}
                     selectedProduct={selectedProduct}
                     setSelectedProduct={setSelectedProduct}
                   />
