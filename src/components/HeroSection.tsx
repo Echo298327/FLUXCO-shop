@@ -2,6 +2,7 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import bg from "../assets/bg.jpg";
+import { Button } from "./Button";
 
 interface HeroSectionProps {
     handleWhatsAppContact: () => void;
@@ -42,14 +43,13 @@ interface HeroSectionProps {
             >
               {t('hero.subtitle')}
             </p>
-            <button
+            <Button
+              text={t('hero.cta')}
+              icon="fab fa-line"
               onClick={() => handleWhatsAppContact()}
-              className="!rounded-button whitespace-nowrap cursor-pointer bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 vintage-shadow"
-              style={{ fontFamily: "Crimson Text, serif" }}
-            >
-                              <i className="fab fa-line mr-3"></i>
-              {t('hero.cta')}
-            </button>
+              color="amber"
+              title={t('hero.cta')}
+            />
           </div>
         </div>
       </section>

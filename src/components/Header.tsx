@@ -2,6 +2,7 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import logo from "../assets/logo.png";
+import { Button } from "./Button";
 
 interface HeaderProps {}
 
@@ -69,17 +70,15 @@ export const Header: React.FC<HeaderProps> = ({}) => {
             </nav>
             
             {/* Language Switcher */}
-            <button
+            <Button
+              text={i18n.language === 'zh' ? 'EN' : '中文'}
+              icon="fas fa-globe"
               onClick={toggleLanguage}
-              className="flex items-center space-x-2 px-3 py-2 bg-amber-100 hover:bg-amber-200 rounded-md transition-colors text-amber-800 cursor-pointer"
-              style={{ fontFamily: "Crimson Text, serif" }}
+              color="light-amber"
+              size="sm"
               title={t('common.language')}
-            >
-              <i className="fas fa-globe text-sm"></i>
-              <span className="text-sm font-semibold">
-                {i18n.language === 'zh' ? 'EN' : '中文'}
-              </span>
-            </button>
+              className="flex items-center space-x-2"
+            />
           </div>
         </div>
       </div>

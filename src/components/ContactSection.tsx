@@ -1,6 +1,7 @@
 // React import
 import React from "react";
 import { useTranslation } from 'react-i18next';
+import { Button } from "./Button";
 
 interface ContactSectionProps {
   handleWhatsAppContact: () => void;
@@ -29,14 +30,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           {t('contact.subtitle')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button
+          <Button
+            text={t('contact.lineButton')}
+            icon="fab fa-line"
             onClick={() => handleWhatsAppContact()}
-            className="!rounded-button whitespace-nowrap cursor-pointer bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 vintage-shadow"
-            style={{ fontFamily: "Crimson Text, serif" }}
-          >
-                            <i className="fab fa-line mr-3 text-xl"></i>
-                          {t('contact.lineButton')}
-          </button>
+            color="green"
+            title={t('contact.lineButton')}
+          />
           <div
             className="text-amber-200"
             style={{ fontFamily: "Crimson Text, serif" }}
