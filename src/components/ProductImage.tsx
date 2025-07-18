@@ -23,7 +23,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
       <div className="bg-white/80 rounded-lg p-8 vintage-shadow">
         <div className="relative p-8">
           <img
-            src={product.image}
+            src={product.dimensionsImage || product.image}
             alt={product.name}
             className="w-full rounded-lg sepia-filter"
           />

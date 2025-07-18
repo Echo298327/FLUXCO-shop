@@ -2,6 +2,11 @@ import b1 from "../assets/bicycles/b1.jpg";
 import b2 from "../assets/bicycles/b2.jpg";
 import b3 from "../assets/bicycles/b3.jpg";
 import b4 from "../assets/bicycles/b4.jpg";
+import b1In from "../assets/bicycles/b1In.png";
+import b2In from "../assets/bicycles/b2In.png";
+import b3In from "../assets/bicycles/b3In.png";
+import b4In from "../assets/bicycles/b4In.png";
+
 import type { Product, Feature } from "../types";
 
 export const products: Product[] = [
@@ -10,6 +15,7 @@ export const products: Product[] = [
     name: "Urban Cruiser 250",
     description: "Entry-level electric city bike with 250W motor perfect for daily commuting",
     image: b1,
+    dimensionsImage: b1In,
     price: 38000,
     vehicleSeatHeight: 66,
     vehicleHeight: 85,
@@ -67,6 +73,7 @@ export const products: Product[] = [
     name: "StepThrough Pro 500",
     description: "Mid-range electric step-through with 500W motor and extended 50km range",
     image: b2,
+    dimensionsImage: b2In,
     price: 60000,
     vehicleSeatHeight: 78,
     vehicleHeight: 108,
@@ -124,6 +131,7 @@ export const products: Product[] = [
     name: "Commuter Elite 750",
     description: "High-performance 750W electric bike with 7-speed Shimano and dual suspension",
     image: b3,
+    dimensionsImage: b3In,
     price: 56000,
     vehicleSeatHeight: 89.5,
     vehicleHeight: 120,
@@ -191,6 +199,7 @@ export const products: Product[] = [
     name: "Cargo Master 750X",
     description: "Heavy-duty 750W cargo e-bike with LED signals and premium accessories",
     image: b4,
+    dimensionsImage: b4In,
     price: 62000,
     vehicleSeatHeight: 85.1,
     vehicleHeight: 120,

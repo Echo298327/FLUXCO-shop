@@ -3,6 +3,7 @@ export interface Product {
     name: string;
     description: string;
     image: string;
+    dimensionsImage?: string;
     price: number;
     vehicleSeatHeight: number;
     vehicleHeight: number;

@@ -63,6 +63,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products }) =>
               slidesPerView={1.2}
               centeredSlides={true}
               loop={false}
+              initialSlide={1}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
