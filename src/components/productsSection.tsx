@@ -62,7 +62,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products }) =>
               spaceBetween={20}
               slidesPerView={1.2}
               centeredSlides={true}
-              loop={true}
+              loop={false}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
@@ -70,6 +70,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products }) =>
               pagination={{
                 clickable: true,
               }}
+              speed={300}
               className="py-8"
             >
               {products.map((product) => (
