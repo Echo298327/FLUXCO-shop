@@ -1,6 +1,7 @@
 // React import
 import React from "react";
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import logo from "../assets/logo.png";
 import { Button } from "./Button";
 
@@ -8,10 +9,17 @@ interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = ({}) => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  
   const toggleLanguage = () => {
     const newLang = i18n.language === 'zh' ? 'en' : 'zh';
     i18n.changeLanguage(newLang);
   };
+
+  const handleLogoClick = () => {
+    navigate('/');
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 vintage-texture bg-gradient-to-r from-amber-50 to-yellow-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 py-4">
@@ -20,7 +28,8 @@ export const Header: React.FC<HeaderProps> = ({}) => {
             <img 
               src={logo} 
               alt="FLUX & CO Logo" 
-              className="h-12 w-auto"
+              className="h-12 w-auto cursor-pointer"
+              onClick={handleLogoClick}
             />
             <div>
               <h1 
