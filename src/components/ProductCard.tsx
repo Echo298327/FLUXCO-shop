@@ -48,8 +48,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                     {t(`products.items.${product.id}.description`)}
                 </p>
                 <ProductButton
-                    text={t('products.inquireNow')}
-                    icon="fab fa-line"
+                    text={t('products.moreDetails')}
+                    icon="fas fa-info-circle"
                     onClick={(e) => {
                         e.stopPropagation();
                         handleProductClick(t(`products.items.${product.id}.name`));

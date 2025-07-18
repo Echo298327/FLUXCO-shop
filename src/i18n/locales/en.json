@@ -18,7 +18,7 @@
   "products": {
     "title": "Our Products",
     "subtitle": "Each product in our collection has been carefully selected to offer you the best quality bicycles and accessories for your cycling adventures.",
-    "inquireNow": "Inquire Now",
+    "moreDetails": "More Details",
     "items": {
       "1": {
         "name": "Classic E-City",
