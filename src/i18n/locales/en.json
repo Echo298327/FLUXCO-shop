@@ -21,20 +21,20 @@
     "moreDetails": "More Details",
     "items": {
       "1": {
-        "name": "Classic E-City",
-        "description": "Classic-inspired electric city bike with elegant copper accents"
+        "name": "Urban Cruiser 250",
+        "description": "Entry-level electric city bike with 250W motor perfect for daily commuting"
       },
       "2": {
-        "name": "Retro E-Step",
-        "description": "Traditional step-through frame with modern electric assist"
+        "name": "StepThrough Pro 500",
+        "description": "Mid-range electric step-through with 500W motor and extended 50km range"
       },
       "3": {
-        "name": "E-Commuter",
-        "description": "Classic commuter design with hidden electric technology"
+        "name": "Commuter Elite 750",
+        "description": "High-performance 750W electric bike with 7-speed Shimano and dual suspension"
       },
       "4": {
-        "name": "E-Cargo",
-        "description": "Electric cargo bike with traditional bamboo carrier"
+        "name": "Cargo Master 750X",
+        "description": "Heavy-duty 750W cargo e-bike with LED signals and premium accessories"
       },
       "5": {
         "name": "E-Explorer",
@@ -102,21 +102,19 @@
     "specifications": "Specifications",
     "details": {
       "labels": {
-        "topSpeed": "Top Speed",
-        "battery": "Battery",
-        "motor": "Motor",
-        "easyCharge": "Easy Charge",
-        "range": "Range",
-        "ridingMode": "Riding Mode",
-        "letterWrap": "Letter Wrap",
-        "UpgradeBluetoothDisplay": "Bluetooth Display",
+        "maxSpeed": "Max Speed",
+        "batteryCapacity": "Battery Capacity",
+        "motorPower": "Motor Power",
+        "chargingSystem": "Charging System",
+        "maxRange": "Max Range",
+        "pedalAssist": "Pedal Assist",
+        "handlebarGrips": "Handlebar Grips",
+        "displayUnit": "Display Unit",
         "warranty": "Warranty",
-        "NonSlipWrap": "Non-Slip Wrap",
-        "UpgradehDisplay": "Display",
-        "SevenSpeedGears": "Speed Gears",
-        "frontRearSuspension": "Suspension",
-        "cupHolder": "Cup Holder",
-        "signals": "Signal Light"
+        "driveSystem": "Drive System",
+        "suspensionSystem": "Suspension",
+        "cargoAccessories": "Cargo Accessories",
+        "lightingSystem": "Lighting System"
       },
       "values": {
         "25km/h": "25km/h",
@@ -129,20 +127,20 @@
         "250W": "250W",
         "500W": "500W",
         "750W": "750W",
-        "Easy Charge": "Easy Charge",
+        "Quick Charge": "Quick Charge",
         "20-25km": "20-25km",
         "45-50km": "45-50km",
         "60-95km": "60-95km",
-        "Three Riding Modes": "Three Riding Modes",
-        "Letter Wrap": "Letter Wrap",
-        "Upgrade Bluetooth Display": "Upgrade Bluetooth Display",
+        "3-Level System": "3-Level System",
+        "Ergonomic Leather": "Ergonomic Leather",
+        "Bluetooth LCD Display": "Bluetooth LCD Display",
         "One Year Warranty": "One Year Warranty",
-        "Non-Slip Wrap": "Non-Slip Wrap",
-        "Upgrade Display": "Upgrade Display",
-        "Seven Speed Gears": "Seven Speed Gears",
-        "Front&Rear": "Front & Rear",
-        "Cup Holder": "Cup Holder",
-        "Signal Light": "Signal Light"
+        "Non-Slip Rubber": "Non-Slip Rubber",
+        "LCD Display": "LCD Display",
+        "7-Speed Shimano": "7-Speed Shimano",
+        "Front & Rear": "Front & Rear",
+        "Cup Holder & Basket": "Cup Holder & Basket",
+        "LED Signal Lights": "LED Signal Lights"
       }
     },
     "form": {

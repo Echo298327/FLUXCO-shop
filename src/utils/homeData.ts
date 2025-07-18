@@ -7,8 +7,8 @@ import type { Product, Feature } from "../types";
 export const products: Product[] = [
   {
     id: 1,
-    name: "Classic E-City",
-    description: "Vintage-inspired electric city bike with elegant copper accents",
+    name: "Urban Cruiser 250",
+    description: "Entry-level electric city bike with 250W motor perfect for daily commuting",
     image: b1,
     price: 38000,
     vehicleSeatHeight: 66,
@@ -64,8 +64,8 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Retro E-Step",
-    description: "Traditional step-through frame with modern electric assist",
+    name: "StepThrough Pro 500",
+    description: "Mid-range electric step-through with 500W motor and extended 50km range",
     image: b2,
     price: 60000,
     vehicleSeatHeight: 78,
@@ -121,8 +121,8 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "E-Commuter",
-    description: "Classic commuter design with hidden electric technology",
+    name: "Commuter Elite 750",
+    description: "High-performance 750W electric bike with 7-speed Shimano and dual suspension",
     image: b3,
     price: 56000,
     vehicleSeatHeight: 89.5,
@@ -188,8 +188,8 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: "E-Cargo",
-    description: "Electric cargo bike with traditional bamboo carrier",
+    name: "Cargo Master 750X",
+    description: "Heavy-duty 750W cargo e-bike with LED signals and premium accessories",
     image: b4,
     price: 62000,
     vehicleSeatHeight: 85.1,
