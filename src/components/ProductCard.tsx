@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import type { Product } from "../types";
+import { ProductButton } from "./ProductButton";
 
 interface ProductCardProps {
     product: Product;
@@ -46,17 +47,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 >
                     {t(`products.items.${product.id}.description`)}
                 </p>
-                <button
+                <ProductButton
+                    text={t('products.inquireNow')}
+                    icon="fab fa-line"
                     onClick={(e) => {
                         e.stopPropagation();
                         handleWhatsAppContact(t(`products.items.${product.id}.name`));
                     }}
-                    className="!rounded-button whitespace-nowrap cursor-pointer w-full bg-amber-600 hover:bg-amber-700 text-white py-3 font-semibold transition-colors duration-300 mt-auto"
-                    style={{ fontFamily: "Crimson Text, serif" }}
-                >
-                    <i className="fab fa-line mr-2"></i>
-                    {t('products.inquireNow')}
-                </button>
+                />
             </div>
         </div>
     );
