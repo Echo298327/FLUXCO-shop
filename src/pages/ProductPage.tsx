@@ -9,14 +9,14 @@ import { ProductSpecifications } from "../components/ProductSpecifications";
 import { EmailFormSection } from "../components/EmailFormSection";
 import { SuccessModal } from "../components/SuccessModal";
 import { NotFound } from "../pages/404";
-// Data imports
+// Utils imports
 import { products } from "../utils/homeData";
+import { handleLineContact } from "../utils/globalFuncs";
 
 interface ProductPageProps {
-  handleLineContact?: (productName: string) => void;
 }
 
-const ProductPage: React.FC<ProductPageProps> = ({ handleLineContact }) => {
+const ProductPage: React.FC<ProductPageProps> = () => {
   const { id } = useParams();
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -39,7 +39,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ handleLineContact }) => {
         {/* Main Product Section */}
         <div className="flex flex-col lg:flex-row gap-12 mb-16">
           {/* Product Image with Dimensions */}
-          <ProductImage product={product} handleLineContact={handleLineContact || (() => {})} />
+          <ProductImage product={product} handleLineContact={handleLineContact} />
           {/* Product Specifications */}
           <ProductSpecifications product={product} />
         </div>
