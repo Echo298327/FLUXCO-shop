@@ -68,7 +68,11 @@
     "title": "Let's Connect",
     "subtitle": "Ready to discover your perfect cycling companion? Get in touch and let us help you find exactly what you're looking for.",
     "lineButton": "Line Chat",
-    "phone": "0983-362-103"
+    "phone": "0983-362-103",
+    "lineMessages": {
+      "withProduct": "Hello! I'm interested in the {{productName}}. Could you provide more details?",
+      "general": "Hello! I'd like to know more about the products."
+    }
   },
   "footer": {
     "companyName": "FLUX & CO",

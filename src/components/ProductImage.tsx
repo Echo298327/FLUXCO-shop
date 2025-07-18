@@ -9,12 +9,10 @@ import { Button } from "./Button";
 
 interface ProductImageProps {
   product: Product;
-  handleLineContact: (productName: string) => void;
 }
 
 export const ProductImage: React.FC<ProductImageProps> = ({
   product,
-  handleLineContact,
 }) => {
   const { t } = useTranslation();
   
@@ -59,7 +57,11 @@ export const ProductImage: React.FC<ProductImageProps> = ({
           <Button
             text={t('productPage.contactButton')}
             icon="fab fa-line"
-            onClick={() => handleLineContact(product.name)}
+            onClick={() => {
+              const message = t('contact.lineMessages.withProduct', { productName: product.name });
+              const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
+              window.open(lineUrl, "_blank");
+            }}
             color="green"
             title={t('productPage.contactButtonTitle')}
           />

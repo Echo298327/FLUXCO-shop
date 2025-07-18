@@ -4,12 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { Button } from "./Button";
 
 interface ContactSectionProps {
-  handleLineContact: () => void;
 }
 
-export const ContactSection: React.FC<ContactSectionProps> = ({
-  handleLineContact,
-}) => {
+export const ContactSection: React.FC<ContactSectionProps> = ({}) => {
   const { t } = useTranslation();
   return (
     <section
@@ -33,7 +30,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           <Button
             text={t('contact.lineButton')}
             icon="fab fa-line"
-            onClick={() => handleLineContact()}
+            onClick={() => {
+              const message = t('contact.lineMessages.general');
+              const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
+              window.open(lineUrl, "_blank");
+            }}
             color="green"
             title={t('contact.lineButton')}
           />

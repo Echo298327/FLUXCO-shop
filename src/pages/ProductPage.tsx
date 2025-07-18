@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 // Hooks imports
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 // Components imports
 import { ProductHeader } from "../components/ProductHeader";
 import { ProductImage } from "../components/ProductImage";
@@ -12,13 +13,13 @@ import { ErrorModal } from "../components/ErrorModal";
 import { NotFound } from "../pages/404";
 // Utils imports
 import { products } from "../utils/homeData";
-import { handleLineContact } from "../utils/globalFuncs";
 
 interface ProductPageProps {
 }
 
 const ProductPage: React.FC<ProductPageProps> = () => {
   const { id } = useParams();
+  const { t } = useTranslation();
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
@@ -41,7 +42,7 @@ const ProductPage: React.FC<ProductPageProps> = () => {
         {/* Main Product Section */}
         <div className="flex flex-col lg:flex-row gap-12 mb-16">
           {/* Product Image with Dimensions */}
-          <ProductImage product={product} handleLineContact={handleLineContact} />
+          <ProductImage product={product} />
           {/* Product Specifications */}
           <ProductSpecifications product={product} />
         </div>

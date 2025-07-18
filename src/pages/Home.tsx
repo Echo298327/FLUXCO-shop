@@ -8,7 +8,6 @@ import { FeaturesSection } from "../components/FeaturesSection";
 import { ContactSection } from "../components/ContactSection";
 // Utils import
 import { products, features } from "../utils/homeData";
-import { handleLineContact } from "../utils/globalFuncs";
 
 const Home: React.FC = () => {
     // Scroll to top when component mounts
@@ -20,7 +19,7 @@ const Home: React.FC = () => {
       {/* Header */}
       <Header />
       {/* Hero Section */}
-      <HeroSection handleLineContact={handleLineContact} />
+      <HeroSection />
       {/* Product Showcase */}
       <ProductsSection
         products={products}
@@ -29,7 +28,7 @@ const Home: React.FC = () => {
       <FeaturesSection features={features} />
       
       {/* Contact Section */}
-      <ContactSection handleLineContact={handleLineContact} />
+      <ContactSection />
     </div>
   );
 };

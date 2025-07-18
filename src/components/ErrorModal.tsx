@@ -2,8 +2,6 @@
 import React from "react";
 // Hooks imports
 import { useTranslation } from 'react-i18next';
-// Utils imports
-import { handleLineContact } from "../utils/globalFuncs";
 
 interface ErrorModalProps {
     onClose: () => void;
@@ -46,7 +44,11 @@ export const ErrorModal: React.FC<ErrorModalProps> = ({ onClose, onRetry }) => {
                     </button>
                     
                     <button
-                        onClick={() => handleLineContact()}
+                        onClick={() => {
+                            const message = t('contact.lineMessages.general');
+                            const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
+                            window.open(lineUrl, "_blank");
+                        }}
                         className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
                         style={{ fontFamily: "Crimson Text, serif" }}
                     >

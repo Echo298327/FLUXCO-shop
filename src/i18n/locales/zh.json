@@ -68,7 +68,11 @@
     "title": "聯繫我們",
     "subtitle": "準備發現您完美的騎行夥伴了嗎？請聯繫我們，讓我們幫您找到您要尋找的產品。",
     "lineButton": "Line 聊天",
-    "phone": "0983-362-103"
+    "phone": "0983-362-103",
+    "lineMessages": {
+      "withProduct": "您好！我對{{productName}}很感興趣，可以提供更多詳細資訊嗎？",
+      "general": "您好！我想了解更多關於產品的資訊。"
+    }
   },
   "footer": {
     "companyName": "FLUX & CO",

@@ -5,12 +5,9 @@ import bg from "../assets/bg.jpg";
 import { Button } from "./Button";
 
 interface HeroSectionProps {
-    handleLineContact: () => void;
-  }
-  
-  export const HeroSection: React.FC<HeroSectionProps> = ({
-    handleLineContact,
-  }) => {
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
     const { t } = useTranslation();
     return (
       <section
@@ -45,7 +42,11 @@ interface HeroSectionProps {
             <Button
               text={t('hero.cta')}
               icon="fab fa-line"
-              onClick={() => handleLineContact()}
+              onClick={() => {
+              const message = t('contact.lineMessages.general');
+              const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
+              window.open(lineUrl, "_blank");
+            }}
               color="amber"
               title={t('hero.cta')}
             />
