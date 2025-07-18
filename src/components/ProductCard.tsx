@@ -5,7 +5,7 @@ import { ProductButton } from "./ProductButton";
 
 interface ProductCardProps {
     product: Product;
-    handleProductClick: (productName: string) => void;
+    handleProductClick: (productId: number) => void;
     selectedProduct: number | null;
     setSelectedProduct: (id: number | null) => void;
 }
@@ -52,7 +52,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                     icon="fas fa-info-circle"
                     onClick={(e) => {
                         e.stopPropagation();
-                        handleProductClick(t(`products.items.${product.id}.name`));
+                        handleProductClick(product.id);
                     }}
                 />
             </div>

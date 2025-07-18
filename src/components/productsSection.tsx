@@ -20,8 +20,8 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products }) =>
     // State for selected product
     const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
 
-    const handleProductClick = (productName: string) => {
-      navigate(`/product/${productName}`);
+    const handleProductClick = (productId: number) => {
+      navigate(`/product/${productId}`);
     }
     return (
         <section

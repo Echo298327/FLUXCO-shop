@@ -3,5 +3,16 @@ export interface Product {
     name: string;
     description: string;
     image: string;
-    price?: number;
+    price: number;
+    vehicleSeatHeight: number;
+    vehicleHeight: number;
+    vehicleLength: number;
+
+    details: {
+        [key: string]: {
+            icon: string;
+            label: string;
+            value: string;
+        };
+    };
 }
