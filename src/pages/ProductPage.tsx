@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 // Hooks imports
 import { useParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 // Components imports
 import { ProductHeader } from "../components/ProductHeader";
 import { ProductImage } from "../components/ProductImage";
@@ -18,7 +17,6 @@ interface ProductPageProps {
 }
 
 const ProductPage: React.FC<ProductPageProps> = ({ handleLineContact }) => {
-  const { t } = useTranslation();
   const { id } = useParams();
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -37,7 +35,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ handleLineContact }) => {
     <div className="min-h-screen pt-20 vintage-texture bg-gradient-to-b from-amber-50/95 to-yellow-50/95">
       <div className="max-w-6xl mx-auto px-6 py-12">    
         {/* Product Header */}
-        <ProductHeader name={product.name} description={product.description} />
+        <ProductHeader product={product} />
         {/* Main Product Section */}
         <div className="flex flex-col lg:flex-row gap-12 mb-16">
           {/* Product Image with Dimensions */}
