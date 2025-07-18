@@ -68,7 +68,7 @@
     "title": "Let's Connect",
     "subtitle": "Ready to discover your perfect cycling companion? Get in touch and let us help you find exactly what you're looking for.",
     "lineButton": "Line Chat",
-    "phone": "+1 (555) 123-4567"
+    "phone": "0983-362-103"
   },
   "footer": {
     "companyName": "FLUX & CO",
@@ -176,12 +176,21 @@
       "message": "Message",
       "messagePlaceholder": "Tell us about your interest in this product...",
       "submitButton": "Send Message",
-      "submitButtonTitle": "Send your inquiry"
+      "submitButtonTitle": "Send your inquiry",
+      "noteLabel": "Note:",
+      "noteMessage": "We'll contact you about your interest in this product."
     },
     "success": {
       "title": "Thank You! 🎉",
       "message": "Your message has been sent successfully! We'll contact you soon.",
       "redirecting": "Redirecting to home..."
+    },
+    "error": {
+      "title": "Oops! Something went wrong",
+      "message": "We couldn't send your message. Don't worry, you can try again or contact us directly.",
+      "retryButton": "Try Again",
+      "lineButton": "Contact via Line",
+      "closeButton": "Close"
     }
   },
   "common": {

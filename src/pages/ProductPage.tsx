@@ -8,6 +8,7 @@ import { ProductImage } from "../components/ProductImage";
 import { ProductSpecifications } from "../components/ProductSpecifications";
 import { EmailFormSection } from "../components/EmailFormSection";
 import { SuccessModal } from "../components/SuccessModal";
+import { ErrorModal } from "../components/ErrorModal";
 import { NotFound } from "../pages/404";
 // Utils imports
 import { products } from "../utils/homeData";
@@ -19,6 +20,7 @@ interface ProductPageProps {
 const ProductPage: React.FC<ProductPageProps> = () => {
   const { id } = useParams();
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -45,10 +47,21 @@ const ProductPage: React.FC<ProductPageProps> = () => {
         </div>
       </div>
         {/* Contact Form Section */}
-        <EmailFormSection setShowSuccess={setShowSuccess} />
+        <EmailFormSection setShowSuccess={setShowSuccess} setShowError={setShowError} product={product} />
+        
         {/* Success Modal */}
         {showSuccess && (
             <SuccessModal />
+        )}
+        
+        {/* Error Modal */}
+        {showError && (
+            <ErrorModal 
+                onClose={() => setShowError(false)}
+                onRetry={() => {
+                    setShowError(false);
+                }}
+            />
         )}
         <style>{`
           @keyframes progress {

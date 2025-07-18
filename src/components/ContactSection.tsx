@@ -41,10 +41,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             className="text-amber-200"
             style={{ fontFamily: "Crimson Text, serif" }}
           >
-            <p className="text-lg">
+            <a 
+              href="tel:0983362103"
+              className="text-lg hover:text-amber-100 transition-colors cursor-pointer block"
+            >
               <i className="fas fa-phone mr-2"></i>
               {t('contact.phone')}
-            </p>
+            </a>
           </div>
         </div>
       </div>

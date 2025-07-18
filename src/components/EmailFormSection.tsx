@@ -5,24 +5,72 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 // Components imports
 import { Button } from "./Button";
+// Types imports
+import type { Product } from "../types";
 
 interface EmailFormSectionProps {
     setShowSuccess: (showSuccess: boolean) => void;
+    setShowError: (showError: boolean) => void;
+    product: Product;
 }
 
-export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSuccess}) => {
+export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSuccess, setShowError, product}) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
 
-    const handleFormSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setShowSuccess(true);
+    // Format date as dd-mm-yy-hh-mm-ss (safe for email subjects)
+    const getFormattedTimestamp = () => {
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = String(now.getFullYear()).slice(-2);
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
         
-        // Navigate to home after 3 seconds
-        setTimeout(() => {
-          navigate('/');
-        }, 3000);
-      };
+        return `${day}-${month}-${year}-${hours}-${minutes}-${seconds}`;
+    };
+
+    const handleFormSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        const form = e.target as HTMLFormElement;
+        
+        // Update the subject with current timestamp before submitting
+        const subjectInput = form.querySelector('input[name="_subject"]') as HTMLInputElement;
+        if (subjectInput) {
+            subjectInput.value = `FLUX&CO New inquiry ${getFormattedTimestamp()}`;
+        }
+        
+        const formData = new FormData(form);
+        
+        console.log('Form data being sent:', Object.fromEntries(formData));
+        
+        try {
+            // Submit to FormSubmit
+            const response = await fetch('https://formsubmit.co/shalomber17@gmail.com', {
+                method: 'POST',
+                body: formData
+            });
+            
+            console.log('Response status:', response.status);
+            
+            if (response.ok) {
+                setShowSuccess(true);
+                
+                // Navigate to home after 3 seconds
+                setTimeout(() => {
+                    navigate('/');
+                }, 3000);
+            } else {
+                console.error('Form submission failed');
+                setShowError(true);
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setShowError(true);
+        }
+    };
     return (
         <div className="vintage-texture bg-gradient-to-b from-amber-100/90 to-amber-50/90 p-8 vintage-shadow">
           <div className="max-w-4xl mx-auto">
@@ -43,6 +91,15 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
               className="space-y-6 max-w-2xl mx-auto"
               onSubmit={handleFormSubmit}
             >
+              {/* FormSubmit configuration fields */}
+              <input type="hidden" name="_subject" value="" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="product_name" value={product.name} />
+              <input type="hidden" name="product_price" value={product.price} />
+              <input type="hidden" name="inquiry_timestamp" value={new Date().toISOString()} />
+              <input type="hidden" name="message" value="Customer is interested in this product and would like more information. Please contact them soon." />
+              
               <div>
                 <label
                   className="block text-amber-800 mb-2 font-semibold"
@@ -90,21 +147,11 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
                 />
               </div>
               
-              <div>
-                <label
-                  className="block text-amber-800 mb-2 font-semibold"
-                  style={{ fontFamily: "Crimson Text, serif" }}
-                >
-                  {t('productPage.form.message')}
-                </label>
-                <textarea
-                  name="message"
-                  rows={4}
-                  required
-                  placeholder={t('productPage.form.messagePlaceholder')}
-                  className="w-full px-4 py-3 rounded-lg bg-white/80 border border-amber-200 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-200 transition-all resize-vertical"
-                  style={{ fontFamily: "Crimson Text, serif" }}
-                ></textarea>
+              {/* Message is now hard-coded in hidden field for testing */}
+              <div className="bg-amber-50/80 p-4 rounded-lg border border-amber-200">
+                <p className="text-amber-800 text-sm" style={{ fontFamily: "Crimson Text, serif" }}>
+                  <strong>{t('productPage.form.noteLabel')}</strong> {t('productPage.form.noteMessage')}
+                </p>
               </div>
               
               <div className="text-center">
