@@ -1,5 +1,5 @@
 // React import
-import React from "react";
+import React, { useEffect } from "react";
 // Components import
 import { Header } from "../components/Header";
 import { HeroSection } from "../components/HeroSection";
@@ -19,6 +19,10 @@ const Home: React.FC = () => {
     )}`;
     window.open(lineUrl, "_blank");
   };
+    // Scroll to top when component mounts
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <div>
       {/* Header */}
