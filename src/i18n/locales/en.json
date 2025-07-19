@@ -83,7 +83,8 @@
       "schedule": "Monday - Saturday: 12:00 PM - 8:00 PM"
     },
     "followUs": "Follow Us",
-    "copyright": "© 2024 FLUX & CO. All rights reserved. | Crafted with passion for cycling excellence."
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "© {{year}} FLUX & CO. All rights reserved. | Crafted with passion for cycling excellence."
   },
   "productPage": {
     "notFound": {
@@ -201,5 +202,32 @@
     "language": "Language",
     "chinese": "中文",
     "english": "English"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: {{date}}",
+    "introduction": {
+      "title": "Information We Collect",
+      "content": "We only collect information that you voluntarily provide to us through our contact forms, including your name, email address, and any messages you send to us."
+    },
+    "usage": {
+      "title": "How We Use Your Information",
+      "content": "We use your contact information solely to respond to your inquiries about our bicycles and services. We will contact you via email or phone to answer your questions and provide product information."
+    },
+    "sharing": {
+      "title": "Information Sharing",
+      "content": "We do not sell, trade, or share your personal information with third parties. Your information is kept confidential and is only used by our team to serve you better."
+    },
+    "retention": {
+      "title": "Data Retention",
+      "content": "We keep your contact information only as long as necessary to respond to your inquiry and provide follow-up service. You can request removal of your information at any time."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have any questions about this privacy policy or want to request removal of your information, please contact us:",
+      "phone": "Phone: 0983-362-103",
+      "address": "Address: No. 7-4, Jinmen Street, Zhongzheng District"
+    },
+    "backButton": "Back to Home"
   }
 } 

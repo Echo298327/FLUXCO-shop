@@ -85,12 +85,23 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           </div>
         </div>
         <div className="border-t border-amber-700 mt-8 pt-8 text-center">
-          <p
-            className="text-amber-400"
-            style={{ fontFamily: "Crimson Text, serif" }}
-          >
-            {t('footer.copyright')}
-          </p>
+          <div className="flex flex-col items-center space-y-2">
+            <div className="flex items-center space-x-4">
+              <a
+                href="/CyclingShop/privacy"
+                className="text-amber-300 hover:text-amber-100 transition-colors text-sm"
+                style={{ fontFamily: "Crimson Text, serif" }}
+              >
+                {t('footer.privacyPolicy')}
+              </a>
+            </div>
+            <p
+              className="text-amber-400"
+              style={{ fontFamily: "Crimson Text, serif" }}
+            >
+              {t('footer.copyright', { year: new Date().getFullYear() })}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
