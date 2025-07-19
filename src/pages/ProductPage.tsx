@@ -2,7 +2,10 @@
 import React, { useState, useEffect } from "react";
 // Hooks imports
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 // Components imports
+import { SEO } from "../components/SEO";
+import { StructuredData } from "../components/StructuredData";
 import { ProductHeader } from "../components/ProductHeader";
 import { ProductImage } from "../components/ProductImage";
 import { ProductSpecifications } from "../components/ProductSpecifications";
@@ -18,6 +21,7 @@ interface ProductPageProps {
 
 const ProductPage: React.FC<ProductPageProps> = () => {
   const { id } = useParams();
+  const { t } = useTranslation();
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
@@ -32,8 +36,31 @@ const ProductPage: React.FC<ProductPageProps> = () => {
     return <NotFound />;
   }
 
+  // Get motor power for SEO
+  const motorValue = product.details?.motor?.value || product.details?.topSpeed?.value || '250W';
+
   return (
     <div className="min-h-screen pt-20 vintage-texture bg-gradient-to-b from-amber-50/95 to-yellow-50/95">
+      <SEO 
+        title={t('seo.product.title', { 
+          productName: t(`products.items.${product.id}.name`) 
+        })}
+        description={t('seo.product.description', { 
+          productDescription: t(`products.items.${product.id}.description`),
+          motor: motorValue
+        })}
+        ogTitle={t('seo.product.title', { 
+          productName: t(`products.items.${product.id}.name`) 
+        })}
+        ogDescription={t('seo.product.description', { 
+          productDescription: t(`products.items.${product.id}.description`),
+          motor: motorValue
+        })}
+        ogImage={`https://echo298327.github.io/CyclingShop${product.image}`}
+        ogUrl={`https://echo298327.github.io/CyclingShop/product/${product.id}`}
+        canonicalUrl={`https://echo298327.github.io/CyclingShop/product/${product.id}`}
+      />
+      <StructuredData type="product" product={product} />
       <div className="max-w-6xl mx-auto px-6 py-12">    
         {/* Product Header */}
         <ProductHeader product={product} />
