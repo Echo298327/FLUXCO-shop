@@ -1,5 +1,6 @@
 // React imports
 import React from "react";
+import { useEffect } from "react";
 // Components imports
 import { Button } from "../components/Button";
 // Hooks import
@@ -9,6 +10,10 @@ import { useTranslation } from 'react-i18next';
 export const Privacy: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen vintage-texture bg-gradient-to-b from-amber-50/95 to-yellow-50/95">

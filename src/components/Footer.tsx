@@ -1,5 +1,7 @@
 // React import
 import React from "react";
+// Hooks import
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 interface FooterProps {
@@ -7,6 +9,8 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({}) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  
   return (
     <footer className="vintage-texture bg-amber-900/95 py-12">
       <div className="max-w-7xl mx-auto px-6">
@@ -88,7 +92,10 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           <div className="flex flex-col items-center space-y-2">
             <div className="flex items-center space-x-4">
               <a
-                href="/CyclingShop/privacy"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate('/privacy');
+                }}
                 className="text-amber-300 hover:text-amber-100 transition-colors text-sm"
                 style={{ fontFamily: "Crimson Text, serif" }}
               >
