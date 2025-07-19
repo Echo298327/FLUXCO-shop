@@ -172,7 +172,7 @@ export const products: Product[] = [
         label: "Non-Slip Wrap",
         value: "Non-Slip Wrap"
       },
-      "UpgradehDisplay": {
+      "UpgradeDisplay": {
         icon: "fas fa-desktop",
         label: "Display",
         value: "Upgrade Display"
