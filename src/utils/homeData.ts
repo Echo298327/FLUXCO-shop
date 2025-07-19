@@ -1,11 +1,11 @@
-import b1 from "../assets/bicycles/b1.jpg";
-import b2 from "../assets/bicycles/b2.jpg";
-import b3 from "../assets/bicycles/b3.jpg";
-import b4 from "../assets/bicycles/b4.jpg";
-import b1In from "../assets/bicycles/b1In.png";
-import b2In from "../assets/bicycles/b2In.png";
-import b3In from "../assets/bicycles/b3In.png";
-import b4In from "../assets/bicycles/b4In.png";
+import b1 from "../assets/bicycles/b1.webp";
+import b2 from "../assets/bicycles/b2.webp";
+import b3 from "../assets/bicycles/b3.webp";
+import b4 from "../assets/bicycles/b4.webp";
+import b1In from "../assets/bicycles/b1In.webp";
+import b2In from "../assets/bicycles/b2In.webp";
+import b3In from "../assets/bicycles/b3In.webp";
+import b4In from "../assets/bicycles/b4In.webp";
 
 import type { Product, Feature } from "../types";
 

@@ -1,7 +1,7 @@
 // React import
 import React from "react";
 import { useTranslation } from 'react-i18next';
-import bg from "../assets/bg.jpg";
+import bg from "../assets/bg.webp";
 import { Button } from "./Button";
 
 interface HeroSectionProps {
