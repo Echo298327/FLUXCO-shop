@@ -44,7 +44,7 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
         
         const formData = new FormData(form);
         
-        console.log('Form data being sent:', Object.fromEntries(formData));
+        // Removed logging of form data to prevent exposure of sensitive information.
         
         try {
             // Submit to FormSubmit
