@@ -1,15 +1,13 @@
 // React import
 import React from "react";
 import { useTranslation } from 'react-i18next';
-import bg from "../assets/bg.jpg";
+import bg from "../assets/bg.webp";
+import { Button } from "./Button";
 
 interface HeroSectionProps {
-    handleWhatsAppContact: () => void;
-  }
-  
-  export const HeroSection: React.FC<HeroSectionProps> = ({
-    handleWhatsAppContact,
-  }) => {
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
     const { t } = useTranslation();
     return (
       <section
@@ -22,7 +20,6 @@ interface HeroSectionProps {
             backgroundImage: `url(${bg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            backgroundAttachment: "fixed",
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-amber-900/70 via-amber-800/50 to-transparent"></div>
@@ -42,14 +39,17 @@ interface HeroSectionProps {
             >
               {t('hero.subtitle')}
             </p>
-            <button
-              onClick={() => handleWhatsAppContact()}
-              className="!rounded-button whitespace-nowrap cursor-pointer bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 vintage-shadow"
-              style={{ fontFamily: "Crimson Text, serif" }}
-            >
-                              <i className="fab fa-line mr-3"></i>
-              {t('hero.cta')}
-            </button>
+            <Button
+              text={t('hero.cta')}
+              icon="fab fa-line"
+              onClick={() => {
+              const message = t('contact.lineMessages.general');
+              const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
+              window.open(lineUrl, "_blank");
+            }}
+              color="amber"
+              title={t('hero.cta')}
+            />
           </div>
         </div>
       </section>

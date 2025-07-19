@@ -5,14 +5,14 @@ import { ProductButton } from "./ProductButton";
 
 interface ProductCardProps {
     product: Product;
-    handleWhatsAppContact: (productName: string) => void;
+    handleProductClick: (productId: number) => void;
     selectedProduct: number | null;
     setSelectedProduct: (id: number | null) => void;
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({
     product,
-    handleWhatsAppContact,
+    handleProductClick,
     selectedProduct,
     setSelectedProduct,
 }) => {
@@ -48,11 +48,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                     {t(`products.items.${product.id}.description`)}
                 </p>
                 <ProductButton
-                    text={t('products.inquireNow')}
-                    icon="fab fa-line"
+                    text={t('products.moreDetails')}
+                    icon="fas fa-info-circle"
                     onClick={(e) => {
                         e.stopPropagation();
-                        handleWhatsAppContact(t(`products.items.${product.id}.name`));
+                        handleProductClick(product.id);
                     }}
                 />
             </div>

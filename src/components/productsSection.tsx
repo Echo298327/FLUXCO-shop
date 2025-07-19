@@ -1,21 +1,28 @@
 // React import
 import React, { useState } from "react";
+// Components import
+import { ProductCard } from "./ProductCard";
+// Hooks import
 import { useTranslation } from 'react-i18next';
-import type { Product } from "../types";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import { ProductCard } from "./ProductCard";
+// Types import
+import type { Product } from "../types";
 
 interface ProductsSectionProps {
     products: Product[];
-    handleWhatsAppContact: (productName: string) => void;
 }
 
-export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, handleWhatsAppContact }) => {
+export const ProductsSection: React.FC<ProductsSectionProps> = ({ products }) => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     // State for selected product
     const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
 
+    const handleProductClick = (productId: number) => {
+      navigate(`/product/${productId}`);
+    }
     return (
         <section
         id="products"
@@ -36,12 +43,12 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
               {t('products.subtitle')}
             </p>
           </div>
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((product) => (
               <ProductCard
                 key={product.id}
                 product={product}
-                handleWhatsAppContact={handleWhatsAppContact}
+                handleProductClick={handleProductClick}
                 selectedProduct={selectedProduct}
                 setSelectedProduct={setSelectedProduct}
               />
@@ -55,7 +62,8 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
               spaceBetween={20}
               slidesPerView={1.2}
               centeredSlides={true}
-              loop={true}
+              loop={false}
+              initialSlide={1}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
@@ -63,13 +71,14 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products, hand
               pagination={{
                 clickable: true,
               }}
+              speed={300}
               className="py-8"
             >
               {products.map((product) => (
                 <SwiperSlide key={product.id}>
                   <ProductCard
                     product={product}
-                    handleWhatsAppContact={handleWhatsAppContact}
+                    handleProductClick={handleProductClick}
                     selectedProduct={selectedProduct}
                     setSelectedProduct={setSelectedProduct}
                   />

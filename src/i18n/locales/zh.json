@@ -18,23 +18,23 @@
   "products": {
     "title": "我們的產品",
     "subtitle": "我們收藏中的每一款產品都經過精心挑選，為您的騎行冒險提供最優質的自行車和配件。",
-    "inquireNow": "立即諮詢",
+    "moreDetails": "更多詳情",
     "items": {
       "1": {
-        "name": "經典電動城市車",
-        "description": "經典風格電動城市自行車，配有優雅的銅色裝飾"
+        "name": "都市巡航者 250",
+        "description": "入門級250W電動城市車，完美適合日常通勤"
       },
       "2": {
-        "name": "經典電動跨步車",
-        "description": "傳統跨步式車架，配備現代電動助力系統"
+        "name": "跨步專業版 500",
+        "description": "中階500W電動跨步車，擁有50公里長續航力"
       },
       "3": {
-        "name": "電動通勤車",
-        "description": "經典通勤設計，配備隱藏式電動技術"
+        "name": "通勤精英 750",
+        "description": "高性能750W電動車，配備Shimano 7速變速與雙避震系統"
       },
       "4": {
-        "name": "電動貨運車",
-        "description": "配備傳統竹編載貨架的電動貨運自行車"
+        "name": "貨運大師 750X",
+        "description": "重型750W貨運電動車，配備LED信號燈與頂級配件"
       },
       "5": {
         "name": "電動探險車",
@@ -68,7 +68,11 @@
     "title": "聯繫我們",
     "subtitle": "準備發現您完美的騎行夥伴了嗎？請聯繫我們，讓我們幫您找到您要尋找的產品。",
     "lineButton": "Line 聊天",
-    "phone": "+1 (555) 123-4567"
+    "phone": "0983-362-103",
+    "lineMessages": {
+      "withProduct": "您好！我對{{productName}}很感興趣，可以提供更多詳細資訊嗎？",
+      "general": "您好！我想了解更多關於產品的資訊。"
+    }
   },
   "footer": {
     "companyName": "FLUX & CO",
@@ -79,11 +83,129 @@
       "schedule": "週一至週六：12:00-20:00"
     },
     "followUs": "關注我們",
-    "copyright": "© 2024 FLUX & CO. 版權所有 | 用心打造卓越騎行體驗。"
+    "privacyPolicy": "隱私政策",
+    "copyright": "© {{year}} FLUX & CO. 版權所有 | 用心打造卓越騎行體驗。"
+  },
+  "productPage": {
+    "notFound": {
+      "title": "找不到產品",
+      "backButton": "返回首頁"
+    },
+    "pageNotFound": {
+      "errorCode": "404",
+      "title": "找不到頁面",
+      "message": "看起來您在騎行旅程中迷路了。讓我們帶您回到正確的路線上。",
+      "returnHome": "返回首頁"
+    },
+    "dimensions": {
+      "vehicleHeight": "車高",
+      "seatHeight": "座高",
+      "vehicleLength": "車長"
+    },
+    "contactButton": "聯繫購買",
+    "contactButtonTitle": "透過Line聯繫我們",
+    "specifications": "產品規格",
+    "details": {
+      "labels": {
+        "topSpeed": "最高時速",
+        "battery": "電池",
+        "motor": "馬達",
+        "easyCharge": "便捷充電",
+        "range": "續航里程",
+        "ridingMode": "騎行模式",
+        "letterWrap": "車把握把",
+        "UpgradeBluetoothDisplay": "藍牙顯示器",
+        "warranty": "保固",
+        "NonSlipWrap": "防滑握把",
+        "UpgradehDisplay": "顯示器",
+        "SevenSpeedGears": "變速系統",
+        "frontRearSuspension": "避震系統",
+        "cupHolder": "杯架",
+        "signals": "信號燈"
+      },
+      "values": {
+        "25km/h": "25公里/小時",
+        "35km/h": "35公里/小時",
+        "25-40km/h": "25-40公里/小時",
+        "25-45km/h": "25-45公里/小時",
+        "36V 5Ah": "36V 5Ah",
+        "48V 10Ah": "48V 10Ah",
+        "48V 8.2Ah": "48V 8.2Ah",
+        "250W": "250W",
+        "500W": "500W",
+        "750W": "750W",
+        "Easy Charge": "便捷充電",
+        "20-25km": "20-25公里",
+        "45-50km": "45-50公里",
+        "60-95km": "60-95公里",
+        "Three Riding Modes": "三種騎行模式",
+        "Letter Wrap": "車把握把",
+        "Upgrade Bluetooth Display": "升級藍牙顯示器",
+        "One Year Warranty": "一年保固",
+        "Non-Slip Wrap": "防滑握把",
+        "Upgrade Display": "升級顯示器",
+        "Seven Speed Gears": "七速變速系統",
+        "Front&Rear": "前後避震",
+        "Cup Holder": "杯架",
+        "Signal Light": "信號燈"
+      }
+    },
+    "form": {
+      "title": "留下您的聯繫方式",
+      "subtitle": "對此產品感興趣嗎？留下您的聯繫方式，我們會盡快聯繫您！",
+      "name": "姓名",
+      "email": "電子郵件",
+      "phone": "電話（選填）",
+      "message": "留言",
+      "messagePlaceholder": "告訴我們您對此產品的興趣...",
+      "submitButton": "發送訊息",
+      "submitButtonTitle": "發送您的詢問",
+      "noteLabel": "注意：",
+      "noteMessage": "我們會聯繫您關於您對此產品的興趣。"
+    },
+    "success": {
+      "title": "謝謝您！🎉",
+      "message": "您的訊息已成功發送！我們會盡快聯繫您。",
+      "redirecting": "正在返回首頁..."
+    },
+    "error": {
+      "title": "糟糕！出了點問題",
+      "message": "我們無法發送您的訊息。別擔心，您可以重試或直接聯繫我們。",
+      "retryButton": "重試",
+      "lineButton": "透過Line聯繫",
+      "closeButton": "關閉"
+    }
   },
   "common": {
     "language": "語言",
     "chinese": "中文",
     "english": "English"
+  },
+  "privacy": {
+    "title": "隱私政策",
+    "lastUpdated": "最後更新：{{date}}",
+    "introduction": {
+      "title": "我們收集的資訊",
+      "content": "我們僅收集您通過聯繫表單主動提供給我們的資訊，包括您的姓名、電子郵件地址以及您發送給我們的任何訊息。"
+    },
+    "usage": {
+      "title": "我們如何使用您的資訊",
+      "content": "我們使用您的聯繫資訊僅用於回覆您對我們自行車和服務的詢問。我們會通過電子郵件或電話聯繫您，回答您的問題並提供產品資訊。"
+    },
+    "sharing": {
+      "title": "資訊分享",
+      "content": "我們不會出售、交易或與第三方分享您的個人資訊。您的資訊將保持機密，僅由我們的團隊使用以更好地為您服務。"
+    },
+    "retention": {
+      "title": "資料保存",
+      "content": "我們僅在回覆您的詢問和提供後續服務所需的時間內保存您的聯繫資訊。您可以隨時要求刪除您的資訊。"
+    },
+    "contact": {
+      "title": "聯繫我們",
+      "content": "如果您對此隱私政策有任何問題或想要求刪除您的資訊，請聯繫我們：",
+      "phone": "電話：0983-362-103",
+      "address": "地址：中正區金門街7之4號"
+    },
+    "backButton": "返回首頁"
   }
 } 

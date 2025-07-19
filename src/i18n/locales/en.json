@@ -18,23 +18,23 @@
   "products": {
     "title": "Our Products",
     "subtitle": "Each product in our collection has been carefully selected to offer you the best quality bicycles and accessories for your cycling adventures.",
-    "inquireNow": "Inquire Now",
+    "moreDetails": "More Details",
     "items": {
       "1": {
-        "name": "Classic E-City",
-        "description": "Classic-inspired electric city bike with elegant copper accents"
+        "name": "Urban Cruiser 250",
+        "description": "Entry-level electric city bike with 250W motor perfect for daily commuting"
       },
       "2": {
-        "name": "Retro E-Step",
-        "description": "Traditional step-through frame with modern electric assist"
+        "name": "StepThrough Pro 500",
+        "description": "Mid-range electric step-through with 500W motor and extended 50km range"
       },
       "3": {
-        "name": "E-Commuter",
-        "description": "Classic commuter design with hidden electric technology"
+        "name": "Commuter Elite 750",
+        "description": "High-performance 750W electric bike with 7-speed Shimano and dual suspension"
       },
       "4": {
-        "name": "E-Cargo",
-        "description": "Electric cargo bike with traditional bamboo carrier"
+        "name": "Cargo Master 750X",
+        "description": "Heavy-duty 750W cargo e-bike with LED signals and premium accessories"
       },
       "5": {
         "name": "E-Explorer",
@@ -68,7 +68,11 @@
     "title": "Let's Connect",
     "subtitle": "Ready to discover your perfect cycling companion? Get in touch and let us help you find exactly what you're looking for.",
     "lineButton": "Line Chat",
-    "phone": "+1 (555) 123-4567"
+    "phone": "0983-362-103",
+    "lineMessages": {
+      "withProduct": "Hello! I'm interested in the {{productName}}. Could you provide more details?",
+      "general": "Hello! I'd like to know more about the products."
+    }
   },
   "footer": {
     "companyName": "FLUX & CO",
@@ -79,11 +83,151 @@
       "schedule": "Monday - Saturday: 12:00 PM - 8:00 PM"
     },
     "followUs": "Follow Us",
-    "copyright": "© 2024 FLUX & CO. All rights reserved. | Crafted with passion for cycling excellence."
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "© {{year}} FLUX & CO. All rights reserved. | Crafted with passion for cycling excellence."
+  },
+  "productPage": {
+    "notFound": {
+      "title": "Product Not Found",
+      "backButton": "Back to Home"
+    },
+    "pageNotFound": {
+      "errorCode": "404",
+      "title": "Page Not Found",
+      "message": "Looks like you've taken a wrong turn on your cycling journey. Let's get you back on track.",
+      "returnHome": "Return Home"
+    },
+    "dimensions": {
+      "vehicleHeight": "Vehicle Height",
+      "seatHeight": "Seat Height", 
+      "vehicleLength": "Vehicle Length"
+    },
+    "contactButton": "Contact for Purchase",
+    "contactButtonTitle": "Contact us via Line",
+    "specifications": "Specifications",
+    "details": {
+      "labels": {
+        "maxSpeed": "Max Speed",
+        "topSpeed": "Top Speed",
+        "batteryCapacity": "Battery Capacity",
+        "battery": "Battery",
+        "motorPower": "Motor Power",
+        "motor": "Motor",
+        "chargingSystem": "Charging System",
+        "easyCharge": "Easy Charge",
+        "maxRange": "Max Range",
+        "range": "Range",
+        "pedalAssist": "Pedal Assist",
+        "ridingMode": "Riding Mode",
+        "handlebarGrips": "Handlebar Grips",
+        "letterWrap": "Handlebar Grips",
+        "NonSlipWrap": "Non-Slip Grips",
+        "displayUnit": "Display Unit",
+        "UpgradeBluetoothDisplay": "Bluetooth Display",
+        "UpgradehDisplay": "LCD Display",
+        "warranty": "Warranty",
+        "driveSystem": "Drive System",
+        "SevenSpeedGears": "7-Speed Gears",
+        "suspensionSystem": "Suspension",
+        "frontRearSuspension": "Front & Rear Suspension",
+        "cargoAccessories": "Cargo Accessories",
+        "cupHolder": "Cup Holder & Basket",
+        "lightingSystem": "Lighting System",
+        "signals": "LED Signal Lights"
+      },
+      "values": {
+        "25km/h": "25km/h",
+        "35km/h": "35km/h",
+        "25-40km/h": "25-40km/h",
+        "25-45km/h": "25-45km/h",
+        "36V 5Ah": "36V 5Ah",
+        "48V 10Ah": "48V 10Ah",
+        "48V 8.2Ah": "48V 8.2Ah",
+        "250W": "250W",
+        "500W": "500W",
+        "750W": "750W",
+        "Quick Charge": "Quick Charge",
+        "Easy Charge": "Easy Charge",
+        "20-25km": "20-25km",
+        "45-50km": "45-50km",
+        "60-95km": "60-95km",
+        "Three Riding Modes": "Three Riding Modes",
+        "Letter Wrap": "Ergonomic Grips",
+        "Non-Slip Wrap": "Non-Slip Grips",
+        "Upgrade Bluetooth Display": "Bluetooth Display",
+        "Upgrade Display": "LCD Display",
+        "Seven Speed Gears": "7-Speed Gears",
+        "Front&Rear": "Front & Rear Suspension",
+        "Cup Holder": "Cup Holder",
+        "Signal Light": "LED Signal Light",
+        "3-Level System": "3-Level System",
+        "Ergonomic Leather": "Ergonomic Leather",
+        "Bluetooth LCD Display": "Bluetooth LCD Display",
+        "One Year Warranty": "One Year Warranty",
+        "Non-Slip Rubber": "Non-Slip Rubber",
+        "LCD Display": "LCD Display",
+        "7-Speed Shimano": "7-Speed Shimano",
+        "Front & Rear": "Front & Rear",
+        "Cup Holder & Basket": "Cup Holder & Basket",
+        "LED Signal Lights": "LED Signal Lights"
+      }
+    },
+    "form": {
+      "title": "Leave Your Details",
+      "subtitle": "Interested in this product? Leave your details and we'll contact you soon!",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (Optional)",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your interest in this product...",
+      "submitButton": "Send Message",
+      "submitButtonTitle": "Send your inquiry",
+      "noteLabel": "Note:",
+      "noteMessage": "We'll contact you about your interest in this product."
+    },
+    "success": {
+      "title": "Thank You! 🎉",
+      "message": "Your message has been sent successfully! We'll contact you soon.",
+      "redirecting": "Redirecting to home..."
+    },
+    "error": {
+      "title": "Oops! Something went wrong",
+      "message": "We couldn't send your message. Don't worry, you can try again or contact us directly.",
+      "retryButton": "Try Again",
+      "lineButton": "Contact via Line",
+      "closeButton": "Close"
+    }
   },
   "common": {
     "language": "Language",
     "chinese": "中文",
     "english": "English"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: {{date}}",
+    "introduction": {
+      "title": "Information We Collect",
+      "content": "We only collect information that you voluntarily provide to us through our contact forms, including your name, email address, and any messages you send to us."
+    },
+    "usage": {
+      "title": "How We Use Your Information",
+      "content": "We use your contact information solely to respond to your inquiries about our bicycles and services. We will contact you via email or phone to answer your questions and provide product information."
+    },
+    "sharing": {
+      "title": "Information Sharing",
+      "content": "We do not sell, trade, or share your personal information with third parties. Your information is kept confidential and is only used by our team to serve you better."
+    },
+    "retention": {
+      "title": "Data Retention",
+      "content": "We keep your contact information only as long as necessary to respond to your inquiry and provide follow-up service. You can request removal of your information at any time."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have any questions about this privacy policy or want to request removal of your information, please contact us:",
+      "phone": "Phone: 0983-362-103",
+      "address": "Address: No. 7-4, Jinmen Street, Zhongzheng District"
+    },
+    "backButton": "Back to Home"
   }
 } 
