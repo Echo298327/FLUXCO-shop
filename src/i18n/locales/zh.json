@@ -210,6 +210,13 @@
       "title": "資訊分享",
       "content": "我們不會出售、交易或與第三方分享您的個人資訊。您的資訊將保持機密，僅由我們的團隊使用以更好地為您服務。"
     },
+    "formsubmit": {
+      "title": "第三方表單處理",
+      "content": "我們使用第三方服務 FormSubmit.co 來處理並通過電子郵件向我們傳送聯繫表單提交的內容。當您提交聯繫表單時，您的資訊（姓名、電子郵件、電話號碼和訊息）會傳送到 FormSubmit 的伺服器進行處理和傳送。FormSubmit 代表我們作為資料處理器，並受其自身隱私政策約束。我們選擇 FormSubmit 是因為其在安全處理表單提交方面的可靠性。有關 FormSubmit 如何處理您資料的更多資訊，請查看他們在",
+      "linkText": "formsubmit.co",
+      "linkUrl": "https://formsubmit.co",
+      "linkSuffix": "的隱私政策。"
+    },
     "retention": {
       "title": "資料保存",
       "content": "我們僅在回覆您的詢問和提供後續服務所需的時間內保存您的聯繫資訊。您可以隨時要求刪除您的資訊。"

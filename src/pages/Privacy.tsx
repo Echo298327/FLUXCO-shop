@@ -97,6 +97,31 @@ export const Privacy: React.FC = () => {
             </p>
           </section>
 
+          {/* Third-Party Form Processing */}
+          <section className="mb-8">
+            <h2
+              className="text-2xl font-bold text-amber-900 mb-4"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
+              {t('privacy.formsubmit.title')}
+            </h2>
+            <p
+              className="text-amber-800 text-lg leading-relaxed"
+              style={{ fontFamily: "Crimson Text, serif" }}
+            >
+              {t('privacy.formsubmit.content')}{' '}
+              <a
+                href={t('privacy.formsubmit.linkUrl')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-600 hover:text-amber-800 underline transition-colors duration-200"
+              >
+                {t('privacy.formsubmit.linkText')}
+              </a>
+              {t('privacy.formsubmit.linkSuffix', { defaultValue: '.' })}
+            </p>
+          </section>
+
           {/* Data Retention */}
           <section className="mb-8">
             <h2

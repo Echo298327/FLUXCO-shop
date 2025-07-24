@@ -232,6 +232,13 @@
       "title": "Information Sharing",
       "content": "We do not sell, trade, or share your personal information with third parties. Your information is kept confidential and is only used by our team to serve you better."
     },
+    "formsubmit": {
+      "title": "Third-Party Form Processing",
+      "content": "We use FormSubmit.co, a third-party service, to process and deliver contact form submissions to us via email. When you submit a contact form, your information (name, email, phone number, and message) is transmitted to FormSubmit's servers for processing and delivery. FormSubmit acts as a data processor on our behalf and is subject to their own privacy policy. We have chosen FormSubmit for its reliability in handling form submissions securely. For more information about how FormSubmit handles your data, please review their privacy policy at",
+      "linkText": "formsubmit.co",
+      "linkUrl": "https://formsubmit.co",
+      "linkSuffix": "."
+    },
     "retention": {
       "title": "Data Retention",
       "content": "We keep your contact information only as long as necessary to respond to your inquiry and provide follow-up service. You can request removal of your information at any time."
