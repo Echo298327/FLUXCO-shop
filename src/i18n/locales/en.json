@@ -118,6 +118,8 @@
     },
     "contactButton": "Contact for Purchase",
     "contactButtonTitle": "Contact us via Line",
+    "showDimensions": "Show Dimensions",
+    "hideDimensions": "Hide Dimensions",
     "specifications": "Specifications",
     "details": {
       "labels": {

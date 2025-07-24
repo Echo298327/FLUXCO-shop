@@ -1,11 +1,12 @@
 // React imports
-import React from "react";
+import React, { useState } from "react";
 // Hooks imports
 import { useTranslation } from 'react-i18next';
 // Types imports
 import type { Product } from "../types/products";
 // Components imports
 import { Button } from "./Button";
+import { DimensionTag } from "./DimensionTag";
 
 interface ProductImageProps {
   product: Product;
@@ -15,6 +16,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
   product,
 }) => {
   const { t } = useTranslation();
+  const [showDimensions, setShowDimensions] = useState(false);
   
   return (
     <div className="lg:w-1/2">
@@ -26,24 +28,41 @@ export const ProductImage: React.FC<ProductImageProps> = ({
             className="w-full rounded-lg sepia-filter"
           />
 
+          {/* Dimensions Toggle Button */}
+          <div className="absolute top-4 right-4 z-10">
+            <button
+              onClick={() => setShowDimensions(!showDimensions)}
+              className="flex items-center gap-2 bg-amber-600/90 hover:bg-amber-700/90 text-white px-3 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-sm font-medium backdrop-blur-sm"
+              title={showDimensions ? t('productPage.hideDimensions') : t('productPage.showDimensions')}
+            >
+              <i className={`${showDimensions ? "fas fa-eye-slash" : "fas fa-ruler"} text-sm`}></i>
+              <span className="hidden sm:inline">
+                {showDimensions ? t('productPage.hideDimensions') : t('productPage.showDimensions')}
+              </span>
+            </button>
+          </div>
+
           {/* Dimension Annotations */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4">
-            <div className="text-amber-800 font-semibold whitespace-nowrap text-sm bg-white/80 px-2 py-1 rounded">
-              {t('productPage.dimensions.vehicleHeight')} {product.vehicleSeatHeight}CM
-            </div>
-          </div>
-
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4">
-            <div className="text-amber-800 font-semibold whitespace-nowrap text-sm bg-white/80 px-2 py-1 rounded">
-              {t('productPage.dimensions.seatHeight')} {product.vehicleHeight}CM
-            </div>
-          </div>
-
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4">
-            <div className="text-amber-800 font-semibold whitespace-nowrap text-sm bg-white/80 px-2 py-1 rounded">
-              {t('productPage.dimensions.vehicleLength')} {product.vehicleLength}CM
-            </div>
-          </div>
+          <DimensionTag
+            label={t('productPage.dimensions.vehicleHeight')}
+            value={product.vehicleSeatHeight}
+            position="left"
+            isVisible={showDimensions}
+          />
+          
+          <DimensionTag
+            label={t('productPage.dimensions.seatHeight')}
+            value={product.vehicleHeight}
+            position="right"
+            isVisible={showDimensions}
+          />
+          
+          <DimensionTag
+            label={t('productPage.dimensions.vehicleLength')}
+            value={product.vehicleLength}
+            position="bottom"
+            isVisible={showDimensions}
+          />
         </div>
 
         {/* Price and Contact */}
