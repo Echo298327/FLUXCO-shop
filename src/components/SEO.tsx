@@ -20,6 +20,51 @@ export const SEO: React.FC<SEOProps> = ({
   canonicalUrl
 }) => {
   useEffect(() => {
+    const createdElements: HTMLElement[] = [];
+    const originalTitle = document.title;
+
+    // Helper function to safely create or update meta tag
+    const createOrUpdateMetaTag = (selector: string, attributes: Record<string, string>) => {
+      let element = document.querySelector(selector) as HTMLMetaElement;
+      if (!element) {
+        element = document.createElement('meta');
+        Object.entries(attributes).forEach(([key, value]) => {
+          element.setAttribute(key, value);
+        });
+        document.head.appendChild(element);
+        createdElements.push(element);
+      } else {
+        // Update existing element
+        Object.entries(attributes).forEach(([key, value]) => {
+          if (key !== 'name' && key !== 'property') {
+            element.setAttribute(key, value);
+          }
+        });
+      }
+      return element;
+    };
+
+    // Helper function to safely create or update link tag
+    const createOrUpdateLinkTag = (selector: string, attributes: Record<string, string>) => {
+      let element = document.querySelector(selector) as HTMLLinkElement;
+      if (!element) {
+        element = document.createElement('link');
+        Object.entries(attributes).forEach(([key, value]) => {
+          element.setAttribute(key, value);
+        });
+        document.head.appendChild(element);
+        createdElements.push(element);
+      } else {
+        // Update existing element
+        Object.entries(attributes).forEach(([key, value]) => {
+          if (key !== 'rel') {
+            element.setAttribute(key, value);
+          }
+        });
+      }
+      return element;
+    };
+
     // Update title
     if (title) {
       document.title = title;
@@ -27,85 +72,75 @@ export const SEO: React.FC<SEOProps> = ({
 
     // Update or create meta description
     if (description) {
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', description);
+      createOrUpdateMetaTag('meta[name="description"]', {
+        name: 'description',
+        content: description
+      });
     }
 
     // Open Graph tags
     if (ogTitle) {
-      let ogTitleTag = document.querySelector('meta[property="og:title"]');
-      if (!ogTitleTag) {
-        ogTitleTag = document.createElement('meta');
-        ogTitleTag.setAttribute('property', 'og:title');
-        document.head.appendChild(ogTitleTag);
-      }
-      ogTitleTag.setAttribute('content', ogTitle);
+      createOrUpdateMetaTag('meta[property="og:title"]', {
+        property: 'og:title',
+        content: ogTitle
+      });
     }
 
     if (ogDescription) {
-      let ogDescTag = document.querySelector('meta[property="og:description"]');
-      if (!ogDescTag) {
-        ogDescTag = document.createElement('meta');
-        ogDescTag.setAttribute('property', 'og:description');
-        document.head.appendChild(ogDescTag);
-      }
-      ogDescTag.setAttribute('content', ogDescription);
+      createOrUpdateMetaTag('meta[property="og:description"]', {
+        property: 'og:description',
+        content: ogDescription
+      });
     }
 
     if (ogImage) {
-      let ogImageTag = document.querySelector('meta[property="og:image"]');
-      if (!ogImageTag) {
-        ogImageTag = document.createElement('meta');
-        ogImageTag.setAttribute('property', 'og:image');
-        document.head.appendChild(ogImageTag);
-      }
-      ogImageTag.setAttribute('content', ogImage);
+      createOrUpdateMetaTag('meta[property="og:image"]', {
+        property: 'og:image',
+        content: ogImage
+      });
     }
 
     if (ogUrl) {
-      let ogUrlTag = document.querySelector('meta[property="og:url"]');
-      if (!ogUrlTag) {
-        ogUrlTag = document.createElement('meta');
-        ogUrlTag.setAttribute('property', 'og:url');
-        document.head.appendChild(ogUrlTag);
-      }
-      ogUrlTag.setAttribute('content', ogUrl);
+      createOrUpdateMetaTag('meta[property="og:url"]', {
+        property: 'og:url',
+        content: ogUrl
+      });
     }
 
     // Canonical URL
     if (canonicalUrl) {
-      let canonicalTag = document.querySelector('link[rel="canonical"]');
-      if (!canonicalTag) {
-        canonicalTag = document.createElement('link');
-        canonicalTag.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalTag);
-      }
-      canonicalTag.setAttribute('href', canonicalUrl);
+      createOrUpdateLinkTag('link[rel="canonical"]', {
+        rel: 'canonical',
+        href: canonicalUrl
+      });
     }
 
     // Add og:type
-    let ogTypeTag = document.querySelector('meta[property="og:type"]');
-    if (!ogTypeTag) {
-      ogTypeTag = document.createElement('meta');
-      ogTypeTag.setAttribute('property', 'og:type');
-      ogTypeTag.setAttribute('content', 'website');
-      document.head.appendChild(ogTypeTag);
-    }
+    createOrUpdateMetaTag('meta[property="og:type"]', {
+      property: 'og:type',
+      content: 'website'
+    });
 
     // Add Twitter Card
-    let twitterCardTag = document.querySelector('meta[name="twitter:card"]');
-    if (!twitterCardTag) {
-      twitterCardTag = document.createElement('meta');
-      twitterCardTag.setAttribute('name', 'twitter:card');
-      twitterCardTag.setAttribute('content', 'summary_large_image');
-      document.head.appendChild(twitterCardTag);
-    }
+    createOrUpdateMetaTag('meta[name="twitter:card"]', {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    });
 
+    // Cleanup function
+    return () => {
+      // Remove elements that were created by this component
+      createdElements.forEach(element => {
+        if (element.parentNode) {
+          element.parentNode.removeChild(element);
+        }
+      });
+      
+      // Restore original title if it was changed
+      if (title && originalTitle !== title) {
+        document.title = originalTitle;
+      }
+    };
   }, [title, description, ogTitle, ogDescription, ogImage, ogUrl, canonicalUrl]);
 
   return null; // This component doesn't render anything

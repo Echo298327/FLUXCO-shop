@@ -22,7 +22,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
         <div className="relative p-8">
           <img
             src={product.dimensionsImage || product.image}
-            alt={`${t(`products.items.${product.id}.name`)} - ${t(`products.items.${product.id}.description`)} with dimensions and specifications`}
+            alt={`Product dimensions and specifications diagram for ${t(`products.items.${product.id}.name`)}`}
             className="w-full rounded-lg sepia-filter"
           />
 

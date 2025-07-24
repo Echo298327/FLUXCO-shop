@@ -30,7 +30,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             <div className="h-64 overflow-hidden">
                 <img
                     src={product.image}
-                    alt={`${t(`products.items.${product.id}.name`)} - ${t(`products.items.${product.id}.description`)} electric bicycle for sale`}
+                    alt={`${t(`products.items.${product.id}.name`)} electric bicycle`}
                     className="w-full h-full object-cover sepia-filter hover:scale-110 transition-transform duration-500"
                 />
             </div>

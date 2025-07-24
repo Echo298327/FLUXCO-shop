@@ -33,7 +33,15 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, product })
     "logo": "https://echo298327.github.io/CyclingShop/logo.webp",
     "image": "https://echo298327.github.io/CyclingShop/logo.webp",
     "priceRange": "$$",
-    "servesCuisine": "Bicycle Sales and Service",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.0320",
+        "longitude": "121.5654"
+      },
+      "geoRadius": "10000"
+    },
     "paymentAccepted": "Cash, Credit Card",
     "currenciesAccepted": "TWD"
   });
