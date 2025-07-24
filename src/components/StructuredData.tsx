@@ -47,7 +47,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, product })
   });
 
   const getProductSchema = () => {
-    if (!product) return null;
+    if (!product || product.id == null) return null;
     
     return {
       "@context": "https://schema.org",
@@ -74,9 +74,9 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ type, product })
         }
       },
       "category": "Electric Bicycle",
-      "productID": product.id.toString(),
+      "productID": String(product.id),
       "sku": `FLUX-${product.id}`,
-      "additionalProperty": Object.entries(product.details).map(([key, spec]) => ({
+      "additionalProperty": Object.entries(product.details || {}).map(([key, spec]) => ({
         "@type": "PropertyValue",
         "name": t(`productPage.details.labels.${key}`) || spec.label,
         "value": spec.value

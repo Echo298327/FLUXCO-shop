@@ -21,7 +21,7 @@ export const SEO: React.FC<SEOProps> = ({
 }) => {
   useEffect(() => {
     const createdElements: HTMLElement[] = [];
-    const originalTitle = document.title;
+    let originalTitle: string | null = null;
 
     // Helper function to safely create or update meta tag
     const createOrUpdateMetaTag = (selector: string, attributes: Record<string, string>) => {
@@ -65,8 +65,9 @@ export const SEO: React.FC<SEOProps> = ({
       return element;
     };
 
-    // Update title
-    if (title) {
+    // Update title only if it's different from current title
+    if (title && document.title !== title) {
+      originalTitle = document.title;
       document.title = title;
     }
 
@@ -136,8 +137,8 @@ export const SEO: React.FC<SEOProps> = ({
         }
       });
       
-      // Restore original title if it was changed
-      if (title && originalTitle !== title) {
+      // Restore original title if it was actually changed
+      if (originalTitle !== null) {
         document.title = originalTitle;
       }
     };
