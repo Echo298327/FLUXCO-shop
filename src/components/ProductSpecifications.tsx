@@ -32,7 +32,11 @@ export const ProductSpecifications: React.FC<ProductSpecificationsProps> = ({
             >
               <div className="flex items-start space-x-3">
                 <div className="flex-shrink-0">
-                  <i className={`${spec.icon} text-2xl text-amber-600`}></i>
+                  {typeof spec.icon === 'string' ? (
+                    <i className={`${spec.icon} text-2xl`}></i>
+                  ) : (
+                    <spec.icon className="w-10 h-10 text-amber-600" />
+                  )}
                 </div>
                 <div className="flex-1">
                   <div

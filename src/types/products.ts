@@ -1,3 +1,5 @@
+import type { FC } from 'react';
+
 export interface Product {
     id: number;
     name: string;
@@ -11,7 +13,7 @@ export interface Product {
 
     details: {
         [key: string]: {
-            icon: string;
+            icon: string | FC<{ className?: string }>;
             label: string;
             value: string;
         };

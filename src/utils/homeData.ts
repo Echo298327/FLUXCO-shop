@@ -6,7 +6,18 @@ import b1In from "../assets/bicycles/b1In.webp";
 import b2In from "../assets/bicycles/b2In.webp";
 import b3In from "../assets/bicycles/b3In.webp";
 import b4In from "../assets/bicycles/b4In.webp";
-
+import { Battery } from "../icons/Battery";
+import { Km } from "../icons/Km";
+import { CupHolder } from "../icons/CupHolder";
+import { Motor } from "../icons/Motor";
+import { Riding } from "../icons/Riding";
+import { FrontAndRear } from "../icons/Front&Rear";
+import { UpgradeDisplay } from "../icons/UpgradeDisplay";
+import { Gears } from "../icons/Gears";
+import { Warranty } from "../icons/Warranty";
+import { SignalLight } from "../icons/SignalLight";
+import { Wrap } from "../icons/Wrap";
+import { BluetoothDisplay } from "../icons/BluetoothDisplay";
 import type { Product, Feature } from "../types";
 
 export const products: Product[] = [
@@ -27,12 +38,12 @@ export const products: Product[] = [
         value: "25km/h"
       },
       "battery": {
-        icon: "fas fa-battery-full",
+        icon: Battery,
         label: "Battery",
         value: "36V 5Ah"
       },
       "motor": {
-        icon: "fas fa-cog",
+        icon: Motor,
         label: "Motor",
         value: "250W"
       },
@@ -42,27 +53,27 @@ export const products: Product[] = [
         value: "Easy Charge"
       },
       "range": {
-        icon: "fas fa-route",
+        icon: Km,
         label: "Range",
         value: "20-25km"
       },
       "ridingMode": {
-        icon: "fas fa-bicycle",
+        icon: Riding,
         label: "Riding Mode",
         value: "Three Riding Modes"
       },
       "letterWrap": {
-        icon: "fas fa-envelope",
+        icon: Wrap,
         label: "Letter Wrap",
         value: "Letter Wrap"
       },
       "UpgradeBluetoothDisplay": {
-        icon: "fas fa-bluetooth",
+        icon: BluetoothDisplay,
         label: "Bluetooth Display",
         value: "Upgrade Bluetooth Display"
       },
       "warranty": {
-        icon: "fas fa-shield-alt",
+        icon: Warranty,
         label: "Warranty",
         value: "One Year Warranty"
       },
@@ -85,12 +96,12 @@ export const products: Product[] = [
         value: "35km/h"
       },
       "battery": {
-        icon: "fas fa-battery-full",
+        icon: Battery,
         label: "Battery",
         value: "48V 10Ah"
       },
       "motor": {
-        icon: "fas fa-cog",
+        icon: Motor,
         label: "Motor",
         value: "500W"
       },
@@ -100,27 +111,27 @@ export const products: Product[] = [
         value: "Easy Charge"
       },
       "range": {
-        icon: "fas fa-route",
+        icon: Km,
         label: "Range",
         value: "45-50km"
       },
       "ridingMode": {
-        icon: "fas fa-bicycle",
+        icon: Riding,
         label: "Riding Mode",
         value: "Three Riding Modes"
       },
       "NonSlipWrap": {
-        icon: "fas fa-grip-horizontal",
+        icon: Wrap,
         label: "Non-Slip Wrap",
         value: "Non-Slip Wrap"
       },
       "UpgradeBluetoothDisplay": {
-        icon: "fas fa-bluetooth",
+        icon: BluetoothDisplay,
         label: "Bluetooth Display",
         value: "Upgrade Bluetooth Display"
       },
       "warranty": {
-        icon: "fas fa-shield-alt",
+        icon: Warranty,
         label: "Warranty",
         value: "One Year Warranty"
       },
@@ -143,12 +154,12 @@ export const products: Product[] = [
         value: "25-40km/h"
       },
       "battery": {
-        icon: "fas fa-battery-full",
+        icon: Battery,
         label: "Battery",
         value: "48V 8.2Ah"
       },
       "motor": {
-        icon: "fas fa-cog",
+        icon: Motor,
         label: "Motor",
         value: "750W"
       },
@@ -158,37 +169,37 @@ export const products: Product[] = [
         value: "Easy Charge"
       },
       "range": {
-        icon: "fas fa-route",
+        icon: Km,
         label: "Range",
         value: "60-95km"
       },
       "ridingMode": {
-        icon: "fas fa-bicycle",
+        icon: Riding,
         label: "Riding Mode",
         value: "Three Riding Modes"
       },
       "NonSlipWrap": {
-        icon: "fas fa-grip-horizontal",
+        icon: Wrap,
         label: "Non-Slip Wrap",
         value: "Non-Slip Wrap"
       },
       "UpgradeDisplay": {
-        icon: "fas fa-desktop",
+        icon: UpgradeDisplay,
         label: "Display",
         value: "Upgrade Display"
       },
       "SevenSpeedGears": {
-        icon: "fas fa-cogs",
+        icon: Gears,
         label: "Speed Gears",
         value: "Seven Speed Gears"
       },
       "frontRearSuspension": {
-        icon: "fas fa-compress-arrows-alt",
+        icon: FrontAndRear,
         label: "Suspension",
         value: "Front&Rear"
       },
       "warranty": {
-        icon: "fas fa-shield-alt",
+        icon: Warranty,
         label: "Warranty",
         value: "One Year Warranty"
       },
@@ -211,12 +222,12 @@ export const products: Product[] = [
         value: "25-45km/h"
       },
       "battery": {
-        icon: "fas fa-battery-full",
+        icon: Battery,
         label: "Battery",
         value: "48V 8.2Ah"
       },
       "motor": {
-        icon: "fas fa-cog",
+        icon: Motor,
         label: "Motor",
         value: "750W"
       },
@@ -226,37 +237,37 @@ export const products: Product[] = [
         value: "Easy Charge"
       },
       "range": {
-        icon: "fas fa-route",
+        icon: Km,
         label: "Range",
         value: "60-95km"
       },
       "SevenSpeedGears": {
-        icon: "fas fa-cogs",
+        icon: Gears,
         label: "Speed Gears",
         value: "Seven Speed Gears"
       },
-      "UpgradehDisplay": {
-        icon: "fas fa-desktop",
+      "UpgradeDisplay": {
+        icon: UpgradeDisplay,
         label: "Display",
         value: "Upgrade Display"
       },
       "frontRearSuspension": {
-        icon: "fas fa-compress-arrows-alt",
+        icon: FrontAndRear,
         label: "Suspension",
         value: "Front&Rear"
       },
       "warranty": {
-        icon: "fas fa-shield-alt",
+        icon: Warranty,
         label: "Warranty",
         value: "One Year Warranty"
       },
       "cupHolder": {
-        icon: "fas fa-coffee",
+        icon: CupHolder,
         label: "Cup Holder",
         value: "Cup Holder"
       },
       "signals": {
-        icon: "fas fa-traffic-light",
+        icon: SignalLight,
         label: "Signal Light",
         value: "Signal Light"
       },
