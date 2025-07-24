@@ -25,14 +25,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
         <div className="absolute inset-0 bg-gradient-to-r from-amber-900/70 via-amber-800/50 to-transparent"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-left">
           <div className="max-w-2xl">
-            <h2
+            <h1
               className="text-6xl font-bold text-amber-50 mb-6 leading-tight"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {t('hero.title')}
               <br />
               <span className="text-amber-200">{t('hero.titleAccent')}</span>
-            </h2>
+            </h1>
             <p
               className="text-xl text-amber-100 mb-8 leading-relaxed"
               style={{ fontFamily: "Crimson Text, serif" }}

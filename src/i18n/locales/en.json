@@ -74,6 +74,20 @@
       "general": "Hello! I'd like to know more about the products."
     }
   },
+  "seo": {
+    "home": {
+      "title": "FLUX & CO - Classic Cycling Heritage | Premium Electric Bikes Taiwan",
+      "description": "Discover high-quality electric bicycles and accessories at FLUX & CO. Premium e-bikes with classic design, perfect for urban commuting and cycling adventures in Taiwan."
+    },
+    "product": {
+      "title": "{{productName}} - Premium Electric Bike | FLUX & CO",
+      "description": "{{productDescription}} - High-quality electric bike with {{motor}} motor. Professional cycling solutions from FLUX & CO Taiwan."
+    },
+    "privacy": {
+      "title": "Privacy Policy | FLUX & CO - Classic Cycling Heritage",
+      "description": "Privacy policy for FLUX & CO. Learn how we protect your personal information and data when you visit our cycling shop or purchase electric bikes."
+    }
+  },
   "footer": {
     "companyName": "FLUX & CO",
     "description": "Your trusted partner for high-quality bicycles and professional cycling services.",
@@ -124,7 +138,7 @@
         "NonSlipWrap": "Non-Slip Grips",
         "displayUnit": "Display Unit",
         "UpgradeBluetoothDisplay": "Bluetooth Display",
-        "UpgradehDisplay": "LCD Display",
+        "UpgradeDisplay": "LCD Display",
         "warranty": "Warranty",
         "driveSystem": "Drive System",
         "SevenSpeedGears": "7-Speed Gears",
@@ -217,6 +231,13 @@
     "sharing": {
       "title": "Information Sharing",
       "content": "We do not sell, trade, or share your personal information with third parties. Your information is kept confidential and is only used by our team to serve you better."
+    },
+    "formsubmit": {
+      "title": "Third-Party Form Processing",
+      "content": "We use FormSubmit.co, a third-party service, to process and deliver contact form submissions to us via email. When you submit a contact form, your information (name, email, phone number, and message) is transmitted to FormSubmit's servers for processing and delivery. FormSubmit acts as a data processor on our behalf and is subject to their own privacy policy. We have chosen FormSubmit for its reliability in handling form submissions securely. For more information about how FormSubmit handles your data, please review their privacy policy at",
+      "linkText": "formsubmit.co",
+      "linkUrl": "https://formsubmit.co",
+      "linkSuffix": "."
     },
     "retention": {
       "title": "Data Retention",

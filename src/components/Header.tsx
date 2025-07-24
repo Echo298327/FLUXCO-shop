@@ -27,17 +27,17 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           <div className="flex items-center space-x-4">
             <img 
               src={logo} 
-              alt="FLUX & CO Logo" 
+              alt="FLUX & CO - Classic Cycling Heritage Logo - Premium Electric Bikes Taiwan" 
               className="h-12 w-auto cursor-pointer"
               onClick={handleLogoClick}
             />
             <div>
-              <h1 
+              <div 
                 className="text-3xl font-bold text-amber-900"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 {t('header.companyName')}
-              </h1>
+              </div>
               <p 
                 className="text-sm text-amber-700"
                 style={{ fontFamily: "Crimson Text, serif" }}

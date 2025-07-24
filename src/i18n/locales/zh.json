@@ -74,6 +74,20 @@
       "general": "您好！我想了解更多關於產品的資訊。"
     }
   },
+  "seo": {
+    "home": {
+      "title": "FLUX & CO - 經典自行車傳承 | 台灣頂級電動自行車",
+      "description": "探索 FLUX & CO 的高品質電動自行車和配件。經典設計的頂級電動車，完美適合台灣都市通勤和騎行冒險。"
+    },
+    "product": {
+      "title": "{{productName}} - 頂級電動自行車 | FLUX & CO",
+      "description": "{{productDescription}} - 配備{{motor}}馬達的高品質電動自行車。來自台灣 FLUX & CO 的專業騎行解決方案。"
+    },
+    "privacy": {
+      "title": "隱私政策 | FLUX & CO - 經典自行車傳承",
+      "description": "FLUX & CO 隱私政策。了解當您造訪我們的自行車店或購買電動自行車時，我們如何保護您的個人資訊和數據。"
+    }
+  },
   "footer": {
     "companyName": "FLUX & CO",
     "description": "您值得信賴的高品質自行車和專業騎行服務合作夥伴。",
@@ -117,7 +131,7 @@
         "UpgradeBluetoothDisplay": "藍牙顯示器",
         "warranty": "保固",
         "NonSlipWrap": "防滑握把",
-        "UpgradehDisplay": "顯示器",
+        "UpgradeDisplay": "顯示器",
         "SevenSpeedGears": "變速系統",
         "frontRearSuspension": "避震系統",
         "cupHolder": "杯架",
@@ -195,6 +209,13 @@
     "sharing": {
       "title": "資訊分享",
       "content": "我們不會出售、交易或與第三方分享您的個人資訊。您的資訊將保持機密，僅由我們的團隊使用以更好地為您服務。"
+    },
+    "formsubmit": {
+      "title": "第三方表單處理",
+      "content": "我們使用第三方服務 FormSubmit.co 來處理並通過電子郵件向我們傳送聯繫表單提交的內容。當您提交聯繫表單時，您的資訊（姓名、電子郵件、電話號碼和訊息）會傳送到 FormSubmit 的伺服器進行處理和傳送。FormSubmit 代表我們作為資料處理器，並受其自身隱私政策約束。我們選擇 FormSubmit 是因為其在安全處理表單提交方面的可靠性。有關 FormSubmit 如何處理您資料的更多資訊，請查看他們在",
+      "linkText": "formsubmit.co",
+      "linkUrl": "https://formsubmit.co",
+      "linkSuffix": "的隱私政策。"
     },
     "retention": {
       "title": "資料保存",

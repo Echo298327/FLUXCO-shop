@@ -2,6 +2,7 @@
 import React from "react";
 import { useEffect } from "react";
 // Components imports
+import { SEO } from "../components/SEO";
 import { Button } from "../components/Button";
 // Hooks import
 import { useNavigate } from "react-router-dom";
@@ -17,6 +18,15 @@ export const Privacy: React.FC = () => {
 
   return (
     <div className="min-h-screen vintage-texture bg-gradient-to-b from-amber-50/95 to-yellow-50/95">
+      <SEO 
+        title={t('seo.privacy.title')}
+        description={t('seo.privacy.description')}
+        ogTitle={t('seo.privacy.title')}
+        ogDescription={t('seo.privacy.description')}
+        ogImage="https://echo298327.github.io/CyclingShop/logo.webp"
+        ogUrl="https://echo298327.github.io/CyclingShop/privacy"
+        canonicalUrl="https://echo298327.github.io/CyclingShop/privacy"
+      />
       <div className="max-w-4xl mx-auto px-6 py-16 pt-25">
         {/* Header */}
         <div className="text-center mb-12">
@@ -84,6 +94,31 @@ export const Privacy: React.FC = () => {
               style={{ fontFamily: "Crimson Text, serif" }}
             >
               {t('privacy.sharing.content')}
+            </p>
+          </section>
+
+          {/* Third-Party Form Processing */}
+          <section className="mb-8">
+            <h2
+              className="text-2xl font-bold text-amber-900 mb-4"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
+              {t('privacy.formsubmit.title')}
+            </h2>
+            <p
+              className="text-amber-800 text-lg leading-relaxed"
+              style={{ fontFamily: "Crimson Text, serif" }}
+            >
+              {t('privacy.formsubmit.content')}{' '}
+              <a
+                href={t('privacy.formsubmit.linkUrl')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-600 hover:text-amber-800 underline transition-colors duration-200"
+              >
+                {t('privacy.formsubmit.linkText')}
+              </a>
+              {t('privacy.formsubmit.linkSuffix', { defaultValue: '.' })}
             </p>
           </section>
 

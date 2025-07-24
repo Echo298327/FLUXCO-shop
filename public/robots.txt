@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://echo298327.github.io/CyclingShop/sitemap.xml
+
+# Allow all search engines to crawl
+Allow: /product/
+Allow: /privacy
+Allow: /*.css
+Allow: /*.js
+Allow: /*.webp
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+
+# Standard files
+Allow: /favicon.ico
+Allow: /logo.webp 
