@@ -1,97 +1,50 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import type { Product } from '../types/products';
+import { Helmet } from 'react-helmet-async';
+import { siteConfig } from '../config/site';
+import type { Product } from '../types';
 
 interface StructuredDataProps {
-  type: 'business' | 'product';
+  type: 'organization' | 'product';
   product?: Product;
 }
 
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, product }) => {
-  const { t } = useTranslation();
-
-  const getBusinessSchema = () => ({
+  const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "FLUX & CO",
-    "description": t('footer.description'),
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Zhongzheng District",
-      "addressRegion": "Taipei",
-      "addressCountry": "TW",
-      "streetAddress": t('footer.address')
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "25.0320",
-      "longitude": "121.5654"
-    },
-    "telephone": "0983-362-103",
-    "openingHours": "Mo-Sa 12:00-20:00",
-    "url": "https://echo298327.github.io/CyclingShop/",
-    "logo": "https://echo298327.github.io/CyclingShop/logo.webp",
-    "image": "https://echo298327.github.io/CyclingShop/logo.webp",
-    "priceRange": "$$",
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "25.0320",
-        "longitude": "121.5654"
-      },
-      "geoRadius": "10000"
-    },
-    "paymentAccepted": "Cash, Credit Card",
-    "currenciesAccepted": "TWD"
-  });
-
-  const getProductSchema = () => {
-    if (!product || product.id == null) return null;
-    
-    return {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": t(`products.items.${product.id}.name`),
-      "description": t(`products.items.${product.id}.description`),
-      "image": `https://echo298327.github.io/CyclingShop${product.image}`,
-      "brand": {
-        "@type": "Brand",
-        "name": "FLUX & CO"
-      },
-      "manufacturer": {
-        "@type": "Organization",
-        "name": "FLUX & CO"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": product.price,
-        "priceCurrency": "TWD",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "FLUX & CO"
-        }
-      },
-      "category": "Electric Bicycle",
-      "productID": String(product.id),
-      "sku": `FLUX-${product.id}`,
-      "additionalProperty": Object.entries(product.details || {}).map(([key, spec]) => ({
-        "@type": "PropertyValue",
-        "name": t(`productPage.details.labels.${key}`) || spec.label,
-        "value": spec.value
-      }))
-    };
+    "@type": "Organization",
+    "name": siteConfig.title,
+    "url": siteConfig.fullUrl,
+    "logo": `${siteConfig.fullUrl}/logo.webp`,
+    "image": `${siteConfig.fullUrl}/logo.webp`,
+    "description": siteConfig.description,
+    "sameAs": [
+      siteConfig.social.github
+    ]
   };
 
-  const schema = type === 'business' ? getBusinessSchema() : getProductSchema();
-
-  if (!schema) return null;
+  const productSchema = product ? {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "description": product.description,
+    "image": `${siteConfig.fullUrl}${product.image}`,
+    "brand": {
+      "@type": "Brand",
+      "name": siteConfig.title
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": product.price,
+      "priceCurrency": "TWD",
+      "availability": "https://schema.org/InStock"
+    }
+  } : null;
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema, null, 2) }}
-    />
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(type === 'organization' ? organizationSchema : productSchema)}
+      </script>
+    </Helmet>
   );
 }; 

@@ -1,148 +1,60 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { siteConfig } from '../config/site';
 
 interface SEOProps {
-  title?: string;
-  description?: string;
-  ogTitle?: string;
-  ogDescription?: string;
+  title: string;
+  description: string;
   ogImage?: string;
   ogUrl?: string;
   canonicalUrl?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageAlt?: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({
   title,
   description,
-  ogTitle,
-  ogDescription,
-  ogImage,
-  ogUrl,
-  canonicalUrl
+  ogImage = `${siteConfig.fullUrl}${siteConfig.defaultImage.url}`,
+  ogUrl = siteConfig.fullUrl,
+  canonicalUrl = siteConfig.fullUrl,
+  imageWidth = siteConfig.defaultImage.width,
+  imageHeight = siteConfig.defaultImage.height,
+  imageAlt = siteConfig.defaultImage.alt,
 }) => {
-  useEffect(() => {
-    const createdElements: HTMLElement[] = [];
-    let originalTitle: string | null = null;
-
-    // Helper function to safely create or update meta tag
-    const createOrUpdateMetaTag = (selector: string, attributes: Record<string, string>) => {
-      let element = document.querySelector(selector) as HTMLMetaElement;
-      if (!element) {
-        element = document.createElement('meta');
-        Object.entries(attributes).forEach(([key, value]) => {
-          element.setAttribute(key, value);
-        });
-        document.head.appendChild(element);
-        createdElements.push(element);
-      } else {
-        // Update existing element
-        Object.entries(attributes).forEach(([key, value]) => {
-          if (key !== 'name' && key !== 'property') {
-            element.setAttribute(key, value);
-          }
-        });
-      }
-      return element;
-    };
-
-    // Helper function to safely create or update link tag
-    const createOrUpdateLinkTag = (selector: string, attributes: Record<string, string>) => {
-      let element = document.querySelector(selector) as HTMLLinkElement;
-      if (!element) {
-        element = document.createElement('link');
-        Object.entries(attributes).forEach(([key, value]) => {
-          element.setAttribute(key, value);
-        });
-        document.head.appendChild(element);
-        createdElements.push(element);
-      } else {
-        // Update existing element
-        Object.entries(attributes).forEach(([key, value]) => {
-          if (key !== 'rel') {
-            element.setAttribute(key, value);
-          }
-        });
-      }
-      return element;
-    };
-
-    // Update title only if it's different from current title
-    if (title && document.title !== title) {
-      originalTitle = document.title;
-      document.title = title;
-    }
-
-    // Update or create meta description
-    if (description) {
-      createOrUpdateMetaTag('meta[name="description"]', {
-        name: 'description',
-        content: description
-      });
-    }
-
-    // Open Graph tags
-    if (ogTitle) {
-      createOrUpdateMetaTag('meta[property="og:title"]', {
-        property: 'og:title',
-        content: ogTitle
-      });
-    }
-
-    if (ogDescription) {
-      createOrUpdateMetaTag('meta[property="og:description"]', {
-        property: 'og:description',
-        content: ogDescription
-      });
-    }
-
-    if (ogImage) {
-      createOrUpdateMetaTag('meta[property="og:image"]', {
-        property: 'og:image',
-        content: ogImage
-      });
-    }
-
-    if (ogUrl) {
-      createOrUpdateMetaTag('meta[property="og:url"]', {
-        property: 'og:url',
-        content: ogUrl
-      });
-    }
-
-    // Canonical URL
-    if (canonicalUrl) {
-      createOrUpdateLinkTag('link[rel="canonical"]', {
-        rel: 'canonical',
-        href: canonicalUrl
-      });
-    }
-
-    // Add og:type
-    createOrUpdateMetaTag('meta[property="og:type"]', {
-      property: 'og:type',
-      content: 'website'
-    });
-
-    // Add Twitter Card
-    createOrUpdateMetaTag('meta[name="twitter:card"]', {
-      name: 'twitter:card',
-      content: 'summary_large_image'
-    });
-
-    // Cleanup function
-    return () => {
-      // Remove elements that were created by this component
-      createdElements.forEach(element => {
-        if (element.parentNode) {
-          element.parentNode.removeChild(element);
-        }
-      });
+  const fullTitle = `${title} | ${siteConfig.title}`;
+  
+  return (
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
       
-      // Restore original title if it was actually changed
-      if (originalTitle !== null) {
-        document.title = originalTitle;
-      }
-    };
-  }, [title, description, ogTitle, ogDescription, ogImage, ogUrl, canonicalUrl]);
-
-  return null; // This component doesn't render anything
+      {/* Open Graph */}
+      <meta property="og:site_name" content={siteConfig.title} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content={String(imageWidth)} />
+      <meta property="og:image:height" content={String(imageHeight)} />
+      <meta property="og:image:alt" content={imageAlt} />
+      <meta property="og:url" content={ogUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={imageAlt} />
+      
+      {/* Additional SEO */}
+      <meta name="robots" content="index,follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonicalUrl} />
+    </Helmet>
+  );
 }; 

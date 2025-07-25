@@ -15,6 +15,7 @@ import { ErrorModal } from "../components/ErrorModal";
 import { NotFound } from "../pages/404";
 // Utils imports
 import { products } from "../utils/homeData";
+import { siteConfig } from "../config/site";
 
 interface ProductPageProps {
 }
@@ -42,23 +43,14 @@ const ProductPage: React.FC<ProductPageProps> = () => {
   return (
     <div className="min-h-screen pt-20 vintage-texture bg-gradient-to-b from-amber-50/95 to-yellow-50/95">
       <SEO 
-        title={t('seo.product.title', { 
-          productName: t(`products.items.${product.id}.name`) 
-        })}
-        description={t('seo.product.description', { 
-          productDescription: t(`products.items.${product.id}.description`),
-          motor: motorValue
-        })}
-        ogTitle={t('seo.product.title', { 
-          productName: t(`products.items.${product.id}.name`) 
-        })}
-        ogDescription={t('seo.product.description', { 
-          productDescription: t(`products.items.${product.id}.description`),
-          motor: motorValue
-        })}
-        ogImage={`https://echo298327.github.io/CyclingShop${product.image}`}
-        ogUrl={`https://echo298327.github.io/CyclingShop/product/${product.id}`}
-        canonicalUrl={`https://echo298327.github.io/CyclingShop/product/${product.id}`}
+        title={t(`products.items.${product.id}.name`)}
+        description={`${product.description} - ${product.details.motor.value} motor, ${product.details.battery.value} battery, range up to ${product.details.range.value}. Price: NT$${product.price.toLocaleString()}`}
+        ogImage={`${siteConfig.fullUrl}${product.image}`}
+        ogUrl={`${siteConfig.fullUrl}/#/product/${product.id}`}
+        canonicalUrl={`${siteConfig.fullUrl}/#/product/${product.id}`}
+        imageWidth={1200}
+        imageHeight={630}
+        imageAlt={`${t(`products.items.${product.id}.name`)} - ${product.description}`}
       />
       <StructuredData type="product" product={product} />
       <div className="max-w-6xl mx-auto px-6 py-12">    

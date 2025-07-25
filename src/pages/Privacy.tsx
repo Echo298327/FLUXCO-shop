@@ -7,6 +7,7 @@ import { Button } from "../components/Button";
 // Hooks import
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import { siteConfig } from "../config/site";
 
 export const Privacy: React.FC = () => {
   const { t } = useTranslation();
@@ -21,11 +22,9 @@ export const Privacy: React.FC = () => {
       <SEO 
         title={t('seo.privacy.title')}
         description={t('seo.privacy.description')}
-        ogTitle={t('seo.privacy.title')}
-        ogDescription={t('seo.privacy.description')}
-        ogImage="https://echo298327.github.io/CyclingShop/logo.webp"
-        ogUrl="https://echo298327.github.io/CyclingShop/privacy"
-        canonicalUrl="https://echo298327.github.io/CyclingShop/privacy"
+        ogImage={`${siteConfig.fullUrl}/logo.webp`}
+        ogUrl={`${siteConfig.fullUrl}/privacy`}
+        canonicalUrl={`${siteConfig.fullUrl}/privacy`}
       />
       <div className="max-w-4xl mx-auto px-6 py-16 pt-25">
         {/* Header */}

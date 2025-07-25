@@ -1,7 +1,7 @@
 // React import
 import React from "react";
 // Router import
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 // QueryClient import
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 // Pages import
@@ -15,11 +15,10 @@ import { Layout } from "./layout/Layout";
 const queryClient = new QueryClient();
 
 export const App: React.FC = () => {
-
-       return (
+  return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Router basename="/CyclingShop">
+        <Router>
           <Routes>
             <Route element={<Layout />}> 
               <Route path="/" element={<Home />} />
