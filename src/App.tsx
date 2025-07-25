@@ -15,11 +15,10 @@ import { Layout } from "./layout/Layout";
 const queryClient = new QueryClient();
 
 export const App: React.FC = () => {
-
-       return (
+  return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Router basename="/CyclingShop">
+        <Router>
           <Routes>
             <Route element={<Layout />}> 
               <Route path="/" element={<Home />} />

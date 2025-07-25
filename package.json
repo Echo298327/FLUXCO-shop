@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Echo298327.github.io/CyclingShop",
+  "homepage": "https://fluxco-dev.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
