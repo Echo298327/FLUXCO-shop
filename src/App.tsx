@@ -1,7 +1,7 @@
 // React import
 import React from "react";
 // Router import
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // QueryClient import
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 // Pages import
