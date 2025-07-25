@@ -21,9 +21,9 @@ export const App: React.FC = () => {
         <Router>
           <Routes>
             <Route element={<Layout />}> 
-              <Route path="" element={<Home />} />
-              <Route path="product/:id" element={<ProductPage />} />
-              <Route path="privacy" element={<Privacy />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/product/:id" element={<ProductPage />} />
+              <Route path="/privacy" element={<Privacy />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
