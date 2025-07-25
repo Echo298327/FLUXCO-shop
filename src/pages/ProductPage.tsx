@@ -15,6 +15,7 @@ import { ErrorModal } from "../components/ErrorModal";
 import { NotFound } from "../pages/404";
 // Utils imports
 import { products } from "../utils/homeData";
+import { siteConfig } from "../config/site";
 
 interface ProductPageProps {
 }
@@ -49,16 +50,9 @@ const ProductPage: React.FC<ProductPageProps> = () => {
           productDescription: t(`products.items.${product.id}.description`),
           motor: motorValue
         })}
-        ogTitle={t('seo.product.title', { 
-          productName: t(`products.items.${product.id}.name`) 
-        })}
-        ogDescription={t('seo.product.description', { 
-          productDescription: t(`products.items.${product.id}.description`),
-          motor: motorValue
-        })}
-        ogImage={`https://echo298327.github.io/CyclingShop${product.image}`}
-        ogUrl={`https://echo298327.github.io/CyclingShop/product/${product.id}`}
-        canonicalUrl={`https://echo298327.github.io/CyclingShop/product/${product.id}`}
+        ogImage={`${siteConfig.fullUrl}${product.image}`}
+        ogUrl={`${siteConfig.fullUrl}/product/${product.id}`}
+        canonicalUrl={`${siteConfig.fullUrl}/product/${product.id}`}
       />
       <StructuredData type="product" product={product} />
       <div className="max-w-6xl mx-auto px-6 py-12">    

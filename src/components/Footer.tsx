@@ -92,7 +92,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           <div className="flex flex-col items-center space-y-2">
             <div className="flex items-center space-x-4">
               <a
-                href="/CyclingShop/privacy"
+                href="/privacy"
                 onClick={(e) => {
                   e.preventDefault();
                   navigate('/privacy');
