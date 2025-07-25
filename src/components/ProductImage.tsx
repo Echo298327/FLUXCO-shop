@@ -32,7 +32,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
           <div className="absolute top-4 right-4 z-10">
             <button
               onClick={() => setShowDimensions(!showDimensions)}
-              className="flex items-center gap-2 bg-amber-600/90 hover:bg-amber-700/90 text-white px-3 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-sm font-medium backdrop-blur-sm"
+              className="flex items-center gap-2 bg-amber-600/90 hover:bg-amber-700/90 text-white px-3 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-sm font-medium backdrop-blur-sm cursor-pointer"
               title={showDimensions ? t('productPage.hideDimensions') : t('productPage.showDimensions')}
             >
               <i className={`${showDimensions ? "fas fa-eye-slash" : "fas fa-ruler"} text-sm`}></i>

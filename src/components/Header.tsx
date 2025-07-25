@@ -1,7 +1,7 @@
 // React import
 import React from "react";
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import logo from "../assets/logo.webp";
 import { Button } from "./Button";
 
@@ -10,6 +10,7 @@ interface HeaderProps {}
 export const Header: React.FC<HeaderProps> = ({}) => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   
   const toggleLanguage = () => {
     const newLang = i18n.language === 'zh' ? 'en' : 'zh';
@@ -18,6 +19,19 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 
   const handleLogoClick = () => {
     navigate('/');
+  };
+
+  const handleNavClick = (sectionId: string) => {
+    // If we're already on the home page
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're on a different page, navigate to home and then scroll
+      navigate('/', { state: { scrollTo: sectionId } });
+    }
   };
 
   return (
@@ -46,36 +60,37 @@ export const Header: React.FC<HeaderProps> = ({}) => {
               </p>
             </div>
           </div>
+          
           <div className="flex items-center space-x-6">
             <nav className="hidden md:flex space-x-8">
-              <a
-                href="#home"
+              <button
+                onClick={() => handleNavClick('home')}
                 className="text-amber-800 hover:text-amber-900 font-semibold cursor-pointer transition-colors"
                 style={{ fontFamily: "Crimson Text, serif" }}
               >
                 {t('header.nav.home')}
-              </a>
-              <a
-                href="#products"
+              </button>
+              <button
+                onClick={() => handleNavClick('products')}
                 className="text-amber-800 hover:text-amber-900 font-semibold cursor-pointer transition-colors"
                 style={{ fontFamily: "Crimson Text, serif" }}
               >
                 {t('header.nav.products')}
-              </a>
-              <a
-                href="#services"
+              </button>
+              <button
+                onClick={() => handleNavClick('services')}
                 className="text-amber-800 hover:text-amber-900 font-semibold cursor-pointer transition-colors"
                 style={{ fontFamily: "Crimson Text, serif" }}
               >
                 {t('header.nav.services')}
-              </a>
-              <a
-                href="#contact"
+              </button>
+              <button
+                onClick={() => handleNavClick('contact')}
                 className="text-amber-800 hover:text-amber-900 font-semibold cursor-pointer transition-colors"
                 style={{ fontFamily: "Crimson Text, serif" }}
               >
                 {t('header.nav.contact')}
-              </a>
+              </button>
             </nav>
             
             {/* Language Switcher */}

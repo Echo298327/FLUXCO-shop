@@ -1,5 +1,6 @@
 // React import
 import React, { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 // Components import
 import { SEO } from "../components/SEO";
 import { StructuredData } from "../components/StructuredData";
@@ -15,11 +16,28 @@ import { useTranslation } from 'react-i18next';
 
 const Home: React.FC = () => {
     const { t } = useTranslation();
+    const location = useLocation();
     
-    // Scroll to top when component mounts
     useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+      // Handle both initial load and navigation from other pages
+      const handleScroll = () => {
+        const state = location.state as { scrollTo?: string } | null;
+        if (state?.scrollTo) {
+          const element = document.getElementById(state.scrollTo);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            // Clear the state after scrolling
+            window.history.replaceState({}, document.title);
+          }
+        } else {
+          // Default behavior - scroll to top
+          window.scrollTo(0, 0);
+        }
+      };
+
+      // Small delay to ensure DOM is ready
+      setTimeout(handleScroll, 100);
+    }, [location]);
     
   return (
     <div>
