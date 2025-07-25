@@ -21,7 +21,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
     return (
         <Link
-            to={`/product/${product.id}`}
+            to={`product/${product.id}`}
             className="block vintage-texture bg-white/90 rounded-lg overflow-hidden vintage-shadow hover:scale-105 transition-all duration-300 cursor-pointer distressed-border flex flex-col h-full"
             onClick={(e) => {
                 // Allow middle click and ctrl/cmd+click to open in new tab
