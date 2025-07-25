@@ -37,7 +37,7 @@ export const NotFound: React.FC = () => {
           className="!rounded-button whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 vintage-shadow"
           text={t('productPage.pageNotFound.returnHome')}
           color="amber"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("")}
         />
       </div>
     </div>

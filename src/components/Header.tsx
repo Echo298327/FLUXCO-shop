@@ -18,41 +18,36 @@ export const Header: React.FC<HeaderProps> = ({}) => {
   };
 
   const handleLogoClick = () => {
-    navigate('/');
+    navigate('');
   };
 
   const handleNavClick = (sectionId: string) => {
     // If we're already on the home page
-    if (location.pathname === '/') {
+    if (location.pathname === '/' || location.pathname === '') {
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
       // If we're on a different page, navigate to home and then scroll
-      navigate('/', { state: { scrollTo: sectionId } });
+      navigate('', { state: { scrollTo: sectionId } });
     }
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 vintage-texture bg-gradient-to-r from-amber-50 to-yellow-50 shadow-lg">
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <img 
-              src={logo} 
-              alt="FLUX & CO - Classic Cycling Heritage Logo - Premium Electric Bikes Taiwan" 
-              className="h-12 w-auto cursor-pointer"
-              onClick={handleLogoClick}
-            />
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 vintage-texture">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center cursor-pointer" onClick={handleLogoClick}>
+            <img src={logo} alt="FLUX&CO Logo" className="h-12 w-auto mr-4" />
             <div>
-              <div 
-                className="text-3xl font-bold text-amber-900"
+              <h1
+                className="text-2xl font-bold text-amber-900"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
-                {t('header.companyName')}
-              </div>
-              <p 
+                FLUX&CO
+              </h1>
+              <p
                 className="text-sm text-amber-700"
                 style={{ fontFamily: "Crimson Text, serif" }}
               >
