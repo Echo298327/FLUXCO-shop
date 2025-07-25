@@ -1,3 +1,4 @@
+// Assets import
 import b1 from "../assets/bicycles/b1.webp";
 import b2 from "../assets/bicycles/b2.webp";
 import b3 from "../assets/bicycles/b3.webp";
@@ -6,6 +7,7 @@ import b1In from "../assets/bicycles/b1In.webp";
 import b2In from "../assets/bicycles/b2In.webp";
 import b3In from "../assets/bicycles/b3In.webp";
 import b4In from "../assets/bicycles/b4In.webp";
+// Icons import
 import { Battery } from "../icons/Battery";
 import { Km } from "../icons/Km";
 import { CupHolder } from "../icons/CupHolder";
@@ -20,6 +22,7 @@ import { Wrap } from "../icons/Wrap";
 import { BluetoothDisplay } from "../icons/BluetoothDisplay";
 import { Speed } from "../icons/Speed";
 import { Charge } from "../icons/Charge";
+// Types import
 import type { Product, Feature } from "../types";
 
 export const products: Product[] = [
