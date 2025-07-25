@@ -18,6 +18,8 @@ import { Warranty } from "../icons/Warranty";
 import { SignalLight } from "../icons/SignalLight";
 import { Wrap } from "../icons/Wrap";
 import { BluetoothDisplay } from "../icons/BluetoothDisplay";
+import { Speed } from "../icons/Speed";
+import { Charge } from "../icons/Charge";
 import type { Product, Feature } from "../types";
 
 export const products: Product[] = [
@@ -33,7 +35,7 @@ export const products: Product[] = [
     vehicleLength: 34,
     details: {
       "topSpeed": {
-        icon: "fas fa-tachometer-alt",
+        icon: Speed,
         label: "Top Speed",
         value: "25km/h"
       },
@@ -48,7 +50,7 @@ export const products: Product[] = [
         value: "250W"
       },
       "easyCharge": {
-        icon: "fas fa-plug",
+        icon: Charge,
         label: "Easy Charge",
         value: "Easy Charge"
       },
@@ -91,7 +93,7 @@ export const products: Product[] = [
     vehicleLength: 57,
     details: {
       "topSpeed": {
-        icon: "fas fa-tachometer-alt",
+        icon: Speed,
         label: "Top Speed",
         value: "35km/h"
       },
@@ -106,7 +108,7 @@ export const products: Product[] = [
         value: "500W"
       },
       "easyCharge": {
-        icon: "fas fa-plug",
+        icon: Charge,
         label: "Easy Charge",
         value: "Easy Charge"
       },
@@ -149,7 +151,7 @@ export const products: Product[] = [
     vehicleLength: 65,
     details: {
       "topSpeed": {
-        icon: "fas fa-tachometer-alt",
+        icon: Speed,
         label: "Top Speed",
         value: "25-40km/h"
       },
@@ -164,7 +166,7 @@ export const products: Product[] = [
         value: "750W"
       },
       "easyCharge": {
-        icon: "fas fa-plug",
+        icon: Charge,
         label: "Easy Charge",
         value: "Easy Charge"
       },
@@ -217,7 +219,7 @@ export const products: Product[] = [
     vehicleLength: 66,
     details: {
       "topSpeed": {
-        icon: "fas fa-tachometer-alt",
+        icon: Speed,
         label: "Top Speed",
         value: "25-45km/h"
       },
@@ -232,7 +234,7 @@ export const products: Product[] = [
         value: "750W"
       },
       "easyCharge": {
-        icon: "fas fa-plug",
+        icon: Charge,
         label: "Easy Charge",
         value: "Easy Charge"
       },
