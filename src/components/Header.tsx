@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 vintage-texture">
+    <header className="fixed top-0 left-0 right-0 z-50 vintage-texture bg-gradient-to-r from-amber-50 to-yellow-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center cursor-pointer" onClick={handleLogoClick}>

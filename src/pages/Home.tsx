@@ -13,6 +13,7 @@ import { ContactSection } from "../components/ContactSection";
 import { products, features } from "../utils/homeData";
 // Translation hook
 import { useTranslation } from 'react-i18next';
+import { siteConfig } from "../config/site";
 
 const Home: React.FC = () => {
     const { t } = useTranslation();
@@ -44,13 +45,11 @@ const Home: React.FC = () => {
       <SEO 
         title={t('seo.home.title')}
         description={t('seo.home.description')}
-        ogTitle={t('seo.home.title')}
-        ogDescription={t('seo.home.description')}
-        ogImage="https://echo298327.github.io/CyclingShop/logo.webp"
-        ogUrl="https://echo298327.github.io/CyclingShop/"
-        canonicalUrl="https://echo298327.github.io/CyclingShop/"
+        ogImage={`${siteConfig.fullUrl}/logo.webp`}
+        ogUrl={siteConfig.fullUrl}
+        canonicalUrl={siteConfig.fullUrl}
       />
-      <StructuredData type="business" />
+      <StructuredData type="organization" />
       {/* Header */}
       <Header />
       {/* Hero Section */}
