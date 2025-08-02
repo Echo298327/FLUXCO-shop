@@ -7,6 +7,7 @@ import { StructuredData } from "../components/StructuredData";
 import { Header } from "../components/Header";
 import { HeroSection } from "../components/HeroSection";
 import { ProductsSection } from "../components/productsSection";
+import { AcessoriesSection } from "../components/AcessoriesSection";
 import { FeaturesSection } from "../components/FeaturesSection";
 import { ContactSection } from "../components/ContactSection";
 // Utils import
@@ -58,6 +59,8 @@ const Home: React.FC = () => {
       <ProductsSection
         products={products}
       />
+      {/* Acessories Section */}
+      <AcessoriesSection setShow404={() => {}} handleWhatsAppContact={() => {}} />
       {/* Features Section */}
       <FeaturesSection features={features} />
       

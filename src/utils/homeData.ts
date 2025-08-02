@@ -7,6 +7,10 @@ import b1In from "../assets/bicycles/b1In.webp";
 import b2In from "../assets/bicycles/b2In.webp";
 import b3In from "../assets/bicycles/b3In.webp";
 import b4In from "../assets/bicycles/b4In.webp";
+// Accessories import
+import basket from "../assets/accessories/basket_3.webp";
+import pedals from "../assets/accessories/pedals_1.webp";
+import childSeat from "../assets/accessories/childSeat_1.webp";
 // Icons import
 import { Battery } from "../icons/Battery";
 import { Km } from "../icons/Km";
@@ -23,7 +27,7 @@ import { BluetoothDisplay } from "../icons/BluetoothDisplay";
 import { Speed } from "../icons/Speed";
 import { Charge } from "../icons/Charge";
 // Types import
-import type { Product, Feature } from "../types";
+import type { Product, Feature, Accessory } from "../types";
 
 export const products: Product[] = [
   {
@@ -296,3 +300,22 @@ export const features: Feature[] = [
     description: "One-on-one consultation to find the perfect cycling solution for your needs",
   },
 ];
+
+
+export const accessories: Accessory[] = [
+  {
+    name: "accessories.items.pedals",
+    price: "600 NTD",
+    image: pedals,
+  },
+  {
+    name: "accessories.items.childSeat",
+    price: "2,800 NTD",
+    image: childSeat,
+  },
+  {
+    name: "accessories.items.basket",
+    price: "2,000 NTD",
+    image: basket,
+  },
+]

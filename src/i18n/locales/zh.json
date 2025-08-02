@@ -197,6 +197,17 @@
     "chinese": "中文",
     "english": "English"
   },
+  "accessories": {
+    "title": "配件",
+    "subtitle": "透過我們精心挑選的優質配件，完善您的騎行體驗。",
+    "seeAll": "查看所有配件",
+    "inquire": "詢問",
+    "items": {
+      "pedals": "防滑踏板",
+      "childSeat": "升級座墊",
+      "basket": "前置物籃"
+    }
+  },
   "privacy": {
     "title": "隱私政策",
     "lastUpdated": "最後更新：{{date}}",
