@@ -7,7 +7,7 @@ import { AccessoryCard } from "./AccessoryCard";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 // Utils import
-import { accessories } from "../utils/homeData";
+import { accessories } from "../utils/productData";
 
 
 interface AcessoriesSectionProps {

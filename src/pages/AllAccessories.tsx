@@ -6,7 +6,7 @@ import { LableButton } from "../components/LableButton";
 // Hooks import
 import { useTranslation } from "react-i18next";
 // Utils import
-import { accessories } from "../utils/homeData";
+import { accessories } from "../utils/accessoriesData";
 // SEO Components
 import { SEO } from "../components/SEO";
 import { StructuredData } from "../components/StructuredData";
@@ -14,11 +14,6 @@ import { StructuredData } from "../components/StructuredData";
 const AccessoriesPage: React.FC = () => {
   const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-
-  const handleWhatsAppContact = (name: string) => {
-    const message = t("contact.lineMessages.withProduct", { productName: name });
-    window.open(`https://line.me/R/oaMessage/@flux.tw/?${encodeURIComponent(message)}`);
-  };
 
   const categories = [
     "all",
@@ -83,7 +78,6 @@ const AccessoriesPage: React.FC = () => {
               <AccessoryCard
                 key={index}
                 accessory={accessory}
-                handleWhatsAppContact={handleWhatsAppContact}
               />
             ))}
           </div>

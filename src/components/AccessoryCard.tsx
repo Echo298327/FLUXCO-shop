@@ -10,12 +10,10 @@ import type { Accessory } from "../types";
 
 interface AccessoryCardProps {
   accessory: Accessory;
-  handleWhatsAppContact: (name: string) => void;
 }
 
 export const AccessoryCard: React.FC<AccessoryCardProps> = ({
   accessory,
-  handleWhatsAppContact,
 }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();

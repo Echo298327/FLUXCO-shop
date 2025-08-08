@@ -11,7 +11,8 @@ import { AcessoriesSection } from "../components/AcessoriesSection";
 import { FeaturesSection } from "../components/FeaturesSection";
 import { ContactSection } from "../components/ContactSection";
 // Utils import
-import { products, features } from "../utils/homeData";
+import { products } from "../utils/productData";
+import { features } from "../utils/featuresData";
 // Translation hook
 import { useTranslation } from 'react-i18next';
 import { siteConfig } from "../config/site";

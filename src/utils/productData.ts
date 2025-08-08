@@ -38,7 +38,7 @@ import { BluetoothDisplay } from "../icons/BluetoothDisplay";
 import { Speed } from "../icons/Speed";
 import { Charge } from "../icons/Charge";
 // Types import
-import type { Product, Feature, Accessory } from "../types";
+import type { Product } from "../types";
 
 export const products: Product[] = [
   {
@@ -294,97 +294,3 @@ export const products: Product[] = [
     },
   },
 ];
-export const features: Feature[] = [
-  {
-    icon: "fas fa-tools",
-    title: "Expert Service",
-    description: "Professional maintenance and repair services for all types of bicycles with certified technicians",
-  },
-  {
-    icon: "fas fa-star",
-    title: "Quality Products",
-    description: "High-quality bicycles and accessories from trusted brands worldwide",
-  },
-  {
-    icon: "fas fa-handshake",
-    title: "Personal Consultation",
-    description: "One-on-one consultation to find the perfect cycling solution for your needs",
-  },
-];
-
-
-export const accessories: Accessory[] = [
-  {
-    name: "accessories.items.pedals",
-    price: "600 NTD",
-    image: pedals,
-    category: "accessories.categories.performance",
-  },
-  {
-    name: "accessories.items.childSeat",
-    price: "2,800 NTD",
-    image: childSeat,
-    category: "accessories.categories.safety",
-  },
-  {
-    name: "accessories.items.basketBlack",
-    price: "2,000 NTD",
-    image: basketBlack,
-    category: "accessories.categories.storage",
-  },
-  {
-    name: "accessories.items.basketWood",
-    price: "2,000 NTD",
-    image: basketWood,
-    category: "accessories.categories.storage",
-  },
-  {
-    name: "accessories.items.capHolder",
-    price: "600 NTD",
-    image: capHolder,
-    category: "accessories.categories.convenience",
-  },
-  {
-    name: "accessories.items.charger",
-    price: "1,200 NTD",
-    image: charger,
-    category: "accessories.categories.electrical",
-  },
-  {
-    name: "accessories.items.frontRearMudguard",
-    price: "1,200 NTD",
-    image: frontRearMudguard,
-    category: "accessories.categories.protection",
-  },
-  {
-    name: "accessories.items.latterGrip",
-    price: "600 NTD",
-    image: latterGrip,
-    category: "accessories.categories.comfort",
-  },
-  {
-    name: "accessories.items.phoneHolder",
-    price: "600 NTD",
-    image: phoneHolder,
-    category: "accessories.categories.convenience",
-  },
-  {
-    name: "accessories.items.rearRack",
-    price: "1,200 NTD",
-    image: rearRack,
-    category: "accessories.categories.storage",
-  },
-  {
-    name: "accessories.items.waterproofBag",
-    price: "1,600 NTD",
-    image: waterproofBag,
-    category: "accessories.categories.storage",
-  },
-  {
-    name: "accessories.items.seat",
-    price: "1,200 NTD",
-    image: seat,
-    category: "accessories.categories.comfort",
-  },
-
-]

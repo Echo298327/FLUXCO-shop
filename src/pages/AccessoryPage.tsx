@@ -12,7 +12,7 @@ import { SuccessModal } from "../components/SuccessModal";
 import { ErrorModal } from "../components/ErrorModal";
 import { NotFound } from "../pages/404";
 // Utils imports
-import { accessories } from "../utils/homeData";
+import { accessories } from "../utils/productData";
 import { siteConfig } from "../config/site";
 
 const AccessoryPage: React.FC = () => {

@@ -14,7 +14,7 @@ import { SuccessModal } from "../components/SuccessModal";
 import { ErrorModal } from "../components/ErrorModal";
 import { NotFound } from "../pages/404";
 // Utils imports
-import { products } from "../utils/homeData";
+import { products } from "../utils/productData";
 import { siteConfig } from "../config/site";
 
 interface ProductPageProps {
