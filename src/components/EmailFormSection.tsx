@@ -12,9 +12,10 @@ interface EmailFormSectionProps {
     setShowSuccess: (showSuccess: boolean) => void;
     setShowError: (showError: boolean) => void;
     product: Product;
+    redirectSection?: string;
 }
 
-export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSuccess, setShowError, product}) => {
+export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSuccess, setShowError, product, redirectSection}) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -60,9 +61,13 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
             if (response.ok) {
                 setShowSuccess(true);
                 
-                // Navigate to home after 3 seconds
+                // Navigate to home with section scroll after 3 seconds
                 setTimeout(() => {
-                    navigate('/');
+                    if (redirectSection) {
+                        navigate('/', { state: { scrollTo: redirectSection } });
+                    } else {
+                        navigate('/');
+                    }
                 }, 3000);
             } else {
                 console.error('Form submission failed');
