@@ -26,9 +26,9 @@ const AccessoryPage: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Find accessory by name (URL-encoded name)
+  // Find accessory by key (language-independent)
   const accessory = accessories.find(acc => 
-    encodeURIComponent(t(acc.name).toLowerCase().replace(/\s+/g, '-')) === name
+    acc.name.replace('accessories.items.', '') === name
   );
 
   if (!accessory) {

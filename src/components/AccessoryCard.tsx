@@ -21,8 +21,9 @@ export const AccessoryCard: React.FC<AccessoryCardProps> = ({
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    const accessoryName = t(accessory.name).toLowerCase().replace(/\s+/g, '-');
-    navigate(`/accessory/${encodeURIComponent(accessoryName)}`);
+    // Use the accessory name key instead of translated name for stable URLs
+    const accessoryKey = accessory.name.replace('accessories.items.', '');
+    navigate(`/accessory/${accessoryKey}`);
   };
 
   return (
