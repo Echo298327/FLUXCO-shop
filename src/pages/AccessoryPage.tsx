@@ -148,11 +148,11 @@ const AccessoryPage: React.FC = () => {
           <div className="lg:w-1/2">
             <div className="bg-white/80 rounded-lg p-8 vintage-shadow">
               {/* Main Image with Navigation */}
-              <div className="relative mb-4">
+              <div className="relative mb-4 h-96 flex items-center justify-center bg-gray-50/50 rounded-lg">
                 <img
                   src={selectedImage || accessory.image}
                   alt={t(accessory.name)}
-                  className="w-full h-auto max-h-96 object-contain sepia-filter"
+                  className="max-w-full max-h-full object-contain sepia-filter"
                 />
                 
                 {/* Navigation Arrows - only show if multiple images */}
