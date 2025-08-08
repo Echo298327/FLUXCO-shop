@@ -219,6 +219,37 @@
     "chinese": "中文",
     "english": "English"
   },
+  "accessories": {
+    "title": "Accessories",
+    "subtitle": "Complete your cycling experience with our carefully curated selection of high-quality accessories.",
+    "seeAll": "See All Accessories",
+    "inquire": "Inquire",
+    "backToAccessories": "Back to Accessories",
+    "categories": {
+      "all": "All Categories",
+      "performance": "Performance",
+      "safety": "Safety",
+      "storage": "Storage",
+      "convenience": "Convenience",
+      "electrical": "Electrical",
+      "protection": "Protection",
+      "comfort": "Comfort"
+    },
+    "items": {
+      "pedals": "Pedals",
+      "childSeat": "Child Seat",
+      "basketBlack": "Black Basket",
+      "basketWood": "Wooden Basket",
+      "capHolder": "Cap Holder",
+      "charger": "Charger",
+      "frontRearMudguard": "Front & Rear Mudguard",
+      "lateralGrip": "Handlebar Grips",
+      "phoneHolder": "Phone Holder",
+      "rearRack": "Rear Rack",
+      "waterproofBag": "Waterproof Bag",
+      "seat": "Seat"
+    }
+  },
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: {{date}}",

@@ -7,10 +7,12 @@ import { StructuredData } from "../components/StructuredData";
 import { Header } from "../components/Header";
 import { HeroSection } from "../components/HeroSection";
 import { ProductsSection } from "../components/productsSection";
+import { AccessoriesSection } from "../components/AccessoriesSection";
 import { FeaturesSection } from "../components/FeaturesSection";
 import { ContactSection } from "../components/ContactSection";
 // Utils import
-import { products, features } from "../utils/homeData";
+import { products } from "../utils/productData";
+import { features } from "../utils/featuresData";
 // Translation hook
 import { useTranslation } from 'react-i18next';
 import { siteConfig } from "../config/site";
@@ -52,12 +54,16 @@ const Home: React.FC = () => {
       <StructuredData type="organization" />
       {/* Header */}
       <Header />
+
+
       {/* Hero Section */}
       <HeroSection />
       {/* Product Showcase */}
       <ProductsSection
         products={products}
       />
+      {/* Accessories Section */}
+      <AccessoriesSection />
       {/* Features Section */}
       <FeaturesSection features={features} />
       
