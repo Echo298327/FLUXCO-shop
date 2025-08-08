@@ -183,7 +183,7 @@ const AccessoryPage: React.FC = () => {
               
               {/* Image Gallery Thumbnails */}
               {imagesToDisplay.length > 1 && (
-                <div className="flex gap-2 overflow-x-hide">
+                <div className="flex gap-2">
                   {imagesToDisplay.map((image, index) => (
                     <button
                       key={index}

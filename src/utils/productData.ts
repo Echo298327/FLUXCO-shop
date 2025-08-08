@@ -7,21 +7,6 @@ import b1In from "../assets/bicycles/b1In.webp";
 import b2In from "../assets/bicycles/b2In.webp";
 import b3In from "../assets/bicycles/b3In.webp";
 import b4In from "../assets/bicycles/b4In.webp";
-// Accessories import
-import basketBlack from "../assets/accessories/basketBlack_3.webp";
-import basketWood from "../assets/accessories/basketWood_1.webp";
-import capHolder from "../assets/accessories/capHolder_1.webp";
-import charger from "../assets/accessories/charger_1.webp";
-import frontRearMudguard from "../assets/accessories/frontRearMudguard_3.webp";
-import lateralGrip from "../assets/accessories/lateralGrip_1.webp";
-import phoneHolder from "../assets/accessories/phoneHolder_1.webp";
-import rearRack from "../assets/accessories/rearRack_1.webp";
-import waterproofBag from "../assets/accessories/waterProofBag_1.webp";
-import pedals from "../assets/accessories/pedals_1.webp";
-import childSeat from "../assets/accessories/childSeat_1.webp";
-import seat from "../assets/accessories/seat_1.webp";
-
-
 // Icons import
 import { Battery } from "../icons/Battery";
 import { Km } from "../icons/Km";
