@@ -20,8 +20,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'zh', // Set default language to Chinese
-    fallbackLng: 'zh',
+    fallbackLng: 'zh', // Fallback to Chinese if no saved preference
     debug: false,
     
     interpolation: {
@@ -32,11 +31,21 @@ i18n
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
-      lookupLocalStorage: 'i18nextLng'
+      lookupLocalStorage: 'i18nextLng',
+      convertDetectedLanguage: (lng: string) => {
+        // Ensure we only use supported languages
+        return ['zh', 'en'].includes(lng) ? lng : 'zh';
+      }
     },
     
     // Supported languages
-    supportedLngs: ['zh', 'en']
+    supportedLngs: ['zh', 'en'],
+    
+    // Don't load a language if it's not in the supportedLngs
+    load: 'languageOnly',
+    
+    // Initialize with saved language from localStorage or fallback
+    initImmediate: false
   });
 
 export default i18n; 

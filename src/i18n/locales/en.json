@@ -200,6 +200,7 @@
       "messagePlaceholder": "Tell us about your interest in this product...",
       "submitButton": "Send Message",
       "submitButtonTitle": "Send your inquiry",
+      "sending": "Sending...",
       "noteLabel": "Note:",
       "noteMessage": "We'll contact you about your interest in this product."
     },

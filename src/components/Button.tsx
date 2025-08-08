@@ -8,6 +8,8 @@ interface ButtonProps {
     size?: 'sm' | 'md' | 'lg';
     className?: string;
     title?: string;
+    loading?: boolean;
+    loadingText?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -18,6 +20,8 @@ export const Button: React.FC<ButtonProps> = ({
     size = 'lg',
     className = "",
     title,
+    loading = false,
+    loadingText = "Loading...",
 }) => {
     const getColorClasses = (color: string) => {
         const colorMap = {
@@ -49,13 +53,23 @@ export const Button: React.FC<ButtonProps> = ({
 
     return (
         <button
-            onClick={onClick}
-            className={`!rounded-button whitespace-nowrap cursor-pointer font-semibold transition-all duration-300 ${getSizeClasses(size)} ${getColorClasses(color)} ${size === 'lg' ? 'vintage-shadow' : ''} ${className}`}
+            onClick={loading ? undefined : onClick}
+            disabled={loading}
+            className={`!rounded-button whitespace-nowrap font-semibold transition-all duration-300 ${getSizeClasses(size)} ${getColorClasses(color)} ${size === 'lg' ? 'vintage-shadow' : ''} ${loading ? 'opacity-70 cursor-not-allowed' : 'cursor-pointer'} ${className}`}
             style={{ fontFamily: "Crimson Text, serif" }}
             title={title}
         >
-            {icon && <i className={`${icon} ${getIconSpacing(size)} ${getIconSize(size)}`}></i>}
-            {text}
+            {loading ? (
+                <>
+                    <i className={`fas fa-spinner fa-spin ${getIconSpacing(size)} ${getIconSize(size)}`}></i>
+                    {loadingText}
+                </>
+            ) : (
+                <>
+                    {icon && <i className={`${icon} ${getIconSpacing(size)} ${getIconSize(size)}`}></i>}
+                    {text}
+                </>
+            )}
         </button>
     );
 }; 
