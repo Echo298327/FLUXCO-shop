@@ -7,17 +7,13 @@ import { AccessoryCard } from "./AccessoryCard";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 // Utils import
-import { accessories } from "../utils/productData";
+import { accessories } from "../utils/accessoriesData";
 
 
 interface AcessoriesSectionProps {
-  setShow404: (show: boolean) => void;
-  handleWhatsAppContact: (name: string) => void;
 }
 
 export const AcessoriesSection: React.FC<AcessoriesSectionProps> = ({
-  setShow404,
-  handleWhatsAppContact,
 }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -57,7 +53,6 @@ export const AcessoriesSection: React.FC<AcessoriesSectionProps> = ({
               <AccessoryCard
                 key={index}
                 accessory={accessory}
-                handleWhatsAppContact={handleWhatsAppContact}
               />
             ))}
           </div>

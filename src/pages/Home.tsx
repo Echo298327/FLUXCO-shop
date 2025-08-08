@@ -61,7 +61,7 @@ const Home: React.FC = () => {
         products={products}
       />
       {/* Acessories Section */}
-      <AcessoriesSection setShow404={() => {}} handleWhatsAppContact={() => {}} />
+      <AcessoriesSection />
       {/* Features Section */}
       <FeaturesSection features={features} />
       
