@@ -1,5 +1,5 @@
 // React import
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 // Hooks imports
 import { useParams } from 'react-router-dom';
@@ -22,6 +22,7 @@ const AccessoryPage: React.FC = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string>("");
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const navigate = useNavigate();
   // Find accessory by key (language-independent)
   const accessory = accessories.find(acc => 
@@ -36,9 +37,47 @@ const AccessoryPage: React.FC = () => {
   // Set initial selected image when accessory is found
   useEffect(() => {
     if (accessory) {
-      setSelectedImage(accessory.image);
+      const imagesToUse = accessory.images && accessory.images.length > 0 ? accessory.images : [accessory.image];
+      setSelectedImage(imagesToUse[0]);
+      setCurrentImageIndex(0);
     }
   }, [accessory]);
+
+  // Get the images array to use (either images array or single image)
+  const imagesToDisplay = accessory?.images && accessory.images.length > 0 ? accessory.images : [accessory?.image || ""];
+
+  const nextImage = useCallback(() => {
+    const nextIndex = (currentImageIndex + 1) % imagesToDisplay.length;
+    setCurrentImageIndex(nextIndex);
+    setSelectedImage(imagesToDisplay[nextIndex]);
+  }, [currentImageIndex, imagesToDisplay]);
+
+  const previousImage = useCallback(() => {
+    const prevIndex = currentImageIndex === 0 ? imagesToDisplay.length - 1 : currentImageIndex - 1;
+    setCurrentImageIndex(prevIndex);
+    setSelectedImage(imagesToDisplay[prevIndex]);
+  }, [currentImageIndex, imagesToDisplay]);
+
+  const selectImage = (image: string, index: number) => {
+    setSelectedImage(image);
+    setCurrentImageIndex(index);
+  };
+
+  // Keyboard navigation for image slider
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (imagesToDisplay.length > 1) {
+        if (event.key === 'ArrowRight') {
+          nextImage();
+        } else if (event.key === 'ArrowLeft') {
+          previousImage();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [nextImage, previousImage, imagesToDisplay.length]);
 
   if (!accessory) {
     return <NotFound />;
@@ -108,22 +147,49 @@ const AccessoryPage: React.FC = () => {
           {/* Accessory Image */}
           <div className="lg:w-1/2">
             <div className="bg-white/80 rounded-lg p-8 vintage-shadow">
-              {/* Main Image */}
-              <img
-                src={selectedImage || accessory.image}
-                alt={t(accessory.name)}
-                className="w-full h-auto max-h-96 object-contain sepia-filter mb-4"
-              />
+              {/* Main Image with Navigation */}
+              <div className="relative mb-4">
+                <img
+                  src={selectedImage || accessory.image}
+                  alt={t(accessory.name)}
+                  className="w-full h-auto max-h-96 object-contain sepia-filter"
+                />
+                
+                {/* Navigation Arrows - only show if multiple images */}
+                {imagesToDisplay.length > 1 && (
+                  <>
+                    <button
+                      onClick={previousImage}
+                      className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-all duration-200 cursor-pointer"
+                      aria-label="Previous image"
+                    >
+                      <i className="fas fa-chevron-left"></i>
+                    </button>
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-all duration-200 cursor-pointer"
+                      aria-label="Next image"
+                    >
+                      <i className="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    {/* Image Counter */}
+                    <div className="absolute bottom-2 right-2 bg-black/50 text-white px-2 py-1 rounded text-sm">
+                      {currentImageIndex + 1} / {imagesToDisplay.length}
+                    </div>
+                  </>
+                )}
+              </div>
               
               {/* Image Gallery Thumbnails */}
-              {accessory.images && accessory.images.length > 1 && (
-                <div className="flex gap-2 overflow-x-auto">
-                  {accessory.images.map((image, index) => (
+              {imagesToDisplay.length > 1 && (
+                <div className="flex gap-2 overflow-x-hide">
+                  {imagesToDisplay.map((image, index) => (
                     <button
                       key={index}
-                      onClick={() => setSelectedImage(image)}
-                      className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
-                        selectedImage === image
+                      onClick={() => selectImage(image, index)}
+                      className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
+                        currentImageIndex === index
                           ? "border-amber-500 scale-105"
                           : "border-gray-200 hover:border-amber-300"
                       }`}
