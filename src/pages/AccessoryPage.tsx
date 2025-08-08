@@ -12,7 +12,7 @@ import { SuccessModal } from "../components/SuccessModal";
 import { ErrorModal } from "../components/ErrorModal";
 import { NotFound } from "../pages/404";
 // Utils imports
-import { accessories } from "../utils/productData";
+import { accessories } from "../utils/accessoriesData";
 import { siteConfig } from "../config/site";
 
 const AccessoryPage: React.FC = () => {
@@ -37,7 +37,8 @@ const AccessoryPage: React.FC = () => {
 
   const handleWhatsAppContact = () => {
     const message = t("contact.lineMessages.withProduct", { productName: t(accessory.name) });
-    window.open(`https://line.me/R/oaMessage/@flux.tw/?${encodeURIComponent(message)}`);
+    const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
+    window.open(lineUrl, "_blank");
   };
 
   return (
