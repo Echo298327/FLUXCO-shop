@@ -1,13 +1,13 @@
 import React from "react";
 
-interface LableButtonProps {
+interface LabelButtonButtonProps {
   category: string;
   isSelected: boolean;
   onClick: (category: string) => void;
   text: string;
 }
 
-export const LableButton: React.FC<LableButtonProps> = ({
+export const LabelButton: React.FC<LabelButtonButtonProps> = ({
   category,
   isSelected,
   onClick,

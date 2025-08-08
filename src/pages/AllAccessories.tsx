@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 // Components import
 import { AccessoryCard } from "../components/AccessoryCard";
-import { LableButton } from "../components/LableButton";
+import { LabelButton } from "../components/LabelButton";
 // Hooks import
 import { useTranslation } from "react-i18next";
 // Utils import
@@ -62,7 +62,7 @@ const AccessoriesPage: React.FC = () => {
           <div className="mb-12">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
-                <LableButton
+                <LabelButton
                   key={category}
                   category={category}
                   isSelected={selectedCategory === category}

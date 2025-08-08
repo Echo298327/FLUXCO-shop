@@ -13,7 +13,7 @@ import basketWood from "../assets/accessories/basketWood_1.webp";
 import capHolder from "../assets/accessories/capHolder_1.webp";
 import charger from "../assets/accessories/charger_1.webp";
 import frontRearMudguard from "../assets/accessories/frontRearMudguard_3.webp";
-import latterGrip from "../assets/accessories/latterGrips_1.webp";
+import lateralGrip from "../assets/accessories/lateralGrip_1.webp";
 import phoneHolder from "../assets/accessories/phoneHolder_1.webp";
 import rearRack from "../assets/accessories/rearRack_1.webp";
 import waterproofBag from "../assets/accessories/waterProofBag_1.webp";

@@ -10,10 +10,10 @@ import { useNavigate } from "react-router-dom";
 import { accessories } from "../utils/accessoriesData";
 
 
-interface AcessoriesSectionProps {
+interface AccessoriesSectionProps {
 }
 
-export const AcessoriesSection: React.FC<AcessoriesSectionProps> = ({
+export const AccessoriesSection: React.FC<AccessoriesSectionProps> = ({
 }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
