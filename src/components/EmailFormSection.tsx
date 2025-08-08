@@ -72,7 +72,7 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
         }
     };
     return (
-        <div className="vintage-texture bg-gradient-to-b from-amber-100/90 to-amber-50/90 p-8 vintage-shadow">
+        <div id="contact-form" className="vintage-texture bg-gradient-to-b from-amber-100/90 to-amber-50/90 p-8 vintage-shadow">
           <div className="max-w-4xl mx-auto">
             <h3
               className="text-3xl font-bold text-amber-900 mb-6 text-center"

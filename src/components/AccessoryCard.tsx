@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "./Button";
 // Hooks import
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 // Types import
 import type { Accessory } from "../types";
 
@@ -17,9 +18,18 @@ export const AccessoryCard: React.FC<AccessoryCardProps> = ({
   handleWhatsAppContact,
 }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    const accessoryName = t(accessory.name).toLowerCase().replace(/\s+/g, '-');
+    navigate(`/accessory/${encodeURIComponent(accessoryName)}`);
+  };
 
   return (
-    <div className="min-w-[300px] md:min-w-[400px] group cursor-pointer">
+    <div 
+      className="min-w-[300px] md:min-w-[400px] group cursor-pointer"
+      onClick={handleCardClick}
+    >
       <div className="relative h-[200px] md:h-[250px] overflow-hidden rounded-lg vintage-shadow bg-yellow-50/95">
         <img
           src={accessory.image}
@@ -44,7 +54,10 @@ export const AccessoryCard: React.FC<AccessoryCardProps> = ({
                 {accessory.price}
               </p>
               <Button
-                onClick={() => handleWhatsAppContact(t(accessory.name))}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleCardClick();
+                }}
                 text={t("products.moreDetails")}
                 icon="fas fa-info-circle"
                 color="amber"
