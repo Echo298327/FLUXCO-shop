@@ -75,7 +75,7 @@ export const AcessoriesSection: React.FC<AcessoriesSectionProps> = ({
         </div>
         <div className="mt-8 text-center md:hidden">
           <Button
-            onClick={() => setShow404(true)}
+            onClick={() => navigate("/accessories")}
             text={t("accessories.seeAll")}
             icon="fas fa-arrow-right"
             color="amber"

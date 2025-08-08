@@ -1,7 +1,8 @@
 // React import
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // Components import
 import { AccessoryCard } from "../components/AccessoryCard";
+import { LableButton } from "../components/LableButton";
 // Hooks import
 import { useTranslation } from "react-i18next";
 // Utils import
@@ -12,11 +13,27 @@ import { StructuredData } from "../components/StructuredData";
 
 const AccessoriesPage: React.FC = () => {
   const { t } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const handleWhatsAppContact = (name: string) => {
     const message = t("contact.lineMessages.withProduct", { productName: name });
     window.open(`https://line.me/R/oaMessage/@flux.tw/?${encodeURIComponent(message)}`);
   };
+
+  const categories = [
+    "all",
+    "performance",
+    "safety", 
+    "storage",
+    "convenience",
+    "electrical",
+    "protection",
+    "comfort"
+  ];
+
+  const filteredAccessories = selectedCategory === "all" 
+    ? accessories 
+    : accessories.filter(accessory => accessory.category === `accessories.categories.${selectedCategory}`);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -45,8 +62,24 @@ const AccessoriesPage: React.FC = () => {
               {t("accessories.subtitle")}
             </p>
           </div>
+
+          {/* Category Filter */}
+          <div className="mb-12">
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category) => (
+                <LableButton
+                  key={category}
+                  category={category}
+                  isSelected={selectedCategory === category}
+                  onClick={setSelectedCategory}
+                  text={t(`accessories.categories.${category}`)}
+                />
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {accessories.map((accessory, index) => (
+            {filteredAccessories.map((accessory, index) => (
               <AccessoryCard
                 key={index}
                 accessory={accessory}

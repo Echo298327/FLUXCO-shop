@@ -224,10 +224,29 @@
     "subtitle": "Complete your cycling experience with our carefully curated selection of high-quality accessories.",
     "seeAll": "See All Accessories",
     "inquire": "Inquire",
+    "categories": {
+      "all": "All Categories",
+      "performance": "Performance",
+      "safety": "Safety",
+      "storage": "Storage",
+      "convenience": "Convenience",
+      "electrical": "Electrical",
+      "protection": "Protection",
+      "comfort": "Comfort"
+    },
     "items": {
       "pedals": "Pedals",
       "childSeat": "Child Seat",
-      "basket": "Basket"
+      "basketBlack": "Black Basket",
+      "basketWood": "Wooden Basket",
+      "capHolder": "Cap Holder",
+      "charger": "Charger",
+      "frontRearMudguard": "Front & Rear Mudguard",
+      "latterGrip": "Handlebar Grips",
+      "phoneHolder": "Phone Holder",
+      "rearRack": "Rear Rack",
+      "waterproofBag": "Waterproof Bag",
+      "seat": "Seat"
     }
   },
   "privacy": {

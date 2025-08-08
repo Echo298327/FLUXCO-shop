@@ -202,10 +202,29 @@
     "subtitle": "透過我們精心挑選的優質配件，完善您的騎行體驗。",
     "seeAll": "查看所有配件",
     "inquire": "詢問",
+    "categories": {
+      "all": "所有分類",
+      "performance": "性能提升",
+      "safety": "安全防護",
+      "storage": "收納儲物",
+      "convenience": "便利功能",
+      "electrical": "電氣配件",
+      "protection": "保護配件",
+      "comfort": "舒適配件"
+    },
     "items": {
       "pedals": "防滑踏板",
-      "childSeat": "升級座墊",
-      "basket": "前置物籃"
+      "childSeat": "兒童座椅",
+      "basketBlack": "前置物籃(黑色)",
+      "basketWood": "前置物籃(木色)",
+      "capHolder": "帽架",
+      "charger": "充電器",
+      "frontRearMudguard": "前後擋泥板",
+      "latterGrip": "車把握把",
+      "phoneHolder": "手機支架",
+      "rearRack": "後貨架",
+      "waterproofBag": "防水袋",
+      "seat": "座墊"
     }
   },
   "privacy": {
