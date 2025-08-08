@@ -62,7 +62,7 @@ const Home: React.FC = () => {
       <ProductsSection
         products={products}
       />
-      {/* Acessories Section */}
+      {/* Accessories Section */}
       <AccessoriesSection />
       {/* Features Section */}
       <FeaturesSection features={features} />
