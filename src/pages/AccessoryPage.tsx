@@ -21,16 +21,24 @@ const AccessoryPage: React.FC = () => {
   const { t } = useTranslation();
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string>("");
   const navigate = useNavigate();
+  // Find accessory by key (language-independent)
+  const accessory = accessories.find(acc => 
+    acc.name.replace('accessories.items.', '') === name
+  );
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Find accessory by key (language-independent)
-  const accessory = accessories.find(acc => 
-    acc.name.replace('accessories.items.', '') === name
-  );
+  // Set initial selected image when accessory is found
+  useEffect(() => {
+    if (accessory) {
+      setSelectedImage(accessory.image);
+    }
+  }, [accessory]);
 
   if (!accessory) {
     return <NotFound />;
@@ -100,11 +108,35 @@ const AccessoryPage: React.FC = () => {
           {/* Accessory Image */}
           <div className="lg:w-1/2">
             <div className="bg-white/80 rounded-lg p-8 vintage-shadow">
+              {/* Main Image */}
               <img
-                src={accessory.image}
+                src={selectedImage || accessory.image}
                 alt={t(accessory.name)}
-                className="w-full h-auto max-h-96 object-contain sepia-filter"
+                className="w-full h-auto max-h-96 object-contain sepia-filter mb-4"
               />
+              
+              {/* Image Gallery Thumbnails */}
+              {accessory.images && accessory.images.length > 1 && (
+                <div className="flex gap-2 overflow-x-auto">
+                  {accessory.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(image)}
+                      className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                        selectedImage === image
+                          ? "border-amber-500 scale-105"
+                          : "border-gray-200 hover:border-amber-300"
+                      }`}
+                    >
+                      <img
+                        src={image}
+                        alt={`${t(accessory.name)} ${index + 1}`}
+                        className="w-full h-full object-cover sepia-filter"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
