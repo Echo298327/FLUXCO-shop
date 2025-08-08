@@ -97,5 +97,4 @@ export const accessories: Accessory[] = [
       image: seat,
       category: "accessories.categories.comfort",
     },
-  
   ]
