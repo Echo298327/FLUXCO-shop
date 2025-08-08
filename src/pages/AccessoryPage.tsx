@@ -1,5 +1,6 @@
 // React import
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 // Hooks imports
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -20,7 +21,7 @@ const AccessoryPage: React.FC = () => {
   const { t } = useTranslation();
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
-
+  const navigate = useNavigate();
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -60,11 +61,12 @@ const AccessoryPage: React.FC = () => {
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-6">
             <Button 
-              onClick={() => window.history.back()}
-              text={t("productPage.notFound.backButton")}
+              onClick={() => navigate("/accessories")}
+              text={t("accessories.backToAccessories")}
               icon="fas fa-arrow-left"
               color="light-amber"
               size="sm"
+              className="rounded-full"
             />
             <span className="text-amber-700/60 text-sm" style={{ fontFamily: "Crimson Text, serif" }}>
               {t("accessories.title")} / {t(accessory.category)}
