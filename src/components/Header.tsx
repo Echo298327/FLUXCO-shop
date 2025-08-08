@@ -73,18 +73,18 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                 {t('header.nav.products')}
               </button>
               <button
-                onClick={() => handleNavClick('services')}
-                className="text-amber-800 hover:text-amber-900 font-semibold cursor-pointer transition-colors"
-                style={{ fontFamily: "Crimson Text, serif" }}
-              >
-                {t('header.nav.services')}
-              </button>
-              <button
                 onClick={() => handleNavClick('accessories')}
                 className="text-amber-800 hover:text-amber-900 font-semibold cursor-pointer transition-colors"
                 style={{ fontFamily: "Crimson Text, serif" }}
               >
                 {t('accessories.title')}
+              </button>
+              <button
+                onClick={() => handleNavClick('services')}
+                className="text-amber-800 hover:text-amber-900 font-semibold cursor-pointer transition-colors"
+                style={{ fontFamily: "Crimson Text, serif" }}
+              >
+                {t('header.nav.services')}
               </button>
               <button
                 onClick={() => handleNavClick('contact')}
