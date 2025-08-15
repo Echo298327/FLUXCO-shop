@@ -85,7 +85,7 @@ const AccessoryPage: React.FC = () => {
 
   const handleWhatsAppContact = () => {
     const message = t("contact.lineMessages.withProduct", { productName: t(accessory.name) });
-    const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
+    const lineUrl = `https://line.me/R/ti/p/@629Ipvil?text=${encodeURIComponent(message)}`;
     window.open(lineUrl, "_blank");
   };
 

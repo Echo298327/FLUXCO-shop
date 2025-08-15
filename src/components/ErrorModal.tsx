@@ -46,7 +46,7 @@ export const ErrorModal: React.FC<ErrorModalProps> = ({ onClose, onRetry }) => {
                     <button
                         onClick={() => {
                             const message = t('contact.lineMessages.general');
-                            const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
+                            const lineUrl = `https://line.me/R/ti/p/@629Ipvil?text=${encodeURIComponent(message)}`;
                             window.open(lineUrl, "_blank");
                         }}
                         className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"

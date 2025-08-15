@@ -78,7 +78,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
             icon="fab fa-line"
             onClick={() => {
               const message = t('contact.lineMessages.withProduct', { productName: product.name });
-              const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
+              const lineUrl = `https://line.me/R/ti/p/@629Ipvil?text=${encodeURIComponent(message)}`;
               window.open(lineUrl, "_blank");
             }}
             color="green"
