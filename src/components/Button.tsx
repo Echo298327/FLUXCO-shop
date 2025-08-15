@@ -58,15 +58,16 @@ export const Button: React.FC<ButtonProps> = ({
             className={`!rounded-button whitespace-nowrap font-semibold transition-all duration-300 ${getSizeClasses(size)} ${getColorClasses(color)} ${size === 'lg' ? 'vintage-shadow' : ''} ${loading ? 'opacity-70 cursor-not-allowed' : 'cursor-pointer'} ${className}`}
             style={{ fontFamily: "Crimson Text, serif" }}
             title={title}
+            aria-label={loading ? `${loadingText}` : title || text}
         >
             {loading ? (
                 <>
-                    <i className={`fas fa-spinner fa-spin ${getIconSpacing(size)} ${getIconSize(size)}`}></i>
+                    <i className={`fas fa-spinner fa-spin ${getIconSpacing(size)} ${getIconSize(size)}`} aria-hidden="true"></i>
                     {loadingText}
                 </>
             ) : (
                 <>
-                    {icon && <i className={`${icon} ${getIconSpacing(size)} ${getIconSize(size)}`}></i>}
+                    {icon && <i className={`${icon} ${getIconSpacing(size)} ${getIconSize(size)}`} aria-hidden="true"></i>}
                     {text}
                 </>
             )}
