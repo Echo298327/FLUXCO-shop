@@ -25,6 +25,7 @@ const ProductPage: React.FC<ProductPageProps> = () => {
   const { t } = useTranslation();
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
+  const [selectedColor, setSelectedColor] = useState<string>("");
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -36,9 +37,6 @@ const ProductPage: React.FC<ProductPageProps> = () => {
   if (!product) {
     return <NotFound />;
   }
-
-  // Get motor power for SEO
-  const motorValue = product.details?.motor?.value || product.details?.topSpeed?.value || '250W';
 
   return (
     <div className="min-h-screen pt-20 vintage-texture bg-gradient-to-b from-amber-50/95 to-yellow-50/95">
@@ -59,13 +57,22 @@ const ProductPage: React.FC<ProductPageProps> = () => {
         {/* Main Product Section */}
         <div className="flex flex-col lg:flex-row gap-12 mb-16">
           {/* Product Image with Dimensions */}
-          <ProductImage product={product} />
+          <ProductImage 
+            product={product} 
+            onColorChange={setSelectedColor}
+          />
           {/* Product Specifications */}
           <ProductSpecifications product={product} />
         </div>
       </div>
         {/* Contact Form Section */}
-        <EmailFormSection setShowSuccess={setShowSuccess} setShowError={setShowError} product={product} redirectSection="products" />
+        <EmailFormSection 
+          setShowSuccess={setShowSuccess} 
+          setShowError={setShowError} 
+          product={product} 
+          redirectSection="products"
+          selectedColor={selectedColor}
+        />
         
         {/* Success Modal */}
         {showSuccess && (

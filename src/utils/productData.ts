@@ -67,6 +67,11 @@ export const products: Product[] = [
         label: "Range",
         value: "50-70km"
       },
+      "ridingMode": {
+        icon: Riding,
+        label: "Riding Mode",
+        value: "Three Riding Modes"
+      },
       "upgradeDisplay": {
         icon: UpgradeDisplay,
         label: "Display",
@@ -80,7 +85,7 @@ export const products: Product[] = [
       "frontRearSuspension": {
         icon: FrontAndRear,
         label: "Suspension",
-        value: "Front&Rear"
+        value: "Front Fork"
       },
       "warranty": {
         icon: Warranty,
@@ -96,6 +101,7 @@ export const products: Product[] = [
     image: F20,
     dimensionsImage: F20In,
     price: 56000,
+    colors: ["Black", "Gray", "Orange", "Brown", "White"],
     vehicleSeatHeight: 89.5,
     vehicleHeight: 120,
     vehicleLength: 165,
@@ -124,6 +130,11 @@ export const products: Product[] = [
         icon: Km,
         label: "Range",
         value: "60-95km"
+      },
+      "ridingMode": {
+        icon: Riding,
+        label: "Riding Mode",
+        value: "Three Riding Modes"
       },
       "UpgradeDisplay": {
         icon: UpgradeDisplay,
@@ -154,6 +165,7 @@ export const products: Product[] = [
     image: F20Pro,
     dimensionsImage: F20ProIn,
     price: 62000,
+    colors: ["Black", "Orange", "White", "Green"],
     vehicleSeatHeight: 85.1,
     vehicleHeight: 120,
     vehicleLength: 166,
@@ -183,6 +195,11 @@ export const products: Product[] = [
         label: "Range",
         value: "60-95km"
       },
+      "ridingMode": {
+        icon: Riding,
+        label: "Riding Mode",
+        value: "Three Riding Modes"
+      },
       "UpgradeDisplay": {
         icon: UpgradeDisplay,
         label: "Display",
@@ -201,7 +218,7 @@ export const products: Product[] = [
       "cupHolder": {
         icon: CupHolder,
         label: "Cup Holder",
-        value: "Cup Holder"
+        value: "Cup Holder & Basket"
       },
       "signals": {
         icon: SignalLight,
@@ -258,8 +275,8 @@ export const products: Product[] = [
       },
       "letterWrap": {
         icon: Wrap,
-        label: "Letter Wrap",
-        value: "Letter Wrap"
+        label: "Handlebar Grips",
+        value: "Leather Grips"
       },
       "UpgradeBluetoothDisplay": {
         icon: BluetoothDisplay,

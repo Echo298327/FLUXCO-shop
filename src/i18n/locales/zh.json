@@ -117,6 +117,7 @@
     "showDimensions": "顯示尺寸",
     "hideDimensions": "隱藏尺寸",
     "specifications": "產品規格",
+    "selectColor": "選擇顏色",
     "details": {
       "labels": {
         "topSpeed": "最高時速",
@@ -132,7 +133,7 @@
         "UpgradeDisplay": "顯示器",
         "SevenSpeedGears": "變速系統",
         "frontRearSuspension": "避震系統",
-        "cupHolder": "杯架",
+        "cupHolder": "杯架&置物籃",
         "signals": "信號燈",
         "upgradeDisplay": "顯示器",
         "sevenSpeedGears": "變速系統"
@@ -157,13 +158,16 @@
         "50-70km": "50-70公里",
         "Three Riding Modes": "3種模式",
         "Letter Wrap": "包含",
-        "Upgrade Bluetooth Display": "可升級",
+        "Leather Grips": "真皮握把",
+        "Upgrade Bluetooth Display": "有提供",
         "One Year Warranty": "1年",
         "Non-Slip Wrap": "包含",
-        "Upgrade Display": "可升級",
-        "Seven Speed Gears": "7速",
+        "Upgrade Display": "有提供",
+        "Seven Speed Gears": "Shimano 7段變速",
         "Front&Rear": "前後",
-        "Cup Holder": "包含",
+        "Front Fork": "前叉避震",
+        "Cup Holder": "杯架",
+        "Cup Holder & Basket": "有提供",
         "Signal Light": "LED"
       }
     },

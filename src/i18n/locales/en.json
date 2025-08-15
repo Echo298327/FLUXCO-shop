@@ -117,6 +117,7 @@
     "showDimensions": "Show Dimensions",
     "hideDimensions": "Hide Dimensions",
     "specifications": "Specifications",
+    "selectColor": "Select Color",
     "details": {
       "labels": {
         "maxSpeed": "Max Speed",
@@ -170,6 +171,7 @@
         "50-70km": "50-70km",
         "Three Riding Modes": "3 Modes",
         "Letter Wrap": "Included",
+        "Leather Grips": "Leather",
         "Non-Slip Wrap": "Included",
         "Upgrade Bluetooth Display": "Available",
         "Upgrade Display": "Available",
@@ -185,6 +187,7 @@
         "LCD Display": "Available",
         "7-Speed Shimano": "Shimano",
         "Front & Rear": "Both",
+        "Front Fork": "Front Fork",
         "Cup Holder & Basket": "Included",
         "LED Signal Lights": "LED Signal Lights"
       }

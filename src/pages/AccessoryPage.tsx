@@ -15,6 +15,7 @@ import { NotFound } from "../pages/404";
 // Utils imports
 import { accessories } from "../utils/accessoriesData";
 import { siteConfig } from "../config/site";
+import { openLineChat } from "../utils/contactUtils";
 
 const AccessoryPage: React.FC = () => {
   const { name } = useParams();
@@ -85,8 +86,7 @@ const AccessoryPage: React.FC = () => {
 
   const handleWhatsAppContact = () => {
     const message = t("contact.lineMessages.withProduct", { productName: t(accessory.name) });
-    const lineUrl = `https://line.me/R/ti/p/584464896?text=${encodeURIComponent(message)}`;
-    window.open(lineUrl, "_blank");
+    openLineChat(message);
   };
 
   return (
