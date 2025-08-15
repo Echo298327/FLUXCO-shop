@@ -21,28 +21,24 @@
     "moreDetails": "更多詳情",
     "items": {
       "1": {
-        "name": "都市巡航者 250",
-        "description": "入門級250W電動城市車，完美適合日常通勤"
+        "name": "F-16",
+        "description": "高性能電動自行車，具備先進功能和長續航能力。"
       },
       "2": {
-        "name": "跨步專業版 500",
-        "description": "中階500W電動跨步車，擁有50公里長續航力"
+        "name": "F20",
+        "description": "強勁750W電動自行車，專為都市通勤和冒險騎行設計。"
       },
       "3": {
-        "name": "通勤精英 750",
-        "description": "高性能750W電動車，配備Shimano 7速變速與雙避震系統"
+        "name": "F20Pro",
+        "description": "頂級電動自行車，配備杯架、信號燈和先進顯示系統。"
       },
       "4": {
-        "name": "貨運大師 750X",
-        "description": "重型750W貨運電動車，配備LED信號燈與頂級配件"
+        "name": "L16",
+        "description": "入門級電動自行車，具備基本功能，適合日常通勤。"
       },
       "5": {
-        "name": "電動探險車",
-        "description": "經典冒險電動自行車，配有高級皮革配件"
-      },
-      "6": {
-        "name": "電動摺疊車",
-        "description": "緊湊型電動摺疊車，融合經典設計元素"
+        "name": "L18",
+        "description": "中階電動自行車，配備藍牙顯示器和增強性能。"
       }
     }
   },
@@ -137,7 +133,9 @@
         "SevenSpeedGears": "變速系統",
         "frontRearSuspension": "避震系統",
         "cupHolder": "杯架",
-        "signals": "信號燈"
+        "signals": "信號燈",
+        "upgradeDisplay": "顯示器",
+        "sevenSpeedGears": "變速系統"
       },
       "values": {
         "25km/h": "25公里/小時",
@@ -145,15 +143,18 @@
         "25-40km/h": "25-40公里/小時",
         "25-45km/h": "25-45公里/小時",
         "36V 5Ah": "36V 5Ah",
-        "48V 10Ah": "48V 10Ah",
-        "48V 8.2Ah": "48V 8.2Ah",
+        "48V 18.2Ah": "48V 18.2Ah",
+        "48V 15.6Ah": "48V 15.6Ah",
+        "48V 13Ah": "48V 13Ah",
         "250W": "250W",
         "500W": "500W",
         "750W": "750W",
+        "350W": "350W",
         "Easy Charge": "包含",
         "20-25km": "20-25公里",
         "45-50km": "45-50公里",
         "60-95km": "60-95公里",
+        "50-70km": "50-70公里",
         "Three Riding Modes": "3種模式",
         "Letter Wrap": "包含",
         "Upgrade Bluetooth Display": "可升級",
@@ -176,6 +177,7 @@
       "messagePlaceholder": "告訴我們您對此產品的興趣...",
       "submitButton": "發送訊息",
       "submitButtonTitle": "發送您的詢問",
+      "sending": "正在發送...",
       "noteLabel": "注意：",
       "noteMessage": "我們會聯繫您關於您對此產品的興趣。"
     },

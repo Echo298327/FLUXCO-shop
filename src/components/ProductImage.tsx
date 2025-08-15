@@ -45,14 +45,14 @@ export const ProductImage: React.FC<ProductImageProps> = ({
           {/* Dimension Annotations */}
           <DimensionTag
             label={t('productPage.dimensions.vehicleHeight')}
-            value={product.vehicleSeatHeight}
+            value={product.vehicleHeight}
             position="left"
             isVisible={showDimensions}
           />
           
           <DimensionTag
             label={t('productPage.dimensions.seatHeight')}
-            value={product.vehicleHeight}
+            value={product.vehicleSeatHeight}
             position="right"
             isVisible={showDimensions}
           />

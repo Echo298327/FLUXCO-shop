@@ -291,6 +291,7 @@ const AccessoryPage: React.FC = () => {
           vehicleLength: 0,
           details: {}
         }} 
+        redirectSection="accessories"
       />
       
       {/* Success Modal */}

@@ -1,5 +1,5 @@
 // React imports
-import React from "react";
+import React, { useState } from "react";
 // Hooks imports
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
@@ -12,11 +12,13 @@ interface EmailFormSectionProps {
     setShowSuccess: (showSuccess: boolean) => void;
     setShowError: (showError: boolean) => void;
     product: Product;
+    redirectSection?: string;
 }
 
-export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSuccess, setShowError, product}) => {
+export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSuccess, setShowError, product, redirectSection}) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Format date as dd-mm-yy-hh-mm-ss (safe for email subjects)
     const getFormattedTimestamp = () => {
@@ -33,6 +35,7 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
 
     const handleFormSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSubmitting(true);
         
         const form = e.target as HTMLFormElement;
         
@@ -58,9 +61,13 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
             if (response.ok) {
                 setShowSuccess(true);
                 
-                // Navigate to home after 3 seconds
+                // Navigate to home with section scroll after 3 seconds
                 setTimeout(() => {
-                    navigate('/');
+                    if (redirectSection) {
+                        navigate('/', { state: { scrollTo: redirectSection } });
+                    } else {
+                        navigate('/');
+                    }
                 }, 3000);
             } else {
                 console.error('Form submission failed');
@@ -69,6 +76,8 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
         } catch (error) {
             console.error('Error submitting form:', error);
             setShowError(true);
+        } finally {
+            setIsSubmitting(false);
         }
     };
     return (
@@ -160,6 +169,8 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
                   icon="fas fa-paper-plane"
                   onClick={() => {}}
                   color="amber"
+                  loading={isSubmitting}
+                  loadingText={t('productPage.form.sending')}
                   title={t('productPage.form.submitButtonTitle')}
                   className="w-full sm:w-auto"
                 />

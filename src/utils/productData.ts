@@ -1,12 +1,14 @@
 // Assets import
-import b1 from "../assets/bicycles/b1.webp";
-import b2 from "../assets/bicycles/b2.webp";
-import b3 from "../assets/bicycles/b3.webp";
-import b4 from "../assets/bicycles/b4.webp";
-import b1In from "../assets/bicycles/b1In.webp";
-import b2In from "../assets/bicycles/b2In.webp";
-import b3In from "../assets/bicycles/b3In.webp";
-import b4In from "../assets/bicycles/b4In.webp";
+import F16 from "../assets/bicycles/F16.webp";
+import F16In from "../assets/bicycles/F16In.webp";
+import F20 from "../assets/bicycles/F20.webp";
+import F20In from "../assets/bicycles/F20In.webp";
+import F20Pro from "../assets/bicycles/F20Pro.webp";
+import F20ProIn from "../assets/bicycles/F20ProIn.webp";
+import L16 from "../assets/bicycles/L16.webp";
+import L16In from "../assets/bicycles/L16In.webp";
+import L18 from "../assets/bicycles/L18.webp";
+import L18In from "../assets/bicycles/L18In.webp";
 // Icons import
 import { Battery } from "../icons/Battery";
 import { Km } from "../icons/Km";
@@ -25,17 +27,204 @@ import { Charge } from "../icons/Charge";
 // Types import
 import type { Product } from "../types";
 
+
+// F16 > F20 > F20pro >L16 >L18
+
 export const products: Product[] = [
   {
     id: 1,
-    name: "Urban Cruiser 250",
-    description: "Entry-level electric city bike with 250W motor perfect for daily commuting",
-    image: b1,
-    dimensionsImage: b1In,
+    name: "F-16",
+    description: "F-16 is a high-performance electric bike with a 350W motor and a 48V 15.6Ah battery. It has a top speed of 25km/h and a range of 50-70km.",
+    image: F16,
+    dimensionsImage: F16In,
+    price: 46000,
+    vehicleSeatHeight: 81.2,
+    vehicleHeight: 105,
+    vehicleLength: 149,
+    details: {
+      "topSpeed": {
+        icon: Speed,
+        label: "Top Speed",
+        value: "25km/h"
+      },
+      "battery": {
+        icon: Battery,
+        label: "Battery",
+        value: "48V 15.6Ah"
+      },
+      "motor": {
+        icon: Motor,
+        label: "Motor",
+        value: "350W"
+      },
+      "easyCharge": {
+        icon: Charge,
+        label: "Easy Charge",
+        value: "Easy Charge"
+      },
+      "range": {
+        icon: Km,
+        label: "Range",
+        value: "50-70km"
+      },
+      "upgradeDisplay": {
+        icon: UpgradeDisplay,
+        label: "Display",
+        value: "Upgrade Display"
+      },
+      "sevenSpeedGears": {
+        icon: Gears,
+        label: "Speed Gears",
+        value: "Seven Speed Gears"
+      },
+      "frontRearSuspension": {
+        icon: FrontAndRear,
+        label: "Suspension",
+        value: "Front&Rear"
+      },
+      "warranty": {
+        icon: Warranty,
+        label: "Warranty",
+        value: "One Year Warranty"
+      },
+    },
+  },
+  {
+    id: 2,
+    name: "F20",
+    description: "F20 is a high-performance electric bike with a 750W motor and 48V 18.2Ah battery. It has a top speed of 25-45km/h and a range of 60-95km.",
+    image: F20,
+    dimensionsImage: F20In,
+    price: 56000,
+    vehicleSeatHeight: 89.5,
+    vehicleHeight: 120,
+    vehicleLength: 165,
+    details: {
+      "topSpeed": {
+        icon: Speed,
+        label: "Top Speed",
+        value: "25-45km/h"
+      },
+      "battery": {
+        icon: Battery,
+        label: "Battery",
+        value: "48V 18.2Ah"
+      },
+      "motor": {
+        icon: Motor,
+        label: "Motor",
+        value: "750W"
+      },
+      "easyCharge": {
+        icon: Charge,
+        label: "Easy Charge",
+        value: "Easy Charge"
+      },
+      "range": {
+        icon: Km,
+        label: "Range",
+        value: "60-95km"
+      },
+      "UpgradeDisplay": {
+        icon: UpgradeDisplay,
+        label: "Display",
+        value: "Upgrade Display"
+      },
+      "sevenSpeedGears": {
+        icon: Gears,
+        label: "Speed Gears",
+        value: "Seven Speed Gears"
+      },
+      "frontRearSuspension": {
+        icon: FrontAndRear,
+        label: "Suspension",
+        value: "Front&Rear"
+      },
+      "warranty": {
+        icon: Warranty,
+        label: "Warranty",
+        value: "One Year Warranty"
+      },
+    },
+  },
+  {
+    id: 3,
+    name: "F20Pro",
+    description: "F20Pro is an advanced electric bike with 750W motor, 48V 18.2Ah battery, cup holder and signal lights. Top speed 25-45km/h with 60-95km range.",
+    image: F20Pro,
+    dimensionsImage: F20ProIn,
+    price: 62000,
+    vehicleSeatHeight: 85.1,
+    vehicleHeight: 120,
+    vehicleLength: 166,
+    details: {
+      "topSpeed": {
+        icon: Speed,
+        label: "Top Speed",
+        value: "25-45km/h"
+      },
+      "battery": {
+        icon: Battery,
+        label: "Battery",
+        value: "48V 18.2Ah"
+      },
+      "motor": {
+        icon: Motor,
+        label: "Motor",
+        value: "750W"
+      },
+      "easyCharge": {
+        icon: Charge,
+        label: "Easy Charge",
+        value: "Easy Charge"
+      },
+      "range": {
+        icon: Km,
+        label: "Range",
+        value: "60-95km"
+      },
+      "UpgradeDisplay": {
+        icon: UpgradeDisplay,
+        label: "Display",
+        value: "Upgrade Display"
+      },
+      "sevenSpeedGears": {
+        icon: Gears,
+        label: "Speed Gears",
+        value: "Seven Speed Gears"
+      },
+      "frontRearSuspension": {
+        icon: FrontAndRear,
+        label: "Suspension",
+        value: "Front&Rear"
+      },
+      "cupHolder": {
+        icon: CupHolder,
+        label: "Cup Holder",
+        value: "Cup Holder"
+      },
+      "signals": {
+        icon: SignalLight,
+        label: "Signal Light",
+        value: "Signal Light"
+      },
+      "warranty": {
+        icon: Warranty,
+        label: "Warranty",
+        value: "One Year Warranty"
+      },
+    },
+  },
+  {
+    id: 4,
+    name: "L16",
+    description: "L16 is an entry-level electric bike with 250W motor and 36V 5Ah battery. Top speed 25km/h with 20-25km range and three riding modes.",
+    image: L16,
+    dimensionsImage: L16In,
     price: 38000,
     vehicleSeatHeight: 66,
     vehicleHeight: 85,
-    vehicleLength: 34,
+    vehicleLength: 134,
     details: {
       "topSpeed": {
         icon: Speed,
@@ -85,15 +274,15 @@ export const products: Product[] = [
     },
   },
   {
-    id: 2,
-    name: "StepThrough Pro 500",
-    description: "Mid-range electric step-through with 500W motor and extended 50km range",
-    image: b2,
-    dimensionsImage: b2In,
-    price: 60000,
+    id: 5,
+    name: "L18",
+    description: "L18 is a mid-range electric bike with 500W motor and 48V 13Ah battery. Top speed 35km/h with 45-50km range and upgraded Bluetooth display.",
+    image: L18,
+    dimensionsImage: L18In,
+    price: 52000,
     vehicleSeatHeight: 78,
     vehicleHeight: 108,
-    vehicleLength: 57,
+    vehicleLength: 157,
     details: {
       "topSpeed": {
         icon: Speed,
@@ -103,7 +292,7 @@ export const products: Product[] = [
       "battery": {
         icon: Battery,
         label: "Battery",
-        value: "48V 10Ah"
+        value: "48V 13Ah"
       },
       "motor": {
         icon: Motor,
@@ -139,142 +328,6 @@ export const products: Product[] = [
         icon: Warranty,
         label: "Warranty",
         value: "One Year Warranty"
-      },
-    },
-  },
-  {
-    id: 3,
-    name: "Commuter Elite 750",
-    description: "High-performance 750W electric bike with 7-speed Shimano and dual suspension",
-    image: b3,
-    dimensionsImage: b3In,
-    price: 56000,
-    vehicleSeatHeight: 89.5,
-    vehicleHeight: 120,
-    vehicleLength: 65,
-    details: {
-      "topSpeed": {
-        icon: Speed,
-        label: "Top Speed",
-        value: "25-40km/h"
-      },
-      "battery": {
-        icon: Battery,
-        label: "Battery",
-        value: "48V 8.2Ah"
-      },
-      "motor": {
-        icon: Motor,
-        label: "Motor",
-        value: "750W"
-      },
-      "easyCharge": {
-        icon: Charge,
-        label: "Easy Charge",
-        value: "Easy Charge"
-      },
-      "range": {
-        icon: Km,
-        label: "Range",
-        value: "60-95km"
-      },
-      "ridingMode": {
-        icon: Riding,
-        label: "Riding Mode",
-        value: "Three Riding Modes"
-      },
-      "NonSlipWrap": {
-        icon: Wrap,
-        label: "Non-Slip Wrap",
-        value: "Non-Slip Wrap"
-      },
-      "UpgradeDisplay": {
-        icon: UpgradeDisplay,
-        label: "Display",
-        value: "Upgrade Display"
-      },
-      "SevenSpeedGears": {
-        icon: Gears,
-        label: "Speed Gears",
-        value: "Seven Speed Gears"
-      },
-      "frontRearSuspension": {
-        icon: FrontAndRear,
-        label: "Suspension",
-        value: "Front&Rear"
-      },
-      "warranty": {
-        icon: Warranty,
-        label: "Warranty",
-        value: "One Year Warranty"
-      },
-    },
-  },
-  {
-    id: 4,
-    name: "Cargo Master 750X",
-    description: "Heavy-duty 750W cargo e-bike with LED signals and premium accessories",
-    image: b4,
-    dimensionsImage: b4In,
-    price: 62000,
-    vehicleSeatHeight: 85.1,
-    vehicleHeight: 120,
-    vehicleLength: 66,
-    details: {
-      "topSpeed": {
-        icon: Speed,
-        label: "Top Speed",
-        value: "25-45km/h"
-      },
-      "battery": {
-        icon: Battery,
-        label: "Battery",
-        value: "48V 8.2Ah"
-      },
-      "motor": {
-        icon: Motor,
-        label: "Motor",
-        value: "750W"
-      },
-      "easyCharge": {
-        icon: Charge,
-        label: "Easy Charge",
-        value: "Easy Charge"
-      },
-      "range": {
-        icon: Km,
-        label: "Range",
-        value: "60-95km"
-      },
-      "SevenSpeedGears": {
-        icon: Gears,
-        label: "Speed Gears",
-        value: "Seven Speed Gears"
-      },
-      "UpgradeDisplay": {
-        icon: UpgradeDisplay,
-        label: "Display",
-        value: "Upgrade Display"
-      },
-      "frontRearSuspension": {
-        icon: FrontAndRear,
-        label: "Suspension",
-        value: "Front&Rear"
-      },
-      "warranty": {
-        icon: Warranty,
-        label: "Warranty",
-        value: "One Year Warranty"
-      },
-      "cupHolder": {
-        icon: CupHolder,
-        label: "Cup Holder",
-        value: "Cup Holder"
-      },
-      "signals": {
-        icon: SignalLight,
-        label: "Signal Light",
-        value: "Signal Light"
       },
     },
   },

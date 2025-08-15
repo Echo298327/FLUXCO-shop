@@ -21,28 +21,24 @@
     "moreDetails": "More Details",
     "items": {
       "1": {
-        "name": "Urban Cruiser 250",
-        "description": "Entry-level electric city bike with 250W motor perfect for daily commuting"
+        "name": "F-16",
+        "description": "High-performance electric bike with advanced features and long-range capability."
       },
       "2": {
-        "name": "StepThrough Pro 500",
-        "description": "Mid-range electric step-through with 500W motor and extended 50km range"
+        "name": "F20",
+        "description": "Powerful 750W electric bike designed for urban commuting and adventure rides."
       },
       "3": {
-        "name": "Commuter Elite 750",
-        "description": "High-performance 750W electric bike with 7-speed Shimano and dual suspension"
+        "name": "F20Pro",
+        "description": "Premium electric bike with cup holder, signal lights and advanced display system."
       },
       "4": {
-        "name": "Cargo Master 750X",
-        "description": "Heavy-duty 750W cargo e-bike with LED signals and premium accessories"
+        "name": "L16",
+        "description": "Entry-level electric bike perfect for daily commuting with essential features."
       },
       "5": {
-        "name": "E-Explorer",
-        "description": "Retro adventure e-bike with premium leather accessories"
-      },
-      "6": {
-        "name": "E-Folding",
-        "description": "Compact electric folder with classic design elements"
+        "name": "L18",
+        "description": "Mid-range electric bike with Bluetooth display and enhanced performance."
       }
     }
   },
@@ -149,7 +145,9 @@
         "cargoAccessories": "Cargo Accessories",
         "cupHolder": "Cup Holder & Basket",
         "lightingSystem": "Lighting System",
-        "signals": "LED Signal Lights"
+        "signals": "LED Signal Lights",
+        "upgradeDisplay": "Display",
+        "sevenSpeedGears": "7-Speed Gears"
       },
       "values": {
         "25km/h": "25km/h",
@@ -157,16 +155,19 @@
         "25-40km/h": "25-40km/h",
         "25-45km/h": "25-45km/h",
         "36V 5Ah": "36V 5Ah",
-        "48V 10Ah": "48V 10Ah",
-        "48V 8.2Ah": "48V 8.2Ah",
+        "48V 18.2Ah": "48V 18.2Ah",
+        "48V 15.6Ah": "48V 15.6Ah",
+        "48V 13Ah": "48V 13Ah",
         "250W": "250W",
         "500W": "500W",
         "750W": "750W",
+        "350W": "350W",
         "Quick Charge": "Included",
         "Easy Charge": "Included",
         "20-25km": "20-25km",
         "45-50km": "45-50km",
         "60-95km": "60-95km",
+        "50-70km": "50-70km",
         "Three Riding Modes": "3 Modes",
         "Letter Wrap": "Included",
         "Non-Slip Wrap": "Included",
@@ -198,6 +199,7 @@
       "messagePlaceholder": "Tell us about your interest in this product...",
       "submitButton": "Send Message",
       "submitButtonTitle": "Send your inquiry",
+      "sending": "Sending...",
       "noteLabel": "Note:",
       "noteMessage": "We'll contact you about your interest in this product."
     },

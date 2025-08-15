@@ -43,7 +43,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ products }) =>
               {t('products.subtitle')}
             </p>
           </div>
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {products.map((product) => (
               <ProductCard
                 key={product.id}

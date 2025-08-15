@@ -65,7 +65,7 @@ const ProductPage: React.FC<ProductPageProps> = () => {
         </div>
       </div>
         {/* Contact Form Section */}
-        <EmailFormSection setShowSuccess={setShowSuccess} setShowError={setShowError} product={product} />
+        <EmailFormSection setShowSuccess={setShowSuccess} setShowError={setShowError} product={product} redirectSection="products" />
         
         {/* Success Modal */}
         {showSuccess && (
