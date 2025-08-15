@@ -1,6 +1,6 @@
 export const siteConfig = {
-  domain: 'fluxco-dev.com',
-  fullUrl: 'https://fluxco-dev.com',
+  domain: 'fluxcotw.com',
+  fullUrl: 'https://fluxcotw.com',
   title: 'FLUX&CO',
   description: 'Experience the perfect blend of classic cycling heritage and modern innovation with FLUX&CO. Premium electric bicycles crafted for style, comfort, and performance.',
   social: {

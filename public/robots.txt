@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://fluxco-dev.com/sitemap.xml
+Sitemap: https://fluxcotw.com/sitemap.xml
 
 # Allow all search engines to crawl
 Allow: /product/
