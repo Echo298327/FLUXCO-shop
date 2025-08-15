@@ -2,6 +2,7 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import { Button } from "./Button";
+import { openLineChat } from "../utils/contactUtils";
 
 interface ContactSectionProps {
 }
@@ -32,8 +33,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({}) => {
             icon="fab fa-line"
             onClick={() => {
               const message = t('contact.lineMessages.general');
-              const lineUrl = `https://line.me/R/ti/p/@629Ipvil?text=${encodeURIComponent(message)}`;
-              window.open(lineUrl, "_blank");
+              openLineChat(message);
             }}
             color="green"
             title={t('contact.lineButton')}

@@ -7,6 +7,8 @@ import type { Product } from "../types/products";
 // Components imports
 import { Button } from "./Button";
 import { DimensionTag } from "./DimensionTag";
+// Utils imports
+import { openLineChat } from "../utils/contactUtils";
 
 interface ProductImageProps {
   product: Product;
@@ -78,8 +80,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
             icon="fab fa-line"
             onClick={() => {
               const message = t('contact.lineMessages.withProduct', { productName: product.name });
-              const lineUrl = `https://line.me/R/ti/p/@629Ipvil?text=${encodeURIComponent(message)}`;
-              window.open(lineUrl, "_blank");
+              openLineChat(message);
             }}
             color="green"
             title={t('productPage.contactButtonTitle')}
