@@ -53,7 +53,7 @@ export const ColorSelector: React.FC<ColorSelectorProps> = ({
             key={color}
             onClick={() => handleColorSelect(color)}
                          className={`
-               relative w-8 h-8 sm:w-12 sm:h-12 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl
+               relative w-8 h-8 sm:w-12 sm:h-12 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer
                ${selectedColor === color 
                  ? 'border-3 border-amber-600 scale-110' 
                  : 'border-2 border-amber-200 hover:border-amber-400'
