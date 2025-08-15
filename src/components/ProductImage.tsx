@@ -7,15 +7,18 @@ import type { Product } from "../types/products";
 // Components imports
 import { Button } from "./Button";
 import { DimensionTag } from "./DimensionTag";
+import { ColorSelector } from "./ColorSelector";
 // Utils imports
 import { openLineChat } from "../utils/contactUtils";
 
 interface ProductImageProps {
   product: Product;
+  onColorChange?: (color: string) => void;
 }
 
 export const ProductImage: React.FC<ProductImageProps> = ({
   product,
+  onColorChange,
 }) => {
   const { t } = useTranslation();
   const [showDimensions, setShowDimensions] = useState(false);
@@ -66,6 +69,14 @@ export const ProductImage: React.FC<ProductImageProps> = ({
             isVisible={showDimensions}
           />
         </div>
+
+        {/* Color Selection */}
+        {product.colors && (
+          <ColorSelector 
+            colors={product.colors}
+            onColorChange={onColorChange}
+          />
+        )}
 
         {/* Price and Contact */}
         <div className="mt-8 text-center">

@@ -13,9 +13,10 @@ interface EmailFormSectionProps {
     setShowError: (showError: boolean) => void;
     product: Product;
     redirectSection?: string;
+    selectedColor?: string;
 }
 
-export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSuccess, setShowError, product, redirectSection}) => {
+export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSuccess, setShowError, product, redirectSection, selectedColor}) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,7 +52,7 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
         
         try {
             // Submit to FormSubmit
-            const response = await fetch('https://formsubmit.co/shalomber17@gmail.com', {
+            const response = await fetch('https://formsubmit.co/fluxtaipei2025@gmail.com', {
                 method: 'POST',
                 body: formData
             });
@@ -106,6 +107,7 @@ export const EmailFormSection: React.FC<EmailFormSectionProps> = ({setShowSucces
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="product_name" value={product.name} />
               <input type="hidden" name="product_price" value={product.price} />
+              {selectedColor && <input type="hidden" name="selected_color" value={selectedColor} />}
               <input type="hidden" name="inquiry_timestamp" value={new Date().toISOString()} />
               <input type="hidden" name="message" value="Customer is interested in this product and would like more information. Please contact them soon." />
               

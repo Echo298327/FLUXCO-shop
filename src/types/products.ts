@@ -7,6 +7,7 @@ export interface Product {
     image: string;
     dimensionsImage?: string;
     price: number;
+    colors?: string[];
     vehicleSeatHeight: number;
     vehicleHeight: number;
     vehicleLength: number;
