@@ -34,7 +34,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: "F-16",
-    description: "F-16 is a high-performance electric bike with a 750W motor and a 48V 8.2Ah battery. It has a top speed of 45km/h and a range of 60-95km.",
+    description: "F-16 is a high-performance electric bike with a 750W motor and a 48V 15.6Ah battery. It has a top speed of 45km/h and a range of 60-95km.",
     image: F16,
     dimensionsImage: F16In,
     price: 46000,
@@ -50,7 +50,7 @@ export const products: Product[] = [
       "battery": {
         icon: Battery,
         label: "Battery",
-        value: "48V 5.6Ah"
+        value: "48V 15.6Ah"
       },
       "motor": {
         icon: Motor,
@@ -108,7 +108,7 @@ export const products: Product[] = [
       "battery": {
         icon: Battery,
         label: "Battery",
-        value: "48V 8.2Ah"
+        value: "48V 18.2Ah"
       },
       "motor": {
         icon: Motor,
@@ -166,7 +166,7 @@ export const products: Product[] = [
       "battery": {
         icon: Battery,
         label: "Battery",
-        value: "48V 8.2Ah"
+        value: "48V 18.2Ah"
       },
       "motor": {
         icon: Motor,
@@ -292,7 +292,7 @@ export const products: Product[] = [
       "battery": {
         icon: Battery,
         label: "Battery",
-        value: "48V 3Ah"
+        value: "48V 13Ah"
       },
       "motor": {
         icon: Motor,
